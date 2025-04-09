@@ -5,7 +5,7 @@ name: "Xeno Operations LEGACY"
 version: 0.98.07.LE
 description: "A complete overhaul mod."
 requiredExtendedVersion: "8.0"
-author: XOps and revamped by b1ackwolf + Kiro Nextgen aka UKX jumps in to fix things.
+author: XOps and revamped by b1ackwolf + IDT members
 id: XOPSLEGACY
 reservedSpace: 15
 isMaster: true
