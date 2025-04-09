@@ -1,0 +1,132 @@
+# Made by B1ackwolf for XOPS-Legacy
+# Status:Reorder and clean
+startingBase:
+  facilities:
+    - type: STR_ACCESS_LIFT #done
+      x: 2
+      y: 2
+    - type: STR_HANGAR
+      x: 0
+      y: 0
+    - type: STR_HANGAR #done
+      x: 2
+      y: 0
+    - type: STR_HANGAR #done
+      x: 4
+      y: 0
+    - type: STR_SECURITY_STATION
+      x: 2
+      y: 3
+    - type: STR_LABORATORY #done
+      x: 5
+      y: 3
+    - type: STR_WORKSHOP
+      x: 4
+      y: 2
+    - type: STR_LARGE_RADAR_SYSTEM #done
+      x: 3
+      y: 3
+    - type: STR_LARGE_LIVING_QUARTERS #done
+      x: 2
+      y: 4
+    - type: STR_GYM #done
+      x: 1
+      y: 3
+    - type: STR_CORRIDOR #done
+      x: 4
+      y: 3
+    - type: STR_GENERAL_STORES #done
+      x: 1
+      y: 5
+
+  crafts:
+    - type: STR_DRAGONFLY
+      id: 1
+      fuel: 1500
+      damage: 0
+      items:
+        STR_GRENADE: 10
+        STR_SMOKE_GRENADE: 10
+        STR_ST_MAIN_PISTOL: 5
+        STR_ST_MAIN_PISTOL_CLIP: 10
+        STR_ST_RIFLE: 10
+        STR_ST_RIFLE_CLIP: 20
+        STR_ELECTRO_FLARE: 10
+        STR_ME_BASIC_KNIFE: 10
+      status: STR_READY
+    - type: STR_SR71
+      id: 1
+      fuel: 5000
+      damage: 0
+    - type: STR_INTERCEPTOR
+      id: 1
+      fuel: 1000
+      damage: 0
+      weapons:
+        - type: STR_STINGRAY
+          ammo: 6
+        - type: STR_AVALANCHE
+          ammo: 3
+      status: STR_READY
+    - type: STR_INTERCEPTOR
+      id: 2
+      fuel: 1000
+      damage: 0
+      weapons:
+        - type: STR_STINGRAY
+          ammo: 6
+        - type: STR_AVALANCHE
+          ammo: 3
+      status: STR_READY
+###ojito , reorder below this
+  items:
+    STR_ST_RIFLE: 5
+    STR_ST_RIFLE_CLIP: 30
+    STR_ST_LMG: 2
+    STR_ST_LMG_BELT: 10
+    STR_ST_SHOTGUN: 2
+    STR_ST_SHOTGUN_SHELLS1: 10
+    STR_ST_SNIPER: 2
+    STR_ST_SNIPER_CLIP: 10
+    STR_ST_UZI: 2
+    STR_ST_SMG: 2
+    STR_ST_SMG_CLIP: 10
+    STR_ST_BULLPUP: 10
+    STR_ST_MAIN_PISTOL: 10
+    STR_ST_MAIN_PISTOL_CLIP: 20
+    STR_ST_SMALL_PISTOL: 5
+    STR_ST_AUTO_PISTOL: 2
+    STR_ST_SMALL_PISTOL_CLIP: 15
+    STR_ST_HEAVY_PISTOL: 2
+    STR_ST_HEAVY_PISTOL_CLIP: 5
+    STR_GRENADE: 15
+    STR_ROCKET_LAUNCHER: 1
+    STR_SMALL_ROCKET: 5
+    STR_ST_MINIGUN: 1
+    STR_ST_MINIGUN_BELT: 5
+    STR_HEAVY_CANNON: 2
+    STR_HC_HE_AMMO: 5
+    STR_HC_I_AMMO: 5
+    STR_HC_AP_AMMO: 3
+    STR_SMOKE_GRENADE: 15
+    STR_ST_ANTI_MATERIEL: 1
+    STR_ST_ANTI_MATERIEL_CLIP: 5
+    STR_EX_ADRENO_KIT: 4
+    STR_EX_FIST_AID_KIT: 7
+    STR_EX_BASIC_MEDI_KIT: 3
+    STR_EX_IMPROVED_MEDI_KIT: 1
+    STR_CANNON_ROUNDS_X50: 3
+    STR_STINGRAY_MISSILES: 25
+    STR_AVALANCHE_MISSILES: 10
+    STR_ELECTRO_FLARE: 10
+    STR_ME_BASIC_KNIFE: 10
+    STR_HIGH_EXPLOSIVE: 5
+    STR_ME_KNUCKLES: 5
+    STR_BO_FIERY_GRENADE: 10
+  scientists: 2
+  engineers: 5
+  randomSoldiers:
+    STR_SOLDIER: 7
+    STR_ELITE_SOLDIER: 2
+    STR_SOLDIER_OFFICER: 1
+    STR_PILOT: 5

@@ -1,0 +1,1257 @@
+# Made by Filip H
+# Script to make the BigOB (and if needed hand and floor) sprite of a weapon to reflect if ammo is loaded, and what kind of ammo is loaded
+# Supports up to 4 different ammo types per weapon (plus empty weapon), foldable stocks (i.e. weapons that change sprite depending if they're in the soldiers hand or not, only 3 ammotypes per weapon supported) and weapons with 2 ammo slots (only one ammotype per slot supported)
+# Works also for multiple weapons sharing the same ammo type(s)
+# Note: weapons with this script only show the default (or no magazine) sprite in the Ufopaedia and hen middle-mouse clicking enemies
+# How to use:
+# To use the script sprite indexes need to be ordered in a very specific way, with each sprite being 8 indexes apart (like handObs normally)
+# The weapon itself should have the first index number in its ruleset
+# Example weapon: a MP5 that can hold magazines of 4 different sizes
+#      752: Resources/BallisticWeapons/SMGs/BigMP5SDnomag.png  # Sprite for empty weapon
+#      760: Resources/BallisticWeapons/SMGs/BigMP5SD10.png # Sprite for smallest magazine/ammo type 1
+#      768: Resources/BallisticWeapons/SMGs/BigMP5SD20.png # Sprite for second smallest magazine/ammo type 2
+#      776: Resources/BallisticWeapons/SMGs/BigMP5SD.png # Sprite for third smallest magazine/ammo type 3
+#      784: Resources/BallisticWeapons/SMGs/BigMP5SD40.png # Sprite for largest magazine/ ammo type 4
+# the MP5 item should have bigSprite: 752
+# Floor and Hand sprites must be spaced in the same way (though they are not required to have the same index number) and each sprite must have a corresponding floor and hand sprite
+# Note: if you want to have the same sprite for all ammo states for floor and hand sprites, you can assign the same sprite to multiple index numbers
+# You Need to add tags (consisting of a number between 1 and 4) to every ammo type
+# Example:
+#  - type: STR_9MM_PARABELLUM_X10 # Smallest magazine/ammo type 1
+#    tags:
+#     AmmoNo: 1
+#  - type: STR_9MM_PARABELLUM_X20 # Second smallest magazine/ammo type 2
+#    tags:
+#     AmmoNo: 2
+#  - type: STR_9MM_PARABELLUM_X30
+#    tags:
+#     AmmoNo: 3 # Third smallest magazine/ammo type 3
+#  - type: STR_9MM_PARABELLUM_X40
+#    tags:
+#     AmmoNo: 4 # Largest magazine/ ammo type 4
+# Lastly you need to attach a tag to every weapon that you want affected by this script
+#  - type: STR_MP5
+#    tags:
+#     AmmoReSprite: 3
+# Note: if multiple weapons share the same ammo, but some cannot use the smallest ammo type, when assigning index numbers there still needs to be a sprite for the smallest ammo type, even if it is just a placeholder.
+# Example: The Glock 18 shares ammo with the MP5, but can only use the second and third smallest magazines, the index looks like this:
+#      2160: Resources/BallisticWeapons/Pistols/BigGlock18nomag.png # Sprite for empty weapon
+#      2168: Resources/BallisticWeapons/Pistols/BigGlock18nomag.png # placeholder sprite that never appears ingame
+#      2176: Resources/BallisticWeapons/Pistols/BigGlock18.png # Sprite for second smallest magazine/ammo type 2
+#      2184: Resources/BallisticWeapons/Pistols/BigGlock1830.png # Sprite for third smallest magazine/ammo type 3
+# If a weapon is folding/ has a different sprite depending if it is in a hand or not it needs the tag FoldStock: 1
+# Such a weapon should have the sprite for when the weapon is held in a hand ordered first and the inventory sprites should be 32 numbers higher
+# Example of a index order for such a weapon
+#      792: Resources/BallisticWeapons/SMGs/BigMPXnomag.png # This sprite should be the unfolded ones/ones in the hand
+#      800: Resources/BallisticWeapons/SMGs/BigMPX10.png
+#      808: Resources/BallisticWeapons/SMGs/BigMPX20.png
+#      816: Resources/BallisticWeapons/SMGs/BigMPX.png
+#      824: Resources/BallisticWeapons/SMGs/BigMPXFoldednomag.png # This sprite and below should be the folded ones/ones iin the inventory
+#      832: Resources/BallisticWeapons/SMGs/BigMPXFolded10.png
+#      840: Resources/BallisticWeapons/SMGs/BigMPXFolded20.png
+#      848: Resources/BallisticWeapons/SMGs/BigMPXFolded.png
+# If a weapon has 2 ammo slots it needs the tag UBS: 1
+# Note: each ammo slot can only use ammo items that have the tag AmmoNo: 1, otherwise the script won't work
+# Example of how the sprites need to be ordered
+#      1064: Resources/BallisticWeapons/Rifles/BigM4MASSnomag3.png #both ammo slots empty
+#      1072: Resources/BallisticWeapons/Rifles/BigM4MASSnomag2.png # slot 0 filled, slot 1 empty
+#      1080: Resources/BallisticWeapons/Rifles/BigM4MASSnomag.png # slot 0 empty, slot 1 filled
+#      1088: Resources/BallisticWeapons/Rifles/BigM4MASS.png # both slots filled
+# Example of a mod where the script is used: https://github.com/Inventorum-Development-Team/CTO
+
+items:
+
+###-----Human first tier Ballistic terran weapons-----###
+
+  - type: STR_ST_SMALL_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_AUTO_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_SMALL_PISTOL_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_ST_MAIN_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_MAIN_PISTOL_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_ST_HEAVY_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_HEAVY_PISTOL_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_ST_UZI # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_SMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_SMG_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_ST_SHOTGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_SHOTGUN_SHELLS1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_ST_SHOTGUN_SHELLS2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+
+  - type: STR_ST_BULLPUP # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_RIFLE_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_ST_LMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_LMG_BELT # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_ST_SNIPER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_SNIPER_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_ST_ANTI_MATERIEL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_ANTI_MATERIEL_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_ST_MINIGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_ST_MINIGUN_BELT # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_HEAVY_CANNON # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HC_HE_AMMO # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HC_I_AMMO # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HC_AP_AMMO # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_ST_BAZOOKA # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ROCKET_LAUNCHER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_SMALL_ROCKET # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_LARGE_ROCKET # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_INCENDIARY_ROCKET # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+###-----Human first tier Ballistic terran weapons ENDING-----###
+###-----Human second tier Ballistic eXperimental weapons-----###
+
+  - type: STR_XP_SMALL_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_AUTO_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_SMALL_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_SMALL_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_MAIN_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_MAIN_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_MAIN_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_HEAVY_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_HEAVY_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_HEAVY_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_UZI # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_SMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_SMG_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_SMG_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_SHOTGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_SHOTGUN_SHELLS2 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+  - type: STR_XP_SHOTGUN_SHELLS3 # ignoreDuplicate
+    tags:
+      AmmoNo: 4
+
+  - type: STR_XP_BULLPUP # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_RIFLE_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_RIFLE_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_LMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_LMG_BELT2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_LMG_BELT3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_ANTI_MATERIEL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_ANTI_MATERIEL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_ANTI_MATERIEL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_MINIGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_MINIGUN_BELT2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_MINIGUN_BELT3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_AUTO_CANNON # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_AUTO_CANNON_BELT1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_XP_AUTO_CANNON_BELT2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_AUTO_CANNON_BELT3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_XP_BAZOOKA # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_XP_ROCKET1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_XP_ROCKET2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_XP_APROCKET # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+###-----Human third tier Ballistic hybrid weapons-----###
+
+  - type: STR_HB_SMALL_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_AUTO_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_SMALL_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_SMALL_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_SMALL_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_MAIN_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_MAIN_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_MAIN_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_MAIN_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_HEAVY_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_HEAVY_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_HEAVY_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_HEAVY_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_UZI # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_SMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_SMG_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_SMG_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_SMG_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_SHOTGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_SHOTGUN_SHELLS1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_SHOTGUN_SHELLS2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_SHOTGUN_SHELLS3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_BULLPUP # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_RIFLE_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_RIFLE_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_RIFLE_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_LMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_LMG_BELT1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_LMG_BELT2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_LMG_BELT3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_SNIPER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_SNIPER_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_SNIPER_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_SNIPER_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_AUTO_CANNON # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_AUTO_CANNON_BELT1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_AUTO_CANNON_BELT2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_HB_AUTO_CANNON_BELT3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_HB_BAZOOKA # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_HB_ROCKET1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_HB_ROCKET2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+
+###-----Human fourth tier Energy laser weapons-----###
+
+  - type: STR_LA_MAIN_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_LA_SMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_LA_PISTOL_BATTERY1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_LA_PISTOL_BATTERY2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_LA_PISTOL_BATTERY3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_LA_SHOTGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_LA_SHOTGUN_BATTERY1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_LA_SHOTGUN_BATTERY2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_LA_SHOTGUN_BATTERY3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_LA_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_LA_RIFLE_BATTERY1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_LA_RIFLE_BATTERY2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_LA_RIFLE_BATTERY3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_LA_LMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_LA_LMG_BATTERY1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_LA_LMG_BATTERY2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_LA_LMG_BATTERY3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_LA_SNIPER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_LA_SNIPER_BATTERY1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_LA_SNIPER_BATTERY2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_LA_SNIPER_BATTERY3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_LA_HEAVY_CANNON # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_LA_HEAVY_CANNON_BATTERY1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_LA_HEAVY_CANNON_BATTERY2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_LA_HEAVY_CANNON_BATTERY3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+###-----Human fifth tier Ballistic Rail weapons-----###
+
+  - type: STR_RL_MAIN_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_RL_SMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_RL_MAIN_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_RL_MAIN_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_RL_MAIN_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_RL_SHOTGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_RL_SHOTGUN_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_RL_SHOTGUN_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_RL_SHOTGUN_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_RL_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_RL_RIFLE_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_RL_RIFLE_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_RL_RIFLE_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_RL_LMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_RL_LMG_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_RL_LMG_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_RL_LMG_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_RL_SNIPER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_RL_SNIPER_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_RL_SNIPER_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_RL_SNIPER_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_RL_AUTO_CANNON # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_RL_AUTO_CANNON_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_RL_AUTO_CANNON_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_RL_AUTO_CANNON_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_RL_BAZOOKA # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_RL_BAZOOKA_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_RL_BAZOOKA_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_RL_BAZOOKA_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+###-----Human sixth tier Energy plasma weapons-----###
+
+  - type: STR_PM_SMALL_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_SMALL_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_SMALL_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_SMALL_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_PM_MAIN_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_SMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_MAIN_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_MAIN_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_MAIN_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_PM_HEAVY_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_BULLPUP # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_HEAVY_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_HEAVY_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_HEAVY_PISTOL_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_PM_SHOTGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_SHOTGUN_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_SHOTGUN_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_SHOTGUN_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_PM_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_RIFLE_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_RIFLE_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_RIFLE_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_PM_LMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_LMG_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_LMG_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_LMG_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_PM_SNIPER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_SNIPER_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_SNIPER_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_SNIPER_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_PM_HEAVY_CANNON # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_HEAVY_CANNON_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_HEAVY_CANNON_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_HEAVY_CANNON_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_PM_ANTIMATTER_LAUNCHER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_PM_ANTIMATTER_LAUNCHER_BOMB1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_PM_ANTIMATTER_LAUNCHER_BOMB2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_PM_ANTIMATTER_LAUNCHER_BOMB3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+###-----Human Seventh Stun Weapons Tier -----###
+
+  - type: STR_SH_SMALL_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_SH_SMALL_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_SH_SMALL_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+
+  - type: STR_SH_MAIN_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_SH_MAIN_PISTOL_BATTERY # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_SH_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_SH_MAIN_PISTOL_BATTERY # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_SH_HEAVY_CANNON # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_SH_HEAVY_CANNON_BATTERY # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_SH_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+#----- Human Eight tier Melee Weaponry -----#
+
+  - type: STR_ME_KNUCKLES # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_BASIC_KNIFE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_ALLOY_KNIFE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_ALLOY_SWORD # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_LASER_KNIFE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_LASER_SWORD # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_PLASMA_KNIFE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_PLASMA_SWORD # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_HUMAN_BASIC_SHIELD # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_HUMAN_ALLOY_SHIELD # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_ME_HUMAN_HOLO_SHIELD # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_AW_HOLO_SHIELD # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_AW_ADVANCED_HOLO_SHIELD # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_AW_ALLOY_BLADE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+  - type: STR_AW_PLASMA_BLADE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 1
+      FoldStock: 1
+
+#----- Human Ninth tier Ordnance Weaponry -----#
+
+  - type: STR_SMOKE_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  # - type: STR_BO_FLASH_GRENADE # ignoreDuplicate
+  #   tags:
+  #     PrimeSprite: 1
+
+  - type: STR_BO_FIERY_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_STICK_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_PROXIMITY_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_HYBRID_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_HYBRID_GRENADE2 # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_AP_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_ELERIUM_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_ELERIUM_PROXY_MINE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_SATCHEL_CHARGE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_HIGH_EXPLOSIVE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_ELERIUM_CHARGE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_ANTIMATTER_EXPLOSIVE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_BREACHING_BANGALORE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_BREACHING_ELERIUM # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_BO_BREACHING_ANTIMATTER # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+
+#----- Tenth tier Alien Weaponry -----#
+
+  - type: STR_AW_MAIN_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_SMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_MAIN_PISTOL_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_AW_MAIN_PISTOL_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+
+  - type: STR_AW_SHOTGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_SHOTGUN_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_AW_SHOTGUN_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+
+  - type: STR_AW_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_RIFLE_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_AW_RIFLE_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_AW_RIFLE_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_AW_LMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_LMG_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_AW_LMG_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_AW_LMG_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_AW_SNIPER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_SNIPER_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_AW_SNIPER_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+
+  - type: STR_AW_HEAVY_CANNON # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_HEAVY_CANNON_CLIP1 # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_AW_HEAVY_CANNON_CLIP2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+
+  - type: STR_AW_HEAVY_CANNON_CLIP3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_AW_ELITE_PISTOL # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_ELITE_PISTOL_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_AW_ELITE_SMG # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_ELITE_SMG_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_AW_ELITE_SHOTGUN # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_ELITE_SHOTGUN_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_AW_ELITE_RIFLE # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_AW_ELITE_RIFLE_CLIP # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+
+  - type: STR_SMALL_LAUNCHER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_STUN_BOMB # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_STUN_BOMB2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_STUN_BOMB3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+  - type: STR_BLASTER_LAUNCHER # ignoreDuplicate
+    tags:
+      AmmoReSprite: 3
+  - type: STR_BLASTER_BOMB # ignoreDuplicate
+    tags:
+      AmmoNo: 1
+  - type: STR_BLASTER_BOMB2 # ignoreDuplicate
+    tags:
+      AmmoNo: 2
+  - type: STR_BLASTER_BOMB3 # ignoreDuplicate
+    tags:
+      AmmoNo: 3
+
+
+
+
+  - type: STR_ALIEN_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_AW_PROXY_GRENADE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+  - type: STR_AW_DEMOLITION_EXPLOSIVE # ignoreDuplicate
+    tags:
+      PrimeSprite: 1
+
+
+##############################################
+extended:
+  tags:
+   RuleItem:
+      AmmoReSprite: int
+      AmmoNo: int
+      FoldStock: int
+      UBS: int
+      PrimeSprite: int
+
+
+  scripts:
+
+     selectItemSprite: #Switches between weapon sprites depending on ammo
+      #  - offset: 3  #ojito este es el tag viejo
+      #    code: |
+      #     var int x;
+      #     var int y;
+      #     item.getTag x Tag.PrimeSprite;
+      #     item.isFuseEnabled y;
+      #     if and eq x 1 eq y 1;
+      #       if eq blit_part blit_item_big;
+      #         add sprite_index 1;
+      #       end;
+      #     end;
+      #     return sprite_index;
+       - offset: 3
+         code: |
+          var int x;
+          var int y;
+          item.getTag x Tag.PrimeSprite;
+          item.isFuseEnabled y;
+          if and eq x 1 eq y 1;
+              add sprite_index 8;
+          end;
+          return sprite_index;
+#
+       - offset: 1
+         code: |
+          var int x;
+          var int y;
+          var ptr BattleItem ammoptr;
+          var ptr BattleItem UBSammoptr;
+          var ptr RuleInventory invptr;
+          var int left;
+          var int right;
+          var int ammono;
+          var int UBSammono;
+          var int z;
+          var int a;
+          BattleItem.getTag item x Tag.AmmoReSprite;
+          if eq x 1;
+           item.getAmmoItem ammoptr;
+           BattleItem.getTag  ammoptr ammono Tag.AmmoNo;
+           BattleItem.getTag item y Tag.FoldStock;
+           if eq y 1;
+            item.getSlot invptr;
+            RuleInventory.isLeftHand invptr left;
+            RuleInventory.isRightHand invptr right;
+            if and eq left 0 eq right 0;
+             set z 1;
+             end;
+            end;
+           if eq z 1;
+            add sprite_index 32;
+            if eq ammono 1;
+             add sprite_index 8;
+             end;
+            if eq ammono 2;
+             add sprite_index 16;
+             end;
+            if eq ammono 3;
+             add sprite_index 24;
+             end;
+            if eq ammono 4;
+             add sprite_index 32;
+            end;
+           end;
+           if neq z 1;
+            if eq ammono 1;
+             add sprite_index 8;
+             end;
+            if eq ammono 2;
+             add sprite_index 16;
+             end;
+            if eq ammono 3;
+             add sprite_index 24;
+             end;
+            if eq ammono 4;
+             add sprite_index 32;
+             end;
+            end;
+           BattleItem.getTag item a Tag.UBS;
+           if eq a 1;
+             item.getAmmoForSlot UBSammoptr 1;
+             BattleItem.getTag  UBSammoptr UBSammono Tag.AmmoNo;
+             if eq UBSammono 1;
+              add sprite_index 16;
+              end;
+            end;
+           end;
+
+
+          if eq x 3;
+           item.getAmmoItem ammoptr;
+           BattleItem.getTag  ammoptr ammono Tag.AmmoNo;
+           BattleItem.getTag item y Tag.FoldStock;
+           if eq y 1;
+            item.getSlot invptr;
+            RuleInventory.isLeftHand invptr left;
+            RuleInventory.isRightHand invptr right;
+            if and eq left 0 eq right 0;
+             set z 1;
+             end;
+            end;
+           if eq z 1;
+            add sprite_index 32;
+            if eq ammono 0;
+              sub sprite_index 8;
+              end;
+            if eq ammono 1;
+             add sprite_index 0;
+             end;
+            if eq ammono 2;
+             add sprite_index 8;
+             end;
+            if eq ammono 3;
+             add sprite_index 16;
+             end;
+            if eq ammono 4;
+             add sprite_index 24;
+            end;
+           end;
+           if neq z 1;
+            if eq ammono 0;
+              sub sprite_index 8;
+              end;
+            if eq ammono 1;
+             add sprite_index 0;
+             end;
+            if eq ammono 2;
+             add sprite_index 8;
+             end;
+            if eq ammono 3;
+             add sprite_index 16;
+             end;
+            if eq ammono 4;
+             add sprite_index 24;
+            end;
+            end;
+           BattleItem.getTag item a Tag.UBS;
+           if eq a 1;
+             item.getAmmoForSlot UBSammoptr 1;
+             BattleItem.getTag  UBSammoptr UBSammono Tag.AmmoNo;
+             if eq UBSammono 1;
+              add sprite_index 16;
+              end;
+            end;
+           end;
+
+          return sprite_index;
+
+
+
+# Explanation on how the script is supposed to function, does not include explanations for multi slot or folding weapons
+# First, every weapon that will be affected by sprite changing depending on what ammo is loaded will have a tag with the value of 1, if they don't the script will not affect them.
+# Every ammotype will get a tag, i.e a number attached to them, currently only the 9mm types do. Currently the 30x has a tag with the value of 3, the 20x has 2 and the 10x has 1.
+# The script will first check the ammos tag and see what value it has, if there is no ammo loaded, the script does nothing and the sprite is the one defined in the weapons ruleset (which should be the sprite that has no mag).
+# If the value of the tag is 1, the script will add 8 to every sprite index of a weapon, e.g. if a weapon had the bigsprite of 10 it will now have 18, a floorsprite of 10 would be 18 and a handsprite of 492 would be 500.
+# If the value of the tag is 2, the script will add 16 to every sprite index instead of 8. if the value of the tag is 3, it will add 24.
+# This is why there needs to be a specific order of sprite indexes, because a weapons bigob, floorob and handob might be any of 4 different indexes depending on what weapon is loaded.
+# The reason of why the script is this way is because it can easily be extended to different sets of ammo, just by adding tags to them with the value of 1-3. the script can be easily extended to support more ammotypes per weapon (infact i just did that in 20 seconds, you can now have tags with values 4 and 5 which add 32 and 40 to the indexes).
+# The main drawback of the script is that it wastes indexes, as some floorobs and handobs are defined to multiple indexes. Also the way i'm going to arrange the indexes is going to leave a lot of empty ones, as i don't have the will of doing it the efficient but more convoluted way.
+
+

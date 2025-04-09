@@ -1,0 +1,12 @@
+#
+# metadata.yaml for XCOM1
+
+name: "Xeno Operations LEGACY"
+version: 0.98.07.LE
+description: "A complete overhaul mod."
+requiredExtendedVersion: "8.0"
+author: XOps and revamped by b1ackwolf + Kiro Nextgen aka UKX jumps in to fix things.
+id: XOPSLEGACY
+reservedSpace: 15
+isMaster: true
+master: xcom1

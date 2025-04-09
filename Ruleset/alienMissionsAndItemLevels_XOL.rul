@@ -1,0 +1,656 @@
+# Made by B1ackwolf for XOPS-Legacy.
+# Status: Clean and reorder,improve with To-Do List ideas.
+
+alienMissions:
+  - type: STR_ALIEN_RESEARCH
+    points: 0
+    raceWeights:
+      0:
+          STR_SECTOID: 70
+          STR_SNAKEMAN: 10
+          STR_FLOATER: 20
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+      1:
+          STR_SECTOID: 60
+          STR_SNAKEMAN: 10
+          STR_FLOATER: 30
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+      5:
+          STR_SECTOID: 30
+          STR_SNAKEMAN: 10
+          STR_MUTON: 30
+          STR_FLOATER: 30
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+      7:
+          STR_SECTOID: 20
+          STR_SNAKEMAN: 10
+          STR_MUTON: 40
+          STR_FLOATER: 30
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+      9:
+          STR_SECTOID: 30
+          STR_SNAKEMAN: 10
+          STR_MUTON: 30
+          STR_FLOATER: 30
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+    waves:
+      - ufo: STR_SURVEY
+        count: 1
+        trajectory: P0
+        timer: 9000
+      - ufo: STR_LARGE_SCOUT
+        count: 1
+        trajectory: P2
+        timer: 7800
+      - ufo: STR_LABSHIP
+        count: 1
+        trajectory: P4
+        timer: 9000
+  - type: STR_ALIEN_HARVEST
+    points: 30
+    raceWeights:
+      0:
+          STR_SECTOID: 50
+          STR_SNAKEMAN: 20
+          STR_FLOATER: 30
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+      1:
+          STR_SECTOID: 50
+          STR_FLOATER: 50
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+      5:
+          STR_SECTOID: 30
+          STR_MUTON: 30
+          STR_FLOATER: 40
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+      7:
+          STR_SECTOID: 10
+          STR_MUTON: 40
+          STR_FLOATER: 30
+          STR_CARCHARODON: 20
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+      9:
+          STR_SECTOID: 10
+          STR_MUTON: 30
+          STR_FLOATER: 20
+          STR_CARCHARODON: 30
+          STR_FORMIC: 0
+          STR_ARMORED_MUTON: 0
+    waves:
+      - ufo: STR_MEDIUM_SCOUT
+        count: 1
+        trajectory: P0
+        timer: 7800
+      - ufo: STR_HARVESTER
+        count: 1
+        trajectory: P4
+        timer: 18000
+      - ufo: STR_HARVESTER
+        count: 2
+        trajectory: P4
+        timer: 12000
+  - type: STR_ALIEN_ABDUCTION
+    points: 50
+    raceWeights:
+      0:
+          STR_SECTOID: 60
+          STR_FLOATER: 40
+      1:
+          STR_SECTOID: 40
+          STR_FLOATER: 60
+      5:
+          STR_SECTOID: 50
+          STR_ARMORED_SECTOID: 10
+          STR_FLOATER: 40
+      7:
+          STR_SECTOID: 30
+          STR_ARMORED_SECTOID: 10
+          STR_FLOATER: 60
+      9:
+          STR_SECTOID: 40
+          STR_ARMORED_SECTOID: 20
+          STR_FLOATER: 40
+    waves:
+      - ufo: STR_SCANNER
+        count: 1
+        trajectory: P0
+        timer: 15000
+      - ufo: STR_ABDUCTOR
+        count: 1
+        trajectory: P3
+        timer: 25000
+      - ufo: STR_ABDUCTOR
+        count: 2
+        trajectory: P3
+        timer: 9000
+  - type: STR_ALIEN_INFILTRATION
+    points: 0
+    objective: 1
+    spawnZone: 4 #Mission zone for alien bases
+    raceWeights:
+      0:
+          STR_SECTOID: 70
+          STR_SNAKEMAN: 0
+          STR_FLOATER: 30
+      1:
+          STR_SECTOID: 50
+          STR_SNAKEMAN: 20
+          STR_FLOATER: 30
+      5:
+          STR_SECTOID: 30
+          STR_SNAKEMAN: 20
+          STR_ARMORED_SECTOID: 10
+          STR_MUTON: 30
+          STR_FLOATER: 10
+      7:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 10
+          STR_ARMORED_SECTOID: 10
+          STR_ETHEREAL: 30
+          STR_MUTON: 20
+          STR_FLOATER: 10
+          STR_ARMORED_MUTON: 10
+      9:
+          STR_SECTOID: 30
+          STR_SNAKEMAN: 10
+          STR_ETHEREAL: 40
+          STR_ARMORED_SECTOID: 10
+          STR_MUTON: 0
+          STR_FLOATER: 0
+          STR_ARMORED_MUTON: 10
+    waves:
+      - ufo: STR_MEDIUM_SCOUT
+        count: 1
+        trajectory: P0
+        timer: 16500
+      - ufo: STR_SCANNER
+        count: 1
+        trajectory: P1
+        timer: 15000
+      - ufo: STR_CLONER
+        count: 1
+        trajectory: P6
+        timer: 13800
+      - ufo: STR_MEDIUM_SCOUT #Change to Envoy
+        count: 1
+        trajectory: P7
+        timer: 9000
+      - ufo: STR_CLONER
+        count: 1
+        trajectory: P7
+        timer: 60
+      - ufo: STR_CONSTRUCTOR
+        count: 1
+        trajectory: P7
+        timer: 60
+      - ufo: STR_BATTLESHIP #Change to Mothership
+        count: 1
+        trajectory: P7
+        timer: 60
+  - type: STR_ALIEN_BASE
+    points: 50
+    objective: 2
+    spawnZone: 4 #Mission zone for alien bases
+    raceWeights:
+      0:
+          STR_SECTOID: 30
+          STR_SNAKEMAN: 10
+          STR_FLOATER: 40
+          STR_FORMIC: 20
+      1:
+          STR_SECTOID: 20
+          STR_SNAKEMAN: 20
+          STR_FLOATER: 20
+          STR_FORMIC: 40
+      5:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 30
+          STR_ARMORED_SECTOID: 10
+          STR_MUTON: 20
+          STR_FLOATER: 20
+          STR_FORMIC: 10
+          STR_ETHEREAL: 0
+          STR_CARCHARODON: 10
+      7:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 20
+          STR_ETHEREAL: 10
+          STR_ARMORED_SECTOID: 10
+          STR_MUTON: 20
+          STR_FLOATER: 10
+          STR_FORMIC: 10
+          STR_ARMORED_MUTON: 10
+          STR_CARCHARODON: 10
+      9:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 10
+          STR_ETHEREAL: 10
+          STR_ARMORED_SECTOID: 10
+          STR_MUTON_COMMANDO: 10
+          STR_MUTON: 10
+          STR_FLOATER: 10
+          STR_SOVEREIGN: 10
+          STR_FORMIC: 10
+          STR_ARMORED_MUTON: 10
+          STR_CARCHARODON: 10
+    waves:
+      - ufo: STR_SURVEY
+        count: 1
+        trajectory: P1
+        timer: 13500
+      - ufo: STR_MEDIUM_SCOUT #Change to Borer
+        count: 1
+        trajectory: P5
+        timer: 15000
+      - ufo: STR_CLONER
+        count: 1
+        trajectory: P5
+        timer: 60
+      - ufo: STR_CONSTRUCTOR
+        count: 1
+        trajectory: P6
+        timer: 60
+  - type: STR_ALIEN_TERROR
+    points: 10
+    objective: 3
+    spawnZone: 3 #Mission zone for terror missions
+    missionWeights:
+      0: 100
+    raceWeights:
+      0:
+          STR_SECTOID: 0
+          STR_FLOATER: 70
+          STR_SNAKEMAN: 0
+          STR_ETHEREAL: 0
+          STR_MUTON_COMMANDO: 0
+          STR_MUTON: 0
+          STR_ARMORED_SECTOID: 0
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 30
+          STR_ARMORED_MUTON: 0
+      1:
+          STR_SECTOID: 0
+          STR_FLOATER: 40
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 60
+          STR_ARMORED_MUTON: 0
+          STR_ETHEREAL: 0
+          STR_MUTON: 0
+      2:
+          STR_SECTOID: 50
+          STR_FLOATER: 25
+          STR_FORMIC: 25
+          STR_ETHEREAL: 0
+          STR_MUTON: 0
+      3:
+          STR_SECTOID: 25
+          STR_FLOATER: 25
+          STR_SNAKEMAN: 10
+          STR_FORMIC: 30
+          STR_CARCHARODON: 10
+          STR_ETHEREAL: 0
+          STR_MUTON: 0
+      5:
+          STR_SECTOID: 5
+          STR_SNAKEMAN: 45
+          STR_FLOATER: 5
+          STR_ARMORED_SECTOID: 20
+          STR_CARCHARODON: 20
+          STR_FORMIC: 5
+          STR_ETHEREAL: 0
+          STR_MUTON: 0
+      7:
+          STR_SECTOID: 5
+          STR_SNAKEMAN: 20
+          STR_MUTON: 25
+          STR_CARCHARODON: 25
+          STR_FLOATER: 5
+          STR_ARMORED_SECTOID: 20
+          STR_FORMIC: 5
+          STR_ETHEREAL: 0
+      9:
+          STR_SECTOID: 5
+          STR_SNAKEMAN: 20
+          STR_ETHEREAL: 0
+          STR_MUTON_COMMANDO: 0
+          STR_MUTON: 30
+          STR_FLOATER: 5
+          STR_ARMORED_SECTOID: 20
+          STR_CARCHARODON: 20
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 5
+          STR_ARMORED_MUTON: 15
+      10:
+          STR_SECTOID: 3
+          STR_SNAKEMAN: 20
+          STR_ETHEREAL: 0
+          STR_MUTON_COMMANDO: 0
+          STR_MUTON: 20
+          STR_FLOATER: 3
+          STR_ARMORED_SECTOID: 20
+          STR_CARCHARODON: 15
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 4
+          STR_ARMORED_MUTON: 30
+      11:
+          STR_SECTOID: 2
+          STR_SNAKEMAN: 24
+          STR_ETHEREAL: 0
+          STR_MUTON_COMMANDO: 0
+          STR_MUTON: 10
+          STR_FLOATER: 2
+          STR_ARMORED_SECTOID: 30
+          STR_CARCHARODON: 20
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 2
+          STR_ARMORED_MUTON: 30
+      12:
+          STR_SECTOID: 3
+          STR_SNAKEMAN: 15
+          STR_ETHEREAL: 15
+          STR_MUTON_COMMANDO: 10
+          STR_MUTON: 15
+          STR_FLOATER: 3
+          STR_ARMORED_SECTOID: 10
+          STR_CARCHARODON: 10
+          STR_SOVEREIGN: 15
+          STR_FORMIC: 4
+          STR_ARMORED_MUTON: 10
+    waves:
+      - ufo: STR_SCANNER
+        count: 1
+        trajectory: P1
+        timer: 15000
+      - ufo: STR_RAIDER
+        count: 1
+        trajectory: P1
+        timer: 9600
+      - ufo: STR_TERROR_SHIP
+        count: 1
+        trajectory: P0
+        timer: 12000
+      - ufo: STR_TERROR_SHIP
+        count: 1
+        trajectory: P7
+        timer: 9000
+        objective: true
+  - type: STR_ALIEN_RETALIATION
+    points: 0
+    objective: 4
+    spawnUfo: STR_BATTLESHIP #Spawned for the final retaliation run
+    raceWeights: # In the case of a shootdown, race comes from the UFO that triggered the mission.
+      0:
+          STR_SECTOID: 10
+          STR_FLOATER: 70
+          STR_SNAKEMAN: 0
+          STR_ETHEREAL: 0
+          STR_MUTON_COMMANDO: 0
+          STR_MUTON: 0
+          STR_ARMORED_SECTOID: 0
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 20
+          STR_ARMORED_MUTON: 0
+      1:
+          STR_SECTOID: 20
+          STR_FLOATER: 20
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 60
+          STR_ARMORED_MUTON: 0
+          STR_ETHEREAL: 0
+          STR_MUTON: 0
+      2:
+          STR_SECTOID: 50
+          STR_FLOATER: 25
+          STR_FORMIC: 25
+          STR_ETHEREAL: 0
+          STR_MUTON: 0
+      3:
+          STR_SECTOID: 30
+          STR_FLOATER: 30
+          STR_SNAKEMAN: 10
+          STR_FORMIC: 30
+          STR_ETHEREAL: 0
+          STR_MUTON: 0
+      5:
+          STR_SECTOID: 5
+          STR_SNAKEMAN: 65
+          STR_FLOATER: 5
+          STR_ARMORED_SECTOID: 20
+          STR_FORMIC: 5
+          STR_ETHEREAL: 0
+          STR_MUTON: 0
+          STR_CARCHARODON: 0
+      7:
+          STR_SECTOID: 5
+          STR_SNAKEMAN: 20
+          STR_MUTON: 40
+          STR_FLOATER: 5
+          STR_ARMORED_SECTOID: 25
+          STR_FORMIC: 5
+          STR_ETHEREAL: 0
+          STR_CARCHARODON: 15
+      9:
+          STR_SECTOID: 3
+          STR_SNAKEMAN: 10
+          STR_ETHEREAL: 15
+          STR_MUTON_COMMANDO: 20
+          STR_MUTON: 5
+          STR_FLOATER: 3
+          STR_ARMORED_SECTOID: 10
+          STR_SOVEREIGN: 15
+          STR_FORMIC: 4
+          STR_ARMORED_MUTON: 15
+          STR_CARCHARODON: 5
+    waves:
+      - ufo: STR_SCANNER
+        count: 1
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_RAIDER
+        count: 1
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_RAIDER
+        count: 1
+        trajectory: P8
+        timer: 30
+      - ufo: STR_DESTROYER
+        count: 1
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_TERROR_SHIP
+        count: 1
+        trajectory: P8
+        timer: 3000
+      - ufo: STR_BATTLESHIP
+        count: 1
+        trajectory: P8
+        timer: 3000
+  - type: STR_ALIEN_SUPPLY
+    points: 0
+    objective: 5
+    raceWeights: {} #Special case, race comes from base.
+    waves:
+      - ufo: STR_SUPPLY_SHIP
+        count: 1
+        trajectory: P9
+        timer: 6000
+        objective: true
+  - type: STR_CODEX_JUNGLE
+    points: 10
+    objective: 3
+    spawnZone: 6
+    raceWeights:
+      0:
+          STR_SECTOID: 10
+          STR_FLOATER: 70
+          STR_SNAKEMAN: 0
+          STR_ETHEREAL: 0
+          STR_MUTON_COMMANDO: 0
+          STR_MUTON: 0
+          STR_ARMORED_SECTOID: 0
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 20
+          STR_ARMORED_MUTON: 0
+      1:
+          STR_SECTOID: 10
+          STR_FLOATER: 70
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 20
+          STR_ARMORED_MUTON: 0
+      2:
+          STR_SECTOID: 10
+          STR_FLOATER: 45
+          STR_FORMIC: 35
+      3:
+          STR_SECTOID: 10
+          STR_FLOATER: 40
+          STR_SNAKEMAN: 10
+          STR_FORMIC: 30
+      5:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 50
+          STR_FLOATER: 20
+          STR_ARMORED_SECTOID: 10
+          STR_FORMIC: 10
+      7:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 20
+          STR_ETHEREAL: 0
+          STR_MUTON: 40
+          STR_FLOATER: 10
+          STR_ARMORED_SECTOID: 10
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 10
+          STR_ARMORED_MUTON: 0
+          STR_CARCHARODON: 10
+      9:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 10
+          STR_ETHEREAL: 10
+          STR_MUTON_COMMANDO: 10
+          STR_MUTON: 10
+          STR_FLOATER: 10
+          STR_ARMORED_SECTOID: 10
+          STR_SOVEREIGN: 10
+          STR_FORMIC: 10
+          STR_ARMORED_MUTON: 10
+          STR_CARCHARODON: 10
+    waves:
+      - ufo: STR_SCANNER
+        count: 1
+        trajectory: P1
+        timer: 15000
+      - ufo: STR_MEDIUM_SCOUT
+        count: 1
+        trajectory: P1
+        timer: 9600
+      - ufo: STR_TERROR_SHIP
+        count: 1
+        trajectory: P0
+        timer: 12000
+      - ufo: STR_CODEX_JUNGLE
+        count: 1
+        trajectory: P12
+        timer: 9000
+        objective: true
+  - type: STR_CODEX_ARCTIC
+    points: 10
+    objective: 3
+    spawnZone: 6
+    raceWeights:
+      0:
+          STR_SECTOID: 10
+          STR_FLOATER: 70
+          STR_SNAKEMAN: 0
+          STR_ETHEREAL: 0
+          STR_MUTON_COMMANDO: 0
+          STR_MUTON: 0
+          STR_ARMORED_SECTOID: 0
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 20
+          STR_ARMORED_MUTON: 0
+      1:
+          STR_SECTOID: 10
+          STR_FLOATER: 70
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 20
+          STR_ARMORED_MUTON: 0
+      2:
+          STR_SECTOID: 10
+          STR_FLOATER: 45
+          STR_FORMIC: 35
+      3:
+          STR_SECTOID: 10
+          STR_FLOATER: 40
+          STR_SNAKEMAN: 10
+          STR_FORMIC: 30
+      5:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 50
+          STR_FLOATER: 20
+          STR_ARMORED_SECTOID: 10
+          STR_FORMIC: 10
+      7:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 20
+          STR_ETHEREAL: 0
+          STR_MUTON: 40
+          STR_FLOATER: 10
+          STR_ARMORED_SECTOID: 10
+          STR_SOVEREIGN: 0
+          STR_FORMIC: 10
+          STR_ARMORED_MUTON: 0
+          STR_CARCHARODON: 10
+      9:
+          STR_SECTOID: 10
+          STR_SNAKEMAN: 10
+          STR_ETHEREAL: 10
+          STR_MUTON_COMMANDO: 10
+          STR_MUTON: 10
+          STR_FLOATER: 10
+          STR_ARMORED_SECTOID: 10
+          STR_SOVEREIGN: 10
+          STR_FORMIC: 10
+          STR_ARMORED_MUTON: 10
+          STR_CARCHARODON: 10
+    waves:
+      - ufo: STR_SCANNER
+        count: 1
+        trajectory: P1
+        timer: 15000
+      - ufo: STR_MEDIUM_SCOUT
+        count: 1
+        trajectory: P1
+        timer: 9600
+      - ufo: STR_TERROR_SHIP
+        count: 1
+        trajectory: P0
+        timer: 12000
+      - ufo: STR_CODEX_ARCTIC
+        count: 1
+        trajectory: P12
+        timer: 9000
+        objective: true
+#alienItemLevels
+alienItemLevels:
+  - [0, 0, 0, 0, 0, 0, 0, 1, 1, 2]
+  - [0, 0, 0, 0, 0, 1, 1, 1, 2, 2]
+  - [0, 0, 0, 1, 1, 1, 1, 2, 2, 2]
+  - [0, 0, 1, 1, 1, 1, 2, 2, 2, 2]
+  - [0, 0, 1, 1, 1, 2, 2, 2, 2, 2]
+  - [0, 1, 1, 1, 2, 2, 2, 2, 2, 2]
+  - [3, 1, 1, 1, 4, 2, 2, 2, 2, 5]
+  - [3, 1, 1, 4, 4, 2, 2, 2, 5, 5]
+  - [3, 1, 1, 1, 4, 4, 2, 2, 5, 5]
+  - [6, 1, 1, 4, 4, 7, 2, 2, 5, 5]
+  - [6, 1, 1, 4, 7, 2, 2, 5, 8, 2]

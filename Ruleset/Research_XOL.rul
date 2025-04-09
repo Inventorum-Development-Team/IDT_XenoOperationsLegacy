@@ -1,0 +1,2608 @@
+# Made by B1ackwolf for XOPS-Legacy
+# Status: Clean, reorder and deffinitely fix tree just as explained in the To-Do List
+
+research:
+#--Deletions
+  - delete: STR_LASER_WEAPONS
+  - delete: STR_FLYING_SUIT
+  - delete: STR_POWER_SUIT
+  - delete: STR_UFO_CONSTRUCTION
+  - delete: STR_LASER_PISTOL
+  - delete: STR_LASER_RIFLE
+  - delete: STR_HEAVY_LASER
+  - delete: STR_PLASMA_PISTOL
+  - delete: STR_PLASMA_PISTOL_CLIP
+  - delete: STR_PLASMA_RIFLE
+  - delete: STR_PLASMA_RIFLE_CLIP
+  - delete: STR_HEAVY_PLASMA
+  - delete: STR_HEAVY_PLASMA_CLIP
+  - delete: STR_PLASMA_CANNON_DEP1
+  - delete: STR_PLASMA_CANNON_DEP2
+  - delete: STR_SMALL_SCOUT
+  - delete: STR_NEW_FIGHTER_CRAFT
+  - delete: STR_NEW_FIGHTER_TRANSPORTER
+  - delete: STR_ULTIMATE_CRAFT
+  - delete: STR_GRAV_SHIELD
+  - delete: STR_PLASMA_DEFENSE
+  - delete: STR_ALIEN_ORIGINS
+  - delete: STR_SECTOID_COMMANDER
+  - delete: STR_SECTOID_MEDIC
+  - delete: STR_SECTOID_LEADER
+  - delete: STR_SECTOID_ENGINEER
+  - delete: STR_SECTOID_NAVIGATOR
+  - delete: STR_SECTOID_SOLDIER
+  - delete: STR_SNAKEMAN_COMMANDER
+  - delete: STR_SNAKEMAN_LEADER
+  - delete: STR_SNAKEMAN_ENGINEER
+  - delete: STR_SNAKEMAN_MEDIC
+  - delete: STR_SNAKEMAN_NAVIGATOR
+  - delete: STR_SNAKEMAN_SOLDIER
+  - delete: STR_ETHEREAL_COMMANDER
+  - delete: STR_ETHEREAL_LEADER
+  - delete: STR_ETHEREAL_ENGINEER
+  - delete: STR_ETHEREAL_MEDIC
+  - delete: STR_ETHEREAL_NAVIGATOR
+  - delete: STR_ETHEREAL_SOLDIER
+  - delete: STR_MUTON_COMMANDER
+  - delete: STR_MUTON_LEADER
+  - delete: STR_MUTON_ENGINEER
+  - delete: STR_MUTON_MEDIC
+  - delete: STR_MUTON_NAVIGATOR
+  - delete: STR_MUTON_SOLDIER
+  - delete: STR_FLOATER_COMMANDER
+  - delete: STR_FLOATER_LEADER
+  - delete: STR_FLOATER_ENGINEER
+  - delete: STR_FLOATER_MEDIC
+  - delete: STR_FLOATER_NAVIGATOR
+  - delete: STR_FLOATER_SOLDIER
+  - delete: STR_CELATID_TERRORIST
+  - delete: STR_SILACOID_TERRORIST
+  - delete: STR_CHRYSSALID_TERRORIST
+  - delete: STR_REAPER_TERRORIST
+  - delete: STR_SECTOPOD_TERRORIST
+  - delete: STR_CYBERDISC_TERRORIST
+  - delete: STR_COMMANDER_PLUS # check if this doesnt create problems later
+  - delete: STR_CYDONIA_OR_BUST # check if this doesnt create problems later
+#--Dummy--------------------
+  - name: STR_ALIENS_ONLY
+    cost: 0
+    points: 0
+    needItem: true
+  - name: STR_DISABLED
+    cost: 0
+    points: 0
+    needItem: true
+#--Supporting units Tech Tree--------------------
+  - name: STR_SUPPORT_UNITS
+    cost: 20
+    points: 10
+  - name: STR_DOGE_RECRUITMENT
+    cost: 10
+    points: 10
+    dependencies:
+      - STR_SUPPORT_UNITS
+  - name: STR_DOGE_EPIGENETIC # ojito mejorar totalmente agregar mejores requisitos
+    cost: 10
+    points: 10
+    dependencies:
+      - STR_DOGE_RECRUITMENT
+      - STR_ADVANCED_SICK_BAY
+  - name: STR_DOGE_UPLIFTING # ojito mejorar totalmente agregar mejores requisitos
+    cost: 10
+    points: 10
+    dependencies:
+      - STR_ADVANCED_SICK_BAY
+  - name: STR_DRONE_WARFARE
+    cost: 10
+    points: 10
+    dependencies:
+      - STR_SUPPORT_UNITS
+  - name: STR_TANKS_UNITS
+    cost: 20
+    points: 11
+    dependencies:
+      - STR_SUPPORT_UNITS
+      - STR_NEXT_GEN_BALLISTICS
+      - STR_ALIEN_ALLOYS
+#--Drone Warfare Tech Tree-------------------- END
+#--Medi Kit and Motion Tracker--------------------
+  - name: STR_MOTION_SCANNER
+    cost: 5
+    points: 20
+    needItem: true
+  - name: STR_PROXIMITY_GRENADE
+    cost: 5
+    points: 10
+    dependencies:
+      - STR_MOTION_SCANNER
+  - name: STR_MEDI_KIT
+    cost: 10
+    points: 20
+    needItem: true
+  - name: STR_ADVANCED_SICK_BAY #OJITO Q ESTE DEBE SER ESTRUCTURADO MEJOR
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_MEDI_KIT
+#--Medi Kit and Motion Tracker--------------------END
+#--New Ballistic Tech Tree--------------------
+  - name: STR_NEXT_GEN_BALLISTICS
+    cost: 20
+    points: 10
+  - name: STR_NEXT_GEN_BALLISTICS_HEAVY
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_NEXT_GEN_BALLISTICS
+  - name: STR_NEXT_GEN_BALLISTICS_MEDIUM
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_NEXT_GEN_BALLISTICS
+  - name: STR_NEXT_GEN_BALLISTICS_LIGHT
+    cost: 15
+    points: 10
+    dependencies:
+      - STR_NEXT_GEN_BALLISTICS
+  - name: STR_BO_STICK_GRENADE
+    cost: 10
+    points: 10
+    dependencies:
+      - STR_NEXT_GEN_BALLISTICS
+  - name: STR_ALLOY_AMMUNITION
+    cost: 15
+    points: 10
+    dependencies:
+      - STR_ALIEN_ALLOYS
+      - STR_BO_STICK_GRENADE
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+  - name: STR_TECH_ROUNDS
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_ALLOY_AMMUNITION
+      - STR_CODEX_1
+#--New Ballistic Tech Tree--------------------END
+#-- Shock Weapon Tech Tree--------------------
+  - name: STR_SHOCK_WEAPONS
+    cost: 15
+    points: 150
+    dependencies:
+      - STR_DATA_RECOVERY
+  - name: STR_SH_GRENADE
+    cost: 10
+    points: 150
+    dependencies:
+      - STR_SHOCK_WEAPONS
+  - name: STR_SH_MAIN_PISTOL
+    cost: 15
+    points: 150
+    dependencies:
+      - STR_SH_RIFLE
+  - name: STR_SH_RIFLE
+    cost: 20
+    points: 150
+    dependencies:
+      - STR_SH_HEAVY_CANNON
+  - name: STR_SH_MAIN_PISTOL_BATTERY
+    cost: 0 #ojito done
+    points: 0
+    dependencies:
+      - STR_SH_RIFLE
+  - name: STR_SH_HEAVY_CANNON
+    cost: 25
+    points: 150
+    dependencies:
+      - STR_SHOCK_WEAPONS
+  - name: STR_SH_HEAVY_CANNON_BATTERY
+    cost: 0 #ojito done
+    points: 0
+    dependencies:
+      - STR_SH_HEAVY_CANNON
+#-- Shock Weapon Tech Tree--------------------END
+#--Hybrid Ballistic Tech Tree--------------------
+  - name: STR_HYBRID_BALLISTICS_WEAPONS
+    points: 65
+    needItem: true
+  - name: STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    cost: 30
+    points: 10
+    dependencies:
+      - STR_HYBRID_BALLISTICS_WEAPONS
+      - STR_CODEX_1
+  - name: STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    cost: 40
+    points: 10
+    dependencies:
+      - STR_HYBRID_BALLISTICS_WEAPONS
+      - STR_CODEX_1
+  - name: STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    cost: 55
+    points: 10
+    dependencies:
+      - STR_HYBRID_BALLISTICS_WEAPONS
+      - STR_CODEX_1
+  - name: STR_CHEMICAL_ROUNDS
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+  - name: STR_E115_ROUNDS
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_CHEMICAL_ROUNDS
+      - STR_CODEX_2
+#--Hybrid Ballistic Tech Tree--------------------END
+#--Armor Tech Tree----------------------------
+#----Starting Armor-----------------------
+  - name: STR_TAC_INF_TECH
+    cost: 10
+    points: 10
+  - name: STR_XOPS_ARMOR_TAN
+    cost: 20
+    points: 15
+    dependencies:
+      - STR_TAC_INF_TECH
+#----Personal Armor-----------------------
+  - name: STR_ALLOY_MESH
+    points: 10
+    needItem: true
+  - name: STR_PERSONAL_ARMOR_TAN
+    cost: 25
+    points: 20
+    dependencies:
+      - STR_ALLOY_MESH
+      - STR_CODEX_1
+#----Alloy Armor-----------------------
+  - name: STR_PLASMA_REACTIVE_PLATING
+    points: 15
+    needItem: true
+  - name: STR_ALLOY_ARMOR_TAN
+    cost: 30
+    points: 20
+    dependencies:
+      - STR_PLASMA_REACTIVE_PLATING
+      - STR_CODEX_2
+#----Sky Strike Armor-----------------------
+  - name: STR_ANTI_GRAV_DEVICE
+    points: 20
+    needItem: true
+  - name: STR_SKY_ARMOR_TAN
+    cost: 25
+    points: 20
+    dependencies:
+      - STR_ANTI_GRAV_DEVICE
+      - STR_CODEX_2
+#----Power Suit Armor-----------------------
+  - name: STR_ELERIUM_POWERED_SERVOS
+    points: 20
+    needItem: true
+  # - name: STR_XOPS_POWER_ARMOR_TAN
+  #   cost: 200
+  #   points: 25
+  #   dependencies:
+  #     - STR_REACTOR_MINIATURIZATION
+  #     - STR_CODEX_4
+#----Power Suit Armor-----------------------
+  # - name: STR_FLYING_SUIT
+  #   cost: 60
+  #   points: 20
+  #   dependencies:
+  #     - STR_POWER_SUIT
+  #     - STR_ANTI_GRAV_DEVICE
+#----Nerve Suit Armor-----------------------
+  - name: STR_NERVE_INTERFACE
+    points: 20
+    needItem: true
+  - name: STR_PSI_ARMOR_TAN
+    cost: 40
+    points: 20
+    dependencies:
+      - STR_PSIONIC_WARFARE
+      - STR_NERVE_INTERFACE
+      - STR_CODEX_4
+#----Power Armor-----------------------
+  - name: STR_REACTOR_MINIATURIZATION
+    points: 20
+    needItem: true
+  - name: STR_XOPS_POWER_ARMOR_TAN
+    cost: 55
+    points: 25
+    dependencies:
+      - STR_ELERIUM_POWERED_SERVOS
+      - STR_REACTOR_MINIATURIZATION
+      - STR_CODEX_4
+#
+  - name: STR_K9_POWER_ARMOR #ojito armadura perrito nueva
+    requiresBaseFunc: [ ADV_LAB ]
+    cost: 75
+    points: 10
+    dependencies:
+      - STR_XOPS_POWER_ARMOR_TAN
+      - STR_DOGE_UPLIFTING
+    listOrder: 17577
+
+#--Armor Tech Tree--------------------END
+#--Laser Weapons Tech Tree--------------------
+  - name: STR_LASER_WEAPONIZATION
+    points: 20
+    dependencies:
+#      - STR_LASER_WEAPONS_CODEX
+      - STR_CODEX_2
+  - name: STR_LASER_CANNON
+    cost: 25
+    points: 15
+    dependencies:
+      - STR_LASER_WEAPONIZATION
+      - STR_CODEX_2
+  - name: STR_LASER_DEFENSE
+    cost: 25
+    points: 15
+    dependencies:
+      - STR_LASER_WEAPONIZATION
+      - STR_CODEX_2
+  - name: STR_HEAVY_LASER_WEAPONS
+    cost: 120
+    points: 15
+    dependencies:
+      - STR_LASER_WEAPONIZATION
+      - STR_CODEX_2
+  - name: STR_MEDIUM_LASER_WEAPONS
+    cost: 90
+    points: 15
+    dependencies:
+      - STR_LASER_WEAPONIZATION
+      - STR_CODEX_2
+  - name: STR_LIGHT_LASER_WEAPONS
+    cost: 70
+    points: 15
+    dependencies:
+      - STR_LASER_WEAPONIZATION
+      - STR_CODEX_2
+  - name: STR_CHARGED_CELLS
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_LIGHT_LASER_WEAPONS
+      - STR_MEDIUM_LASER_WEAPONS
+      - STR_HEAVY_LASER_WEAPONS
+  - name: STR_ELERIUM_LASER_BATTERY
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_LIGHT_LASER_WEAPONS
+      - STR_MEDIUM_LASER_WEAPONS
+      - STR_HEAVY_LASER_WEAPONS
+      - STR_CODEX_3
+      # - STR_CHARGED_CELLS #ojito
+#--Laser Weapons Tech Tree--------------------END
+#--Alien Alloy Tech Tree--------------------END
+  - name: STR_ALIEN_ALLOYS
+    cost: 25
+    points: 30
+    needItem: true
+  - name: STR_ZEROG_SMELTING
+    points: 20
+    needItem: true
+  - name: STR_ALLOY_FORGE
+    cost: 70
+    points: 10
+    dependencies:
+      - STR_ZEROG_SMELTING
+      - STR_CODEX_4
+      - STR_ALIEN_ALLOYS
+#--Alien Alloy Tech Tree--------------------END
+#--Elerium 115 Tech Tree--------------------
+  - name: STR_ELERIUM_115
+    cost: 10
+    points: 60
+    needItem: true
+  - name: STR_MATTER_CREATION
+    points: 50
+    needItem: true
+  - name: STR_ELERIUM_115_SYNTHESIS
+    cost: 100
+    points: 10
+    dependencies:
+    ### ojito, aqui agregare a los soberanos para el trasquilamiento de elerium
+      - STR_MATTER_CREATION
+      - STR_CODEX_COMPLETE #ojito reducir a codex 5
+      - STR_ELERIUM_115
+#  - name: STR_ELERIUM_PROCESSING_2_UNLOCK
+#    points: 50
+#    needItem: true
+#  - name: STR_ELERIUM_PROCESSING_2
+#    cost: 1
+#    points: 10
+#    dependencies:
+#      - STR_ELERIUM_PROCESSING_2_UNLOCK
+#      - STR_CODEX_3
+#  - name: STR_ELERIUM_PROCESSING_3_UNLOCK
+#    points: 50
+#    needItem: true
+#  - name: STR_ELERIUM_PROCESSING_3
+#    cost: 1
+#    points: 10
+#    dependencies:
+#      - STR_ELERIUM_PROCESSING_3_UNLOCK
+#      - STR_CODEX_5
+#--Elerium 115 Tech Tree--------------------END
+#--Codex Fragment Tech Tree--------------------
+#  - name: STR_CODEX_CELL
+#    cost: 30
+#    points: 10
+#    dependencies:
+#      - STR_CODEX_FRAGMENT
+  - name: STR_FRAGMENT_REPLICATION
+    points: 50
+    needItem: true
+  - name: STR_FRAGMENT_CREATION
+    cost: 5
+    points: 10
+    dependencies:
+      - STR_FRAGMENT_REPLICATION
+      - STR_CODEX_FRAGMENT
+      - STR_CODEX_5
+#  - name: STR_CODEX_CELL_REPLICATION_2_UNLOCK
+#    points: 50
+#    needItem: true
+#  - name: STR_CODEX_CELL_REPLICATION_2
+#    cost: 1
+#    points: 10
+#    dependencies:
+#      - STR_CODEX_CELL_REPLICATION_2_UNLOCK
+#      - STR_CODEX_2
+#  - name: STR_CODEX_CELL_REPLICATION_3_UNLOCK
+#    points: 50
+#    needItem: true
+#  - name: STR_CODEX_CELL_REPLICATION_3
+#    cost: 1
+#    points: 10
+#    dependencies:
+#      - STR_CODEX_CELL_REPLICATION_3_UNLOCK
+#      - STR_CODEX_4
+#--Tech Cell Tech Tree--------------------END
+#--Plasma Tech Tree--------------------
+  - name: STR_ADVANCED_PLASMA
+    points: 10
+    needItem: true
+    unlocks:
+      - STR_PLASMA_CANNON
+  - name: STR_HEAVY_PLASMA_WEAPONS
+    cost: 180
+    points: 10
+    dependencies:
+      - STR_ADVANCED_PLASMA
+      - STR_CODEX_4
+  - name: STR_MEDIUM_PLASMA_WEAPONS
+    cost: 180
+    points: 10
+    dependencies:
+      - STR_ADVANCED_PLASMA
+      - STR_CODEX_4
+  - name: STR_LIGHT_PLASMA_WEAPONS
+    cost: 180
+    points: 10
+    dependencies:
+      - STR_ADVANCED_PLASMA
+      - STR_CODEX_4
+  - name: STR_PLASMA_CANNON
+    cost: 100
+    points: 10
+    dependencies:
+      - STR_ADVANCED_PLASMA
+      - STR_UFO_CONSTRUCTION
+      - STR_CODEX_4
+  - name: STR_PLASMA_DEFENSE
+    cost: 70
+    points: 25
+    dependencies:
+      - STR_ADVANCED_PLASMA
+      - STR_CODEX_4
+  - name: STR_CHARGED_PLASMA_CELLS
+    cost: 100
+    points: 10
+    dependencies:
+      - STR_HEAVY_PLASMA_WEAPONS
+      - STR_MEDIUM_PLASMA_WEAPONS
+      - STR_LIGHT_PLASMA_WEAPONS
+  - name: STR_ANTIMATTER_CLIP
+    cost: 100
+    points: 10
+    dependencies:
+      - STR_CHARGED_PLASMA_CELLS
+      - STR_CODEX_5
+#--Human Plasma Weapons --------------------
+  - name: STR_HOVER_HWP_PLASMA
+    cost: 120
+    points: 25
+    dependencies:
+      - STR_HEAVY_PLASMA_WEAPONS
+      - STR_ANTI_GRAV_DEVICE
+#--Human Plasma Weapons --------------------END
+#--Plasma Tech Tree--------------------END
+  - name: STR_CYBERNETICS
+    points: 25
+    needItem: true
+  - name: STR_CYBER_SOLDIER ###ojito
+    cost: 150
+    points: 25
+    dependencies:
+      - STR_CYBERNETICS
+      - STR_CODEX_4
+#--Unlock Techs--------------------
+  - name: STR_THREAT_UNLOCK
+    requires:
+      - STR_THE_ALIEN_MIND
+    dependencies:
+      - STR_SECTOID_COMMANDER
+      - STR_SECTOID_LEADER
+      - STR_SNAKEMAN_COMMANDER
+      - STR_SNAKEMAN_LEADER
+      - STR_ETHEREAL_COMMANDER
+      - STR_ETHEREAL_LEADER
+      - STR_ETHEREAL_SOLDIER
+      - STR_FLOATER_COMMANDER
+      - STR_FLOATER_LEADER
+      - STR_ARMORED_SECTOID_COMMANDER
+      - STR_ARMORED_SECTOID_LEADER
+#      - STR_FORMIC_ALPHA
+      - STR_MUTON_COMMANDO
+      - STR_MUTON_CHIEFTAIN
+      - STR_SOVEREIGN
+      - STR_CARCHARODON_LEADER
+      - STR_CARCHARODON_COMMANDER
+  - name: STR_NAVIGATOR_UNLOCK
+    requires:
+      - STR_THE_ALIEN_MIND
+    dependencies:
+      - STR_FLOATER_NAVIGATOR
+      - STR_SNAKEMAN_NAVIGATOR
+      - STR_MUTON_NAVIGATOR
+      - STR_SECTOID_NAVIGATOR
+      - STR_ARMORED_SECTOID_NAVIGATOR
+      - STR_CARCHARODON_NAVIGATOR
+  - name: STR_LEADER_UNLOCK
+    requires:
+      - STR_ALIEN_ORIGINS
+    dependencies:
+      - STR_SECTOID_COMMANDER
+      - STR_SECTOID_LEADER
+      - STR_SNAKEMAN_COMMANDER
+      - STR_SNAKEMAN_LEADER
+      - STR_ETHEREAL_COMMANDER
+      - STR_ETHEREAL_LEADER
+      - STR_FLOATER_COMMANDER
+      - STR_FLOATER_LEADER
+      - STR_ARMORED_SECTOID_COMMANDER
+      - STR_ARMORED_SECTOID_LEADER
+      - STR_MUTON_CHIEFTAIN
+#      - STR_FORMIC_ALPHA
+      - STR_CARCHARODON_LEADER
+      - STR_CARCHARODON_COMMANDER
+  - name: STR_COMMANDER_UNLOCK
+    requires:
+      - STR_UFO_TRAJECTORIES
+    dependencies:
+      - STR_SECTOID_COMMANDER
+      - STR_SNAKEMAN_COMMANDER
+      - STR_ETHEREAL_COMMANDER
+      - STR_FLOATER_COMMANDER
+      - STR_ARMORED_SECTOID_COMMANDER
+      - STR_MUTON_CHIEFTAIN
+      - STR_CARCHARODON_COMMANDER
+  - name: STR_FINAL_UNLOCK
+    requires:
+      - STR_ALIEN_THREAT
+    dependencies:
+      - STR_ETHEREAL_COMMANDER
+      - STR_MUTON_CHIEFTAIN
+#--Unlock Techs--------------------END
+#--Alien Biology and Psychology Tech Tree--------------------
+  - name: STR_XENO_PHYSIOLOGY
+    cost: 10
+    points: 10
+    dependencies:
+      - STR_SECTOID_CORPSE
+      - STR_SNAKEMAN_CORPSE
+      - STR_MUTON_CORPSE
+      - STR_ETHEREAL_CORPSE
+      - STR_FLOATER_CORPSE
+      - STR_CHRYSSALID_CORPSE
+      - STR_SILACOID_CORPSE
+      - STR_CELATID_CORPSE
+      - STR_REAPER_CORPSE
+      - STR_MUTON_COMMANDO_CORPSE
+      - STR_MUTON_CHIEFTAIN_CORPSE
+      - STR_ABOMINATION_CORPSE
+      - STR_FORMIC_CORPSE
+      - STR_ARMORED_MUTON_CORPSE
+      # - STR_MUTON_WARLORD_CORPSE
+      # - STR_MUTON_BERSERKER_CORPSE
+      - STR_ARMORED_SECTOID_CORPSE
+      - STR_CARCHARODON_CORPSE
+  - name: STR_ALIEN_CONTAINMENT
+    cost: 25
+    points: 10
+    dependencies:
+      - STR_XENO_PHYSIOLOGY
+      - STR_ALIEN_HABITAT
+  - name: STR_THE_ALIEN_MIND
+    cost: 110
+    points: 10
+    dependencies:
+      - STR_SECTOID_SOLDIER
+      - STR_SNAKEMAN_SOLDIER
+      - STR_ETHEREAL_SOLDIER
+      - STR_MUTON_SOLDIER
+      - STR_FLOATER_SOLDIER
+      - STR_ARMORED_SECTOID_SOLDIER
+      - STR_MUTON_COMMANDO
+      - STR_CARCHARODON_SOLDIER
+  - name: STR_ALIEN_THREAT
+    cost: 120
+    points: 10
+    dependencies:
+      - STR_THREAT_UNLOCK
+      - STR_THE_ALIEN_MIND
+#--Alien Biology and Psychology Tech Tree--------------------END
+#--Victory Tech Tree--------------------
+  - name: STR_ALIEN_ORIGINS
+    cost: 80
+    points: 60
+    dependencies:
+      - STR_NAVIGATOR_UNLOCK
+      - STR_THE_ALIEN_MIND
+  - name: STR_UFO_TRAJECTORIES
+    cost: 120
+    points: 10
+    dependencies:
+      - STR_ALIEN_ORIGINS
+      - STR_LEADER_UNLOCK
+  - name: STR_MARTIAN_DEFENSES
+    cost: 160
+    points: 10
+    dependencies:
+      - STR_COMMANDER_UNLOCK
+      - STR_UFO_TRAJECTORIES
+      - STR_CODEX_1
+  - name: STR_MASTERMIND
+    cost: 200
+    points: 10
+    dependencies:
+      - STR_FINAL_UNLOCK
+      - STR_ALIEN_THREAT
+  - name: STR_OVERLORD
+    cost: 500
+    points: 10
+    dependencies:
+      - STR_MARTIAN_DEFENSES
+      - STR_CODEX_5
+  - name: STR_ENDGAME
+    cost: 600
+    points: 10
+    unlockFinalMission: true
+    dependencies:
+      - STR_MASTERMIND
+      - STR_OVERLORD
+  # - name: STR_CYDONIA_OR_BUST #delete later?
+  #   cost: 0
+  #   points: 60
+  #   dependencies:
+  #     - STR_ENDGAME
+#--Victory Tech Tree--------------------END
+#--Hyper Wave Tech Tree--------------------
+  - name: STR_CODEX_HYPERWAVE_THEORY
+    points: 10
+    needItem: true
+  - name: STR_ALIEN_CRYPTOGRAPHY
+    cost: 45
+    points: 10
+    dependencies:
+      - STR_FLOATER_NAVIGATOR
+      - STR_SNAKEMAN_NAVIGATOR
+      - STR_MUTON_NAVIGATOR
+      - STR_SECTOID_NAVIGATOR
+      - STR_ARMORED_SECTOID_NAVIGATOR
+      - STR_CARCHARODON_NAVIGATOR
+  - name: STR_HYPER_WAVE_DECODER
+    cost: 60
+    points: 25
+    dependencies:
+      - STR_CODEX_2
+      - STR_CODEX_HYPERWAVE_THEORY
+      - STR_ALIEN_CRYPTOGRAPHY
+  - name: STR_DIMENSIONAL_FATIGUE
+    points: 10
+    needItem: true
+  - name: STR_HYPER_WAVE_GLOBAL_NETWORK
+    cost: 180
+    points: 25
+    dependencies:
+      - STR_DIMENSIONAL_FATIGUE
+      - STR_HYPER_WAVE_DECODER
+      - STR_CODEX_4
+#--Hyper Wave Tech Tree--------------------END
+#--Psionics Tech Tree--------------------
+  - name: STR_MIND_PROBE
+    cost: 15
+    points: 25
+    needItem: true
+  - name: STR_ALIEN_PSIONICS
+    cost: 25
+    points: 10
+    dependencies:
+      - STR_MIND_PROBE
+  - name: STR_PSI_LAB
+    cost: 45
+    points: 25
+    dependencies:
+      - STR_ALIEN_PSIONICS
+  - name: STR_PSIONIC_UNLOCK
+    unlocks:
+      - STR_PSIONIC_WARFARE
+    dependencies:
+      - STR_ETHEREAL_COMMANDER
+      - STR_ETHEREAL_LEADER
+      - STR_ETHEREAL_SOLDIER
+      - STR_SECTOID_LEADER
+      - STR_SECTOID_COMMANDER
+      - STR_ARMORED_SECTOID_LEADER
+      - STR_ARMORED_SECTOID_COMMANDER
+      - STR_ABOMINATION
+  - name: STR_PSIONIC_WARFARE
+    cost: 80
+    points: 10
+    dependencies:
+      - STR_PSIONIC_UNLOCK
+  - name: STR_PSIONIC_AMPLIFICATION
+    points: 20
+    needItem: true
+  - name: STR_EX_PSI_AMP_SMALL
+    cost: 50
+    points: 20
+    dependencies:
+      - STR_PSIONIC_WARFARE
+      - STR_PSIONIC_AMPLIFICATION
+      - STR_CODEX_3
+  - name: STR_PSIONIC_DOMINATION
+    points: 20
+    needItem: true
+  - name: STR_EX_PSI_AMP_LARGE
+    cost: 50
+    points: 20
+    dependencies:
+      - STR_PSIONIC_WARFARE
+      - STR_PSIONIC_DOMINATION
+      - STR_CODEX_5
+  - name: STR_MIND_SHIELD
+    cost: 40
+    points: 50
+    needItem: true
+#--Terran Craft Tech Tree-------------------- #
+  - name: STR_NEW_CRAFT_WEAPON
+    cost: 4
+    points: 10
+  - name: STR_PILUM_MISSILES
+    cost: 4
+    points: 14
+    dependencies:
+      - STR_UPDATED_INTERCEPTOR
+      - STR_CLUSTER_MISSILE
+  - name: STR_CLUSTER_MISSILE
+    cost: 5
+    points: 10
+    dependencies:
+      - STR_NEW_CRAFT_WEAPON
+  - name: STR_GLOBAL_DETECTION_COVERAGE
+    cost: 15
+    points: 15
+    dependencies:
+      - STR_NEW_FIGHTER_PROGRAM
+
+###### aviones de combate
+
+
+  - name: STR_UPDATED_INTERCEPTOR # Bishop is f35 upgraded
+    cost: 40
+    points: 15
+    dependencies:
+      - STR_NEW_FIGHTER_PROGRAM
+  - name: STR_NEW_FIGHTER_PROGRAM
+    cost: 15
+    points: 10
+    dependencies:
+      - STR_ALIEN_ALLOYS
+
+
+  - name: STR_XCF2 #xf2 Rider
+    cost: 40
+    points: 25
+    dependencies:
+      - STR_ALLOY_AERODYNAMICS
+      - STR_CODEX_1
+  - name: STR_ALLOY_AERODYNAMICS
+    points: 25
+    needItem: true
+
+  - name: STR_XCF3 #xf3 Rook
+    cost: 70
+    points: 25
+    dependencies:
+      - STR_FINAL_TERRAN_FIGHTER
+      - STR_CODEX_3
+  - name: STR_FINAL_TERRAN_FIGHTER
+    points: 25
+    needItem: true
+
+  - name: STR_XCF4 #xf4 Empress
+    cost: 320
+    points: 25
+    dependencies:
+      - STR_CODEX_4
+      - STR_UFO_ENGINEERING
+  - name: STR_UFO_ENGINEERING
+    points: 25
+    needItem: true
+
+
+#####transportes
+  - name: STR_FIREFLY
+    cost: 20
+    points: 15
+    dependencies:
+      - STR_NEW_FIGHTER_PROGRAM
+  - name: STR_SCARAB
+    cost: 40
+    points: 30
+    dependencies:
+      - STR_NEXT_GEN_TRANSPORT
+      - STR_CODEX_1
+  - name: STR_NEXT_GEN_TRANSPORT
+    points: 25
+    needItem: true
+  - name: STR_GOLIATHUS
+    cost: 150
+    points: 25
+    dependencies:
+      - STR_HYBRID_CRAFT
+      - STR_CODEX_3
+  - name: STR_HYBRID_CRAFT
+    points: 25
+    needItem: true
+  - name: STR_UFO_MASTERY
+    points: 25
+    needItem: true
+  - name: STR_HERCULES
+    cost: 220
+    points: 25
+    dependencies:
+      - STR_UFO_MASTERY
+      - STR_CODEX_5
+###sobrantes
+  - name: STR_GRAV_SHIELD #ojito sobrante
+    cost: 0
+    points: 25
+    needItem: true
+  # - name: STR_AVENGER #OJITO SOBRANTE
+  #   cost: 450
+  #   points: 25
+  #   dependencies:
+  #     - STR_SOLVE_ANOMALOUS_EQUATION
+
+
+
+
+
+
+###########
+
+
+
+
+#--Terran Craft Tech Tree--------------------END
+#--UFO Tech Tree--------------------
+  - name: STR_UFO_POWER_SOURCE
+    cost: 50
+    points: 30
+    needItem: true
+  - name: STR_UFO_NAVIGATION
+    cost: 25
+    points: 30
+    needItem: true
+  - name: STR_UFO_CONSTRUCTION
+    cost: 25
+    points: 25
+    needItem: true
+  - name: STR_ALIEN_FOOD
+    cost: 8
+    points: 30
+    needItem: true
+  - name: STR_ALIEN_REPRODUCTION
+    cost: 12
+    points: 30
+    needItem: true
+  - name: STR_EXAMINATION_ROOM
+    cost: 8
+    points: 30
+    needItem: true
+  - name: STR_ALIEN_HABITAT
+    cost: 25
+    points: 30
+    needItem: true
+  - name: STR_ALIEN_ENTERTAINMENT
+    cost: 8
+    points: 30
+    needItem: true
+#--UFO Tech Tree--------------------END
+
+#--Alien Plasma Weapons --------------------END
+  - name: STR_AW_MAIN_PISTOL
+    cost: 15
+    points: 10
+    needItem: true
+  - name: STR_AW_SMG
+    cost: 15
+    points: 10
+    needItem: true
+  - name: STR_AW_RIFLE
+    cost: 15
+    points: 10
+    needItem: true
+  - name: STR_AW_RIFLE_CLIP2
+    cost: 5
+    points: 6
+    needItem: true
+    dependencies:
+      - STR_ELERIUM_115
+  - name: STR_AW_RIFLE_CLIP3
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_AW_SHOTGUN
+    cost: 15
+    points: 10
+    needItem: true
+  - name: STR_AW_SHOTGUN_CLIP1
+    cost: 5
+    points: 6
+    needItem: true
+    dependencies:
+      - STR_ELERIUM_115
+  - name: STR_AW_SNIPER
+    cost: 15
+    points: 10
+    needItem: true
+  - name: STR_AW_SNIPER_CLIP1
+    cost: 5
+    points: 6
+    needItem: true
+    dependencies:
+      - STR_ELERIUM_115
+  - name: STR_AW_SNIPER_CLIP2
+    cost: 5
+    points: 6
+    needItem: true
+    dependencies:
+      - STR_ELERIUM_115
+  - name: STR_AW_LMG
+    cost: 15
+    points: 10
+    needItem: true
+  - name: STR_AW_LMG_CLIP2
+    cost: 5
+    points: 7
+    needItem: true
+    dependencies:
+      - STR_ELERIUM_115
+  - name: STR_AW_LMG_CLIP3
+    cost: 5
+    points: 7
+    needItem: true
+  - name: STR_AW_HEAVY_CANNON
+    cost: 20
+    points: 10
+    needItem: true
+  - name: STR_AW_HEAVY_CANNON_CLIP3
+    cost: 5
+    points: 7
+    needItem: true
+#eliteweapons ojito
+  - name: STR_AW_ELITE_PISTOL
+    cost: 20
+    points: 10
+    needItem: true
+  - name: STR_AW_ELITE_PISTOL_CLIP
+    cost: 5
+    points: 7
+    needItem: true
+
+  - name: STR_AW_ELITE_SMG
+    cost: 20
+    points: 10
+    needItem: true
+  - name: STR_AW_ELITE_SMG_CLIP
+    cost: 5
+    points: 7
+    needItem: true
+
+  - name: STR_AW_ELITE_SHOTGUN
+    cost: 20
+    points: 10
+    needItem: true
+  - name: STR_AW_ELITE_SHOTGUN_CLIP
+    cost: 5
+    points: 7
+    needItem: true
+
+  - name: STR_AW_ELITE_RIFLE
+    cost: 20
+    points: 10
+    needItem: true
+  - name: STR_AW_ELITE_RIFLE_CLIP
+    cost: 5
+    points: 7
+    needItem: true
+
+
+
+#--Alien Plasma Weapons --------------------END
+#--Alien Other Weapons --------------------
+  - name: STR_ALIEN_GRENADE
+    cost: 10
+    points: 20
+    needItem: true
+  - name: STR_AW_PROXY_GRENADE
+    cost: 10
+    points: 20
+    needItem: true
+  - name: STR_AW_DEMOLITION_EXPLOSIVE
+    cost: 10
+    points: 25
+    needItem: true
+  - name: STR_AW_ALLOY_BLADE
+    cost: 10
+    points: 15
+    needItem: true
+  - name: STR_AW_PLASMA_BLADE
+    cost: 20
+    points: 25
+    needItem: true
+  - name: STR_BLASTER_BOMB
+    cost: 20
+    points: 10
+    needItem: true
+  - name: STR_BLASTER_BOMB2
+    cost: 20
+    points: 10
+    needItem: true
+  - name: STR_BLASTER_BOMB3
+    cost: 20
+    points: 10
+    needItem: true
+  - name: STR_BLASTER_LAUNCHER
+    cost: 80
+    points: 10
+    needItem: true
+  - name: STR_SMALL_LAUNCHER
+    cost: 20
+    points: 30
+    needItem: true
+  - name: STR_STUN_BOMB
+    cost: 5
+    points: 10
+    needItem: true
+  - name: STR_STUN_BOMB2
+    cost: 5
+    points: 10
+    needItem: true
+  - name: STR_STUN_BOMB3
+    cost: 5
+    points: 10
+    needItem: true
+#--Alien Other Weapons  --------------------END
+#--Human Other Weapons  --------------------
+  - name: STR_ELERIUM_EXPLOSIVES
+    points: 10
+    needItem: true
+  - name: STR_ELERIUM_GRENADE
+    cost: 20
+    points: 10
+    dependencies:
+      - STR_ALIEN_GRENADE
+      - STR_ELERIUM_EXPLOSIVES
+      - STR_CODEX_3
+  - name: STR_BO_ELERIUM_PROXY_MINE
+    cost: 30
+    points: 10
+    dependencies:
+      - STR_AW_PROXY_GRENADE
+      - STR_ELERIUM_EXPLOSIVES
+      - STR_CODEX_3
+  - name: STR_BO_ANTIMATTER_EXPLOSIVE
+    cost: 30
+    points: 10
+    dependencies:
+      - STR_ELERIUM_EXPLOSIVES
+      - STR_AW_DEMOLITION_EXPLOSIVE
+      - STR_CODEX_3
+######ojito este son los bangalores, prioridad, revisar todos los bangalores e implementarlos mejor al techtree
+  - name: STR_BO_BREACHING_BANGALORE
+    cost: 20
+    points: 5
+    listOrder: 168
+    dependencies:
+      - STR_ALIEN_ALLOYS
+  - name: STR_BO_BREACHING_ELERIUM
+    cost: 35
+    points: 5
+    listOrder: 168
+    dependencies:
+      - STR_ALIEN_ALLOYS
+
+
+  - name: STR_BO_BREACHING_ANTIMATTER
+    cost: 55
+    points: 5
+    listOrder: 168
+    dependencies:
+      - STR_ALIEN_ALLOYS
+#####
+  - name: STR_ME_ALLOY_KNIFE #ojito mejorar totalmente
+    cost: 25
+    points: 10
+    dependencies:
+      - STR_AW_ALLOY_BLADE
+  - name: STR_ME_PLASMA_SWORD #ojito mejorar
+    cost: 40
+    points: 10
+    dependencies:
+      - STR_LIGHT_PLASMA_WEAPONS
+  - name: STR_MICRO_FUSION
+    points: 30
+    needItem: true
+  - name: STR_PM_ANTIMATTER_LAUNCHER
+    cost: 80
+    points: 30
+    dependencies:
+      - STR_BLASTER_LAUNCHER
+      - STR_BLASTER_BOMB
+      - STR_MICRO_FUSION
+      - STR_CODEX_5
+  - name: STR_FUSION_DEFENSE
+    cost: 35
+    points: 25
+    dependencies:
+      - STR_MICRO_FUSION
+      - STR_CODEX_5
+  - name: STR_FUSION_MISSILE
+    cost: 25
+    points: 25
+    dependencies:
+      - STR_MICRO_FUSION
+      - STR_CODEX_5
+  - name: STR_HOVER_HWP_FUSION
+    cost: 150
+    points: 25
+    dependencies:
+      - STR_PM_ANTIMATTER_LAUNCHER
+      - STR_ANTI_GRAV_DEVICE
+#--Human Other Weapons  --------------------END
+#--Alien Gear --------------------
+  - name: STR_EX_PORTABLE_HYPERWAVE
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_HOLO_PROJECTOR
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_SYRINGE_SAMPLE
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_PORTABLE_HYPERSENSORY
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_ALIEN_ELERIUM_LAMP
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_PORTABLE_COMPUTER
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_BIO_SAMPLE
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_EMBRYO_SAMPLE
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_SAMPLE_COLLECTOR
+    cost: 5
+    points: 6
+    needItem: true
+  - name: STR_EX_ORGAN_SAMPLE
+    cost: 5
+    points: 6
+    needItem: true
+#--Alien Gear --------------------END
+#--Component Production --------------------
+#--Component Production  --------------------END
+#--Hyper Velocity Tech Tree --------------------
+  - name: STR_HYPERVELOCITY_PROJECTILES
+    needItem: true
+    points: 20
+  - name: STR_HEAVY_HYPERVELOCITY_WEAPONS
+    cost: 35
+    points: 20
+    dependencies:
+      - STR_HYPERVELOCITY_PROJECTILES
+      - STR_CODEX_3
+  - name: STR_MEDIUM_HYPERVELOCITY_WEAPONS
+    cost: 25
+    points: 20
+    dependencies:
+      - STR_HYPERVELOCITY_PROJECTILES
+      - STR_CODEX_3
+  - name: STR_LIGHT_HYPERVELOCITY_WEAPONS
+    cost: 20
+    points: 20
+    dependencies:
+      - STR_HYPERVELOCITY_PROJECTILES
+      - STR_CODEX_3
+  - name: STR_HYPERVELOCITY_SLUGS
+    cost: 100
+    points: 30
+    dependencies:
+      - STR_LIGHT_HYPERVELOCITY_WEAPONS
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+  - name: STR_HYPERVELOCITY_CELLS
+    cost: 120
+    points: 30
+    dependencies:
+      - STR_HYPERVELOCITY_SLUGS
+      - STR_CODEX_4
+#--Hyper Velocity Tech Tree --------------------END
+#--Alien Research --------------------
+#--Races --------------------
+  - name: STR_SECTOID
+    points: 50
+    cost: 15
+    needItem: true
+  - name: STR_ARMORED_SECTOID
+    cost: 20
+    points: 50
+    needItem: true
+  - name: STR_FLOATER
+    points: 15
+    cost: 50
+    needItem: true
+  - name: STR_SNAKEMAN
+    points: 15
+    cost: 50
+    needItem: true
+  - name: STR_MUTON #ojito faltarian los mutones mas avanzados?
+    points: 25
+    cost: 50
+    needItem: true
+  - name: STR_ETHEREAL
+    points: 50
+    cost: 50
+    needItem: true
+  - name: STR_CYBERDISC
+    points: 25
+    cost: 50
+    needItem: true
+  - name: STR_REAPER
+    points: 10
+    cost: 50
+    needItem: true
+  - name: STR_CHRYSSALID
+    points: 20
+    cost: 50
+    needItem: true
+  - name: STR_SILACOID
+    points: 10
+    cost: 50
+    needItem: true
+  - name: STR_CELATID
+    points: 10
+    cost: 50
+    needItem: true
+  - name: STR_SECTOPOD
+    points: 50
+    cost: 50
+    needItem: true
+  - name: STR_CARCHARODON
+    cost: 15
+    points: 50
+    needItem: true
+  - name: STR_ANCIENT_SPAWN
+    cost: 50
+    points: 50
+    needItem: true
+#--Corpses --------------------
+  - name: STR_ARMORED_SECTOID_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_ARMORED_SECTOID_AUTOPSY
+    needItem: true
+  - name: STR_MUTON_COMMANDO_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_MUTON_COMMANDO_AUTOPSY
+    needItem: true
+  - name: STR_MUTON_CHIEFTAIN_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_MUTON_CHIEFTAIN_AUTOPSY
+    needItem: true
+  - name: STR_ABOMINATION_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_ABOMINATION_AUTOPSY
+    needItem: true
+  - name: STR_SOVEREIGN_CORPSE
+    cost: 10
+    points: 50
+    lookup: STR_SOVEREIGN_AUTOPSY
+    needItem: true
+  - name: STR_ENERGYALIEN_CORPSE
+    cost: 10
+    points: 50
+    lookup: STR_ENERGYALIEN_AUTOPSY
+    needItem: true
+  - name: STR_CELATID_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_CELATID_AUTOPSY
+    needItem: true
+  - name: STR_ETHEREAL_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_ETHEREAL_AUTOPSY
+    needItem: true
+  - name: STR_SILACOID_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_SILACOID_AUTOPSY
+    needItem: true
+  - name: STR_REAPER_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_REAPER_AUTOPSY
+    needItem: true
+  - name: STR_SNAKEMAN_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_SNAKEMAN_AUTOPSY
+    needItem: true
+  - name: STR_SECTOID_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_SECTOID_AUTOPSY
+    needItem: true
+  - name: STR_SECTOPOD_CORPSE
+    cost: 20
+    points: 50
+    lookup: STR_SECTOPOD_AUTOPSY
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    needItem: true
+  - name: STR_MUTON_CORPSE
+    cost: 15
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_MUTON_AUTOPSY
+    needItem: true
+  - name: STR_ARMORED_MUTON_CORPSE
+    cost: 15
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_MUTON_AUTOPSY
+    needItem: true
+  - name: STR_FLOATER_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_FLOATER_AUTOPSY
+    needItem: true
+  - name: STR_FORMIC_CORPSE # ojito posiblemente ya cambie el precio, confirmar con los otros igual
+    cost: 4
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_FORMIC_AUTOPSY
+    needItem: true
+  - name: STR_CYBERDISC_CORPSE
+    cost: 20
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_CYBERDISC_AUTOPSY
+    needItem: true
+  - name: STR_CHRYSSALID_CORPSE
+    cost: 15
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_CHRYSSALID_AUTOPSY
+    needItem: true
+  - name: STR_CARCHARODON_CORPSE
+    cost: 10
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_CARCHARODON_AUTOPSY
+    needItem: true
+  - name: STR_ANCIENT_SPAWN_CORPSE
+    cost: 30
+    points: 50
+    unlocks:
+      - STR_XENO_PHYSIOLOGY
+    lookup: STR_ANCIENT_SPAWN_AUTOPSY
+    needItem: true
+#########3 autopsies????
+  - name: STR_ENERGYALIEN_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_ARMORED_SECTOID_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_MUTON_CHIEFTAIN_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_MUTON_COMMANDO_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_ABOMINATION_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_SOVEREIGN_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_SECTOID_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_SNAKEMAN_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_FLOATER_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_MUTON_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_ETHEREAL_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_CYBERDISC_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_CHRYSSALID_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_REAPER_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_CELATID_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_SILACOID_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_SECTOPOD_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_FORMIC_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_CARCHARODON_AUTOPSY
+    points: 50
+    needItem: true
+  - name: STR_ANCIENT_SPAWN_AUTOPSY
+    points: 50
+    needItem: true
+#--Live Alien Terrorists --------------------#
+  - name: STR_ABOMINATION
+    cost: 25
+    points: 50
+    lookup: STR_ABOMINATION
+    needItem: true
+    destroyItem: true
+  - name: STR_ENERGYALIEN
+    cost: 25
+    points: 50
+    lookup: STR_ENERGYALIEN
+    needItem: true
+    destroyItem: true
+  - name: STR_CYBERDISC_TERRORIST
+    cost: 30
+    points: 50
+    lookup: STR_CYBERDISC
+    needItem: true
+    destroyItem: true
+  - name: STR_REAPER_TERRORIST
+    cost: 20
+    points: 50
+    lookup: STR_REAPER
+    needItem: true
+    destroyItem: true
+  - name: STR_CHRYSSALID_TERRORIST
+    cost: 30
+    points: 50
+    lookup: STR_CHRYSSALID
+    needItem: true
+    destroyItem: true
+  - name: STR_SILACOID_TERRORIST
+    cost: 15
+    points: 50
+    lookup: STR_SILACOID
+    needItem: true
+    destroyItem: true
+  - name: STR_CELATID_TERRORIST
+    cost: 15
+    points: 50
+    lookup: STR_CELATID
+    needItem: true
+    destroyItem: true
+  - name: STR_SECTOPOD_TERRORIST
+    cost: 40
+    points: 50
+    lookup: STR_SECTOPOD
+    needItem: true
+    destroyItem: true
+  - name: STR_ARMORED_MUTON #ojito quizas mover a otro sitio ojito mover a otro lado
+    cost: 25
+    points: 50
+    lookup: STR_ARMORED_MUTON
+    needItem: true
+    destroyItem: true
+  - name: STR_MUTON_BERSERKER
+    cost: 15
+    points: 50
+    lookup: STR_MUTON_BERSERKER
+    needItem: true
+    destroyItem: true
+  - name: STR_MUTON_WARLORD #ojito quizas mover a otro sitio, acomodar en el techtree relacionado a los mutones y el desbloqueo final, falta el muton chieftaim?
+    cost: 30
+    points: 50
+    lookup: STR_MUTON_WARLORD
+    needItem: true
+    destroyItem: true
+  - name: STR_ANCIENT_SPAWN_TERRORIST
+    cost: 50
+    points: 50
+    lookup: STR_ANCIENT_SPAWN
+    needItem: true
+    destroyItem: true
+#--Live Alien Soldiers --------------------
+  - name: STR_SECTOID_SOLDIER
+    cost: 20
+    points: 50
+    lookup: STR_SECTOID
+    unlocks:
+      - STR_THE_ALIEN_MIND
+    needItem: true
+    destroyItem: true
+  - name: STR_SOVEREIGN
+    cost: 40
+    points: 50
+    lookup: STR_SOVEREIGN
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_THREAT_UNLOCK
+  - name: STR_ARMORED_SECTOID_SOLDIER
+    cost: 20
+    points: 50
+    lookup: STR_ARMORED_SECTOID
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_THE_ALIEN_MIND
+  - name: STR_MUTON_COMMANDO
+    cost: 30
+    points: 50
+    lookup: STR_MUTON_COMMANDO
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_THREAT_UNLOCK
+      - STR_THE_ALIEN_MIND
+  - name: STR_FLOATER_SOLDIER
+    cost: 30
+    points: 50
+    lookup: STR_FLOATER
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_THE_ALIEN_MIND
+  - name: STR_SNAKEMAN_SOLDIER
+    cost: 25
+    points: 50
+    lookup: STR_SNAKEMAN
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_THE_ALIEN_MIND
+  - name: STR_MUTON_SOLDIER
+    cost: 30
+    points: 50
+    lookup: STR_MUTON
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_THE_ALIEN_MIND
+  - name: STR_ETHEREAL_SOLDIER
+    cost: 100
+    points: 50
+    lookup: STR_ETHEREAL
+    needItem: true
+    destroyItem: true
+    unlocks:
+      - STR_THREAT_UNLOCK
+      - STR_PSIONIC_UNLOCK
+      - STR_THE_ALIEN_MIND
+  - name: STR_FORMIC
+    cost: 20
+    points: 50
+    lookup: STR_FORMIC
+    needItem: true
+    destroyItem: true
+  - name: STR_CARCHARODON_SOLDIER
+    cost: 15
+    points: 50
+    lookup: STR_CARCHARODON
+    needItem: true
+    destroyItem: true
+#--Live Alien Navigators --------------------
+  - name: STR_SECTOID_NAVIGATOR
+    cost: 20
+    points: 50
+    lookup: STR_SECTOID
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_NAVIGATOR_UNLOCK
+      - STR_ALIEN_CRYPTOGRAPHY
+    getOneFree:
+      - STR_ALIEN_RESEARCH
+      - STR_ALIEN_HARVEST
+      - STR_ALIEN_ABDUCTION
+      - STR_ALIEN_INFILTRATION
+      - STR_ALIEN_BASE
+      - STR_ALIEN_TERROR
+      - STR_ALIEN_RETALIATION
+      - STR_ALIEN_SUPPLY
+      #- STR_CODEX_RECOVERY #ojito
+  - name: STR_ARMORED_SECTOID_NAVIGATOR
+    cost: 25
+    points: 50
+    lookup: STR_ARMORED_SECTOID
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_NAVIGATOR_UNLOCK
+      - STR_ALIEN_CRYPTOGRAPHY
+    getOneFree:
+      - STR_ALIEN_RESEARCH
+      - STR_ALIEN_HARVEST
+      - STR_ALIEN_ABDUCTION
+      - STR_ALIEN_INFILTRATION
+      - STR_ALIEN_BASE
+      - STR_ALIEN_TERROR
+      - STR_ALIEN_RETALIATION
+      - STR_ALIEN_SUPPLY
+      #- STR_CODEX_RECOVERY
+  - name: STR_FLOATER_NAVIGATOR
+    cost: 20
+    points: 50
+    lookup: STR_FLOATER
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_NAVIGATOR_UNLOCK
+      - STR_ALIEN_CRYPTOGRAPHY
+    getOneFree:
+      - STR_ALIEN_RESEARCH
+      - STR_ALIEN_HARVEST
+      - STR_ALIEN_ABDUCTION
+      - STR_ALIEN_INFILTRATION
+      - STR_ALIEN_BASE
+      - STR_ALIEN_TERROR
+      - STR_ALIEN_RETALIATION
+      - STR_ALIEN_SUPPLY
+      #- STR_CODEX_RECOVERY
+  - name: STR_SNAKEMAN_NAVIGATOR
+    cost: 20
+    points: 50
+    lookup: STR_SNAKEMAN
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_NAVIGATOR_UNLOCK
+      - STR_ALIEN_CRYPTOGRAPHY
+    getOneFree:
+      - STR_ALIEN_RESEARCH
+      - STR_ALIEN_HARVEST
+      - STR_ALIEN_ABDUCTION
+      - STR_ALIEN_INFILTRATION
+      - STR_ALIEN_BASE
+      - STR_ALIEN_TERROR
+      - STR_ALIEN_RETALIATION
+      - STR_ALIEN_SUPPLY
+      #- STR_CODEX_RECOVERY
+  - name: STR_MUTON_NAVIGATOR
+    cost: 20
+    points: 50
+    lookup: STR_MUTON
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_NAVIGATOR_UNLOCK
+      - STR_ALIEN_CRYPTOGRAPHY
+    getOneFree:
+      - STR_ALIEN_RESEARCH
+      - STR_ALIEN_HARVEST
+      - STR_ALIEN_ABDUCTION
+      - STR_ALIEN_INFILTRATION
+      - STR_ALIEN_BASE
+      - STR_ALIEN_TERROR
+      - STR_ALIEN_RETALIATION
+      - STR_ALIEN_SUPPLY
+      #- STR_CODEX_RECOVERY
+  - name: STR_CARCHARODON_NAVIGATOR
+    cost: 20
+    points: 50
+    lookup: STR_CARCHARODON
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_NAVIGATOR_UNLOCK
+      - STR_ALIEN_CRYPTOGRAPHY
+    getOneFree:
+      - STR_ALIEN_RESEARCH
+      - STR_ALIEN_HARVEST
+      - STR_ALIEN_ABDUCTION
+      - STR_ALIEN_INFILTRATION
+      - STR_ALIEN_BASE
+      - STR_ALIEN_TERROR
+      - STR_ALIEN_RETALIATION
+      - STR_ALIEN_SUPPLY
+      #- STR_CODEX_RECOVERY
+#--Live Alien Medics --------------------
+  - name: STR_SECTOID_MEDIC
+    cost: 25
+    points: 50
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    lookup: STR_SECTOID
+    getOneFree:
+#      - STR_SECTOID
+#      - STR_SECTOID_CORPSE
+      - STR_ARMORED_SECTOID
+      - STR_ARMORED_SECTOID_CORPSE
+      - STR_FLOATER
+      - STR_FLOATER_CORPSE
+      - STR_SNAKEMAN
+      - STR_SNAKEMAN_CORPSE
+      - STR_FORMIC
+      - STR_FORMIC_CORPSE
+      - STR_CARCHARODON
+      - STR_CARCHARODON_CORPSE
+      - STR_MUTON
+      - STR_MUTON_CORPSE
+#      - STR_MUTON_COMMANDO
+#      - STR_MUTON_GUARD
+      - STR_MUTON_COMMANDO_CORPSE # ojito renombrar
+#      - STR_MUTON_CHIEFTAIN
+#      - STR_MUTON_CHIEFTAIN_CORPSE # ojito renombrar
+#      - STR_SOVEREIGN
+#      - STR_SOVEREIGN_CORPSE
+#      - STR_ENERGYALIEN
+#      - STR_ETHEREAL
+#      - STR_ETHEREAL_CORPSE
+      - STR_REAPER
+      - STR_REAPER_CORPSE
+      - STR_CHRYSSALID
+      - STR_CHRYSSALID_CORPSE
+      - STR_CELATID
+      - STR_CELATID_CORPSE
+      - STR_SILACOID
+      - STR_SILACOID_CORPSE
+      - STR_ABOMINATION
+      - STR_ABOMINATION_CORPSE
+      - STR_ANCIENT_SPAWN
+      - STR_ANCIENT_SPAWN_CORPSE
+      - STR_CYBERDISC
+      - STR_CYBERDISC_CORPSE
+      - STR_SECTOPOD
+      - STR_SECTOPOD_CORPSE
+  - name: STR_ARMORED_SECTOID_MEDIC
+    cost: 25
+    points: 50
+    lookup: STR_ARMORED_SECTOID
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    getOneFree:
+#      - STR_SECTOID
+#      - STR_SECTOID_CORPSE
+#      - STR_ARMORED_SECTOID
+#      - STR_ARMORED_SECTOID_CORPSE
+      - STR_FLOATER
+      - STR_FLOATER_CORPSE
+      - STR_SNAKEMAN
+      - STR_SNAKEMAN_CORPSE
+      - STR_FORMIC
+      - STR_FORMIC_CORPSE
+      - STR_CARCHARODON
+      - STR_CARCHARODON_CORPSE
+      - STR_MUTON
+      - STR_MUTON_CORPSE
+      - STR_MUTON_COMMANDO
+      - STR_MUTON_GUARD
+      - STR_MUTON_COMMANDO_CORPSE # ojito renombrar
+#      - STR_MUTON_CHIEFTAIN
+#      - STR_MUTON_CHIEFTAIN_CORPSE # ojito renombrar
+#      - STR_SOVEREIGN
+      - STR_SOVEREIGN_CORPSE
+      - STR_ENERGYALIEN
+#      - STR_ETHEREAL
+      - STR_ETHEREAL_CORPSE
+      - STR_REAPER
+      - STR_REAPER_CORPSE
+      - STR_CHRYSSALID
+      - STR_CHRYSSALID_CORPSE
+      - STR_CELATID
+      - STR_CELATID_CORPSE
+      - STR_SILACOID
+      - STR_SILACOID_CORPSE
+      - STR_ABOMINATION
+      - STR_ABOMINATION_CORPSE
+      - STR_ANCIENT_SPAWN
+      - STR_ANCIENT_SPAWN_CORPSE
+      - STR_CYBERDISC
+      - STR_CYBERDISC_CORPSE
+      - STR_SECTOPOD
+      - STR_SECTOPOD_CORPSE
+  - name: STR_FLOATER_MEDIC
+    cost: 25
+    points: 50
+    lookup: STR_FLOATER
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    getOneFree:
+      - STR_SECTOID
+      - STR_SECTOID_CORPSE
+      - STR_ARMORED_SECTOID
+      - STR_ARMORED_SECTOID_CORPSE
+#      - STR_FLOATER
+#      - STR_FLOATER_CORPSE
+      - STR_SNAKEMAN
+      - STR_SNAKEMAN_CORPSE
+      - STR_FORMIC
+      - STR_FORMIC_CORPSE
+      - STR_CARCHARODON
+      - STR_CARCHARODON_CORPSE
+      - STR_MUTON
+      - STR_MUTON_CORPSE
+#      - STR_MUTON_COMMANDO
+#      - STR_MUTON_GUARD
+      - STR_MUTON_COMMANDO_CORPSE # ojito renombrar
+#      - STR_MUTON_CHIEFTAIN
+#      - STR_MUTON_CHIEFTAIN_CORPSE # ojito renombrar
+#      - STR_SOVEREIGN
+#      - STR_SOVEREIGN_CORPSE
+#      - STR_ENERGYALIEN
+#      - STR_ETHEREAL
+#      - STR_ETHEREAL_CORPSE
+      - STR_REAPER
+      - STR_REAPER_CORPSE
+      - STR_CHRYSSALID
+      - STR_CHRYSSALID_CORPSE
+      - STR_CELATID
+      - STR_CELATID_CORPSE
+      - STR_SILACOID
+      - STR_SILACOID_CORPSE
+      - STR_ABOMINATION
+      - STR_ABOMINATION_CORPSE
+      - STR_ANCIENT_SPAWN
+      - STR_ANCIENT_SPAWN_CORPSE
+      - STR_CYBERDISC
+      - STR_CYBERDISC_CORPSE
+      - STR_SECTOPOD
+      - STR_SECTOPOD_CORPSE
+#--Live Alien Engineers --------------------
+  - name: STR_SECTOID_ENGINEER
+    cost: 25
+    points: 50
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    lookup: STR_SECTOID
+    getOneFree:
+      - STR_MEDIUM_SCOUT
+      - STR_LARGE_SCOUT
+      - STR_HARVESTER
+      - STR_ABDUCTOR
+      - STR_TERROR_SHIP
+      - STR_BATTLESHIP
+      - STR_SUPPLY_SHIP
+      - STR_SURVEY
+      - STR_SCANNER
+      - STR_RAIDER
+      - STR_CLONER
+      - STR_LABSHIP
+      - STR_DESTROYER
+      - STR_CONSTRUCTOR
+  - name: STR_ARMORED_SECTOID_ENGINEER
+    cost: 25
+    points: 50
+    lookup: STR_ARMORED_SECTOID
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    getOneFree:
+      - STR_MEDIUM_SCOUT
+      - STR_LARGE_SCOUT
+      - STR_HARVESTER
+      - STR_ABDUCTOR
+      - STR_TERROR_SHIP
+      - STR_BATTLESHIP
+      - STR_SUPPLY_SHIP
+      - STR_SURVEY
+      - STR_SCANNER
+      - STR_RAIDER
+      - STR_CLONER
+      - STR_LABSHIP
+      - STR_DESTROYER
+      - STR_CONSTRUCTOR
+  - name: STR_FLOATER_ENGINEER
+    cost: 25
+    points: 50
+    lookup: STR_FLOATER
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    getOneFree:
+      - STR_MEDIUM_SCOUT
+      - STR_LARGE_SCOUT
+      - STR_HARVESTER
+      - STR_ABDUCTOR
+      - STR_TERROR_SHIP
+      - STR_BATTLESHIP
+      - STR_SUPPLY_SHIP
+      - STR_SURVEY
+      - STR_SCANNER
+      - STR_RAIDER
+      - STR_CLONER
+      - STR_LABSHIP
+      - STR_DESTROYER
+      - STR_CONSTRUCTOR
+  - name: STR_SNAKEMAN_ENGINEER
+    cost: 25
+    points: 50
+    lookup: STR_SNAKEMAN
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    getOneFree:
+      - STR_MEDIUM_SCOUT
+      - STR_LARGE_SCOUT
+      - STR_HARVESTER
+      - STR_ABDUCTOR
+      - STR_TERROR_SHIP
+      - STR_BATTLESHIP
+      - STR_SUPPLY_SHIP
+      - STR_SURVEY
+      - STR_SCANNER
+      - STR_RAIDER
+      - STR_CLONER
+      - STR_LABSHIP
+      - STR_DESTROYER
+      - STR_CONSTRUCTOR
+  - name: STR_MUTON_ENGINEER
+    cost: 25
+    points: 50
+    lookup: STR_MUTON
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    getOneFree:
+      - STR_MEDIUM_SCOUT
+      - STR_LARGE_SCOUT
+      - STR_HARVESTER
+      - STR_ABDUCTOR
+      - STR_TERROR_SHIP
+      - STR_BATTLESHIP
+      - STR_SUPPLY_SHIP
+      - STR_SURVEY
+      - STR_SCANNER
+      - STR_RAIDER
+      - STR_CLONER
+      - STR_LABSHIP
+      - STR_DESTROYER
+      - STR_CONSTRUCTOR
+  - name: STR_CARCHARODON_ENGINEER
+    cost: 20
+    points: 50
+    lookup: STR_CARCHARODON
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    getOneFree:
+      - STR_MEDIUM_SCOUT
+      - STR_LARGE_SCOUT
+      - STR_HARVESTER
+      - STR_ABDUCTOR
+      - STR_TERROR_SHIP
+      - STR_BATTLESHIP
+      - STR_SUPPLY_SHIP
+      - STR_SURVEY
+      - STR_SCANNER
+      - STR_RAIDER
+      - STR_CLONER
+      - STR_LABSHIP
+      - STR_DESTROYER
+      - STR_CONSTRUCTOR
+#--Live Alien Leaders --------------------
+  - name: STR_SECTOID_LEADER
+    cost: 40
+    points: 50
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_THREAT_UNLOCK
+      - STR_PSIONIC_UNLOCK
+    lookup: STR_SECTOID
+  - name: STR_ARMORED_SECTOID_LEADER
+    cost: 40
+    points: 50
+    lookup: STR_ARMORED_SECTOID
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_THREAT_UNLOCK
+      - STR_PSIONIC_UNLOCK
+    needItem: true
+    destroyItem: true
+  - name: STR_FLOATER_LEADER
+    cost: 30
+    points: 50
+    lookup: STR_FLOATER
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_THREAT_UNLOCK
+    needItem: true
+    destroyItem: true
+  - name: STR_SNAKEMAN_LEADER
+    cost: 30
+    points: 50
+    lookup: STR_SNAKEMAN
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_THREAT_UNLOCK
+  - name: STR_ETHEREAL_LEADER
+    cost: 100
+    points: 50
+    lookup: STR_ETHEREAL
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_THREAT_UNLOCK
+      - STR_PSIONIC_UNLOCK
+  - name: STR_CARCHARODON_LEADER
+    cost: 25
+    points: 50
+    lookup: STR_CARCHARODON
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_THREAT_UNLOCK
+#--Live Aliens Commanders --------------------
+  - name: STR_SECTOID_COMMANDER
+    cost: 60
+    points: 50
+    needItem: true
+    destroyItem: true
+    lookup: STR_SECTOID
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_THREAT_UNLOCK
+      - STR_COMMANDER_UNLOCK
+      - STR_PSIONIC_UNLOCK
+  - name: STR_ARMORED_SECTOID_COMMANDER
+    cost: 60
+    points: 50
+    lookup: STR_ARMORED_SECTOID
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_THREAT_UNLOCK
+      - STR_COMMANDER_UNLOCK
+      - STR_PSIONIC_UNLOCK
+  - name: STR_FLOATER_COMMANDER
+    cost: 40
+    points: 50
+    lookup: STR_FLOATER
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_COMMANDER_UNLOCK
+      - STR_THREAT_UNLOCK
+  - name: STR_SNAKEMAN_COMMANDER
+    cost: 40
+    points: 50
+    lookup: STR_SNAKEMAN
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_COMMANDER_UNLOCK
+      - STR_THREAT_UNLOCK
+  - name: STR_ETHEREAL_COMMANDER
+    cost: 120
+    points: 50
+    lookup: STR_ETHEREAL
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_FINAL_UNLOCK
+      - STR_COMMANDER_UNLOCK
+      - STR_THREAT_UNLOCK
+      - STR_PSIONIC_UNLOCK
+  - name: STR_MUTON_CHIEFTAIN
+    cost: 55
+    points: 50
+    lookup: STR_MUTON_CHIEFTAIN
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_FINAL_UNLOCK
+      - STR_COMMANDER_UNLOCK
+      - STR_THREAT_UNLOCK
+  - name: STR_MUTON_GUARD
+    cost: 40
+    points: 50
+    lookup: STR_MUTON_GUARD
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_COMMANDER_UNLOCK
+      - STR_THREAT_UNLOCK
+  - name: STR_CARCHARODON_COMMANDER
+    cost: 40
+    points: 50
+    lookup: STR_CARCHARODON
+    needItem: true
+    destroyItem: true
+    dependencies:
+      - STR_THE_ALIEN_MIND
+    unlocks:
+      - STR_LEADER_UNLOCK
+      - STR_COMMANDER_UNLOCK
+      - STR_THREAT_UNLOCK
+#--Alien Research --------------------END
+#--UFOS --------------------
+  - name: STR_SURVEY
+    points: 50
+    needItem: true
+  - name: STR_SCANNER
+    points: 50
+    needItem: true
+  - name: STR_RAIDER
+    points: 50
+    needItem: true
+  - name: STR_MEDIUM_SCOUT
+    points: 50
+    needItem: true
+  - name: STR_LARGE_SCOUT
+    points: 50
+    needItem: true
+  - name: STR_HARVESTER
+    points: 50
+    needItem: true
+  - name: STR_ABDUCTOR
+    points: 50
+    needItem: true
+  - name: STR_CLONER
+    points: 50
+    needItem: true
+  - name: STR_LABSHIP
+    points: 50
+    needItem: true
+  - name: STR_DESTROYER
+    points: 50
+    needItem: true
+  - name: STR_TERROR_SHIP
+    points: 50
+    needItem: true
+  - name: STR_BATTLESHIP
+    points: 50
+    needItem: true
+  - name: STR_SUPPLY_SHIP
+    points: 50
+    needItem: true
+  - name: STR_CONSTRUCTOR
+    points: 50
+    needItem: true
+#--UFOS --------------------END
+#--Goods Tech Tree --------------------END
+  - name: STR_GOODS_UNLOCK_6
+    cost: 0
+    points: 0
+    needItem: true
+#--Goods -------------------- #ojito luego meterle tiempo?
+  - name: STR_GOODS_2
+    cost: 10
+    points: 5
+    needItem: true
+  - name: STR_GOODS_3
+    cost: 20
+    points: 5
+    needItem: true
+  - name: STR_GOODS_4
+    cost: 30
+    points: 5
+    needItem: true
+  - name: STR_GOODS_5
+    cost: 40
+    points: 5
+    needItem: true
+  - name: STR_GOODS_6
+    cost: 50
+    points: 5
+    needItem: true
+  - name: STR_GOODS_7
+    cost: 600
+    points: 200
+    dependencies:
+      - STR_GOODS_UNLOCK_6
+      - STR_CODEX_COMPLETE # ojito reducir a codex 5
+#--Goods --------------------END
+#--Goods Tech Tree --------------------END
+#--Alien Gear Tech Tree --------------------
+  - name: STR_LIGHT_ALIEN_WEAPONS
+    cost: 10
+    points: 0
+    needItem: true
+  - name: STR_MEDIUM_ALIEN_WEAPONS
+    cost: 10
+    points: 0
+    needItem: true
+  - name: STR_HEAVY_ALIEN_WEAPONS
+    cost: 15
+    points: 0
+    needItem: true
+  - name: STR_SPECIAL_ALIEN_WEAPONS
+    cost: 15
+    points: 0
+    needItem: true
+  - name: STR_ELITE_ALIEN_WEAPONS
+    cost: 20
+    points: 0
+    needItem: true
+#--Alien Gear Tech Tree --------------------END
+#--Dead Techs ------------------------- ojito corregir esto, aumentar la cantidad de corrupted datas a 14 minimo
+  - name: STR_CORRUPTED_DATA
+    cost: 0
+    points: 0
+    needItem: true
+  - name: STR_CORRUPTED_DATA_1
+    cost: 0
+    points: 0
+    lookup: STR_CORRUPTED_DATA
+    needItem: true
+  - name: STR_CORRUPTED_DATA_2
+    cost: 0
+    points: 0
+    lookup: STR_CORRUPTED_DATA
+    needItem: true
+  - name: STR_CORRUPTED_DATA_3
+    cost: 0
+    points: 0
+    lookup: STR_CORRUPTED_DATA
+    needItem: true
+  - name: STR_CORRUPTED_DATA_4
+    cost: 0
+    points: 0
+    lookup: STR_CORRUPTED_DATA
+    needItem: true
+  - name: STR_CORRUPTED_DATA_5
+    cost: 0
+    points: 0
+    lookup: STR_CORRUPTED_DATA
+    needItem: true
+  - name: STR_DATA_RECOVERY #Shock Weapons ojito corregir esto y hacerle su propia articulo, ademas esto servira como buffers de informacion para hacer perder el tiempo
+    cost: 200
+    points: 150
+    dependencies:
+      - STR_CORRUPTED_DATA_1
+      - STR_CORRUPTED_DATA_2
+      - STR_CORRUPTED_DATA_3
+      - STR_CORRUPTED_DATA_4
+      - STR_CORRUPTED_DATA_5
+  - name: STR_DATA_FRAGMENT
+    cost: 0
+    points: 0
+    needItem: true
+  - name: STR_DATA_FRAGMENT_1
+    cost: 0
+    points: 0
+    lookup: STR_DATA_FRAGMENT
+    needItem: true
+  - name: STR_DATA_FRAGMENT_2
+    cost: 0
+    points: 0
+    lookup: STR_DATA_FRAGMENT
+    needItem: true
+  - name: STR_DATA_FRAGMENT_3
+    cost: 0
+    points: 0
+    lookup: STR_DATA_FRAGMENT
+    needItem: true
+  - name: STR_DATA_FRAGMENT_4
+    cost: 0
+    points: 0
+    lookup: STR_DATA_FRAGMENT
+    needItem: true
+  - name: STR_DATA_FRAGMENT_SORTING #ojito corregir esto
+    cost: 200
+    points: 150
+    dependencies:
+      - STR_DATA_FRAGMENT_1
+      - STR_DATA_FRAGMENT_2
+      - STR_DATA_FRAGMENT_3
+      - STR_DATA_FRAGMENT_4
+  - name: STR_ANOMOLOUS_EQUATION #ojito darle mejor uso a esto, checar to-do list
+    cost: 0
+    points: 0
+    needItem: true
+  - name: STR_ANOMOLOUS_EQUATION_1
+    cost: 0
+    points: 0
+    lookup: STR_ANOMOLOUS_EQUATION
+    needItem: true
+  - name: STR_ANOMOLOUS_EQUATION_2
+    cost: 0
+    points: 0
+    lookup: STR_ANOMOLOUS_EQUATION
+    needItem: true
+  - name: STR_ANOMOLOUS_EQUATION_3
+    cost: 0
+    points: 0
+    lookup: STR_ANOMOLOUS_EQUATION
+    needItem: true
+  - name: STR_SOLVE_ANOMALOUS_EQUATION #Hurrican Transport
+    cost: 200
+    points: 150
+    dependencies:
+      - STR_ANOMOLOUS_EQUATION_1
+      - STR_ANOMOLOUS_EQUATION_2
+      - STR_ANOMOLOUS_EQUATION_3
+#--Dead Techs -------------------------END
+#--Codex Tech Tree --------------------
+  - name: STR_CODEX_FRAGMENT
+    cost: 15
+    points: 50
+    needItem: true
+  - name: STR_CODEX_KEY
+    cost: 20
+    points: 50
+    needItem: true
+    dependencies:
+      - STR_CODEX_FRAGMENT
+  - name: STR_CODEX_1
+    cost: 30 # antes 100
+    points: 500
+    needItem: true
+#    lookup: STR_CODEX_1
+    getOneFree:
+      - STR_MOTION_SCANNER
+      - STR_ALLOY_MESH #Personal Armor
+      - STR_ALLOY_AERODYNAMICS #Interceptor + transport here?
+      - STR_NEXT_GEN_TRANSPORT
+      - STR_HYBRID_BALLISTICS_WEAPONS
+      - STR_CORRUPTED_DATA_1
+      - STR_CORRUPTED_DATA_2
+      - STR_CORRUPTED_DATA_3
+      - STR_CORRUPTED_DATA_4
+      - STR_CORRUPTED_DATA_5
+      - STR_GOODS_2
+      - STR_LIGHT_ALIEN_WEAPONS
+  - name: STR_CODEX_2
+    cost: 125 #antes 500
+    points: 500
+    needItem: true
+    getOneFree:
+      - STR_MEDI_KIT
+      - STR_LASER_WEAPONIZATION
+      - STR_PLASMA_REACTIVE_PLATING
+      - STR_ANTI_GRAV_DEVICE
+      - STR_FINAL_TERRAN_FIGHTER
+      - STR_CODEX_HYPERWAVE_THEORY
+#      - STR_DATA_FRAGMENT_1
+#      - STR_DATA_FRAGMENT_2
+#      - STR_DATA_FRAGMENT_3
+#      - STR_DATA_FRAGMENT_4
+      - STR_GOODS_3
+      - STR_MEDIUM_ALIEN_WEAPONS
+  - name: STR_CODEX_3
+    cost: 320 #antes 1000
+    points: 500
+    needItem: true
+    getOneFree:
+      - STR_HYBRID_CRAFT #Lightning
+      - STR_ELERIUM_POWERED_SERVOS #Power Suit
+      - STR_GRAV_SHIELD
+      - STR_ELERIUM_EXPLOSIVES
+      - STR_HYPERVELOCITY_PROJECTILES
+      - STR_PSIONIC_AMPLIFICATION
+      - STR_ANOMOLOUS_EQUATION_1
+      - STR_ANOMOLOUS_EQUATION_2
+      - STR_ANOMOLOUS_EQUATION_3
+      - STR_GOODS_4
+      - STR_HEAVY_ALIEN_WEAPONS
+  - name: STR_CODEX_4
+    cost: 800 #antes 3000
+    points: 500
+    needItem: true
+    getOneFree:
+      - STR_REACTOR_MINIATURIZATION #Power Armor
+      - STR_ADVANCED_PLASMA #Plasma Weapons
+      - STR_NERVE_INTERFACE #Psi Armor
+      - STR_ZEROG_SMELTING #Alien Alloys
+      - STR_UFO_ENGINEERING #Firestorm
+      - STR_MIND_SHIELD
+      - STR_CYBERNETICS
+      - STR_GOODS_5
+      - STR_DIMENSIONAL_FATIGUE
+      - STR_SPECIAL_ALIEN_WEAPONS
+#Another possible resource to build
+  - name: STR_CODEX_5
+    cost: 1350 #antes 5000
+    points: 500
+    needItem: true
+    getOneFree:
+      - STR_UFO_MASTERY #Avenger
+      - STR_MICRO_FUSION #Fusion Weapons
+      - STR_GOODS_6
+      - STR_PSIONIC_DOMINATION
+      - STR_FRAGMENT_REPLICATION
+      - STR_ELITE_ALIEN_WEAPONS
+  - name: STR_CODEX_COMPLETE
+    cost: 5000 #antes 10000
+    points: 500
+    needItem: true
+    getOneFree:
+      - STR_MATTER_CREATION
+#      - STR_COMPLETE_CODEX_ARCHIVE_UNLOCK
+      - STR_GOODS_UNLOCK_6 #keep this not instant
+#      -STR_HUMANITYS_ASCENSION or someting like that. Supersoldiers
+#      - STR_CODEX_REPLICATOR #Build Codex Fragments and Keys
+#     Teleporter craft? Can't go to Cydonia though
+#     Perfect defense? Acts as a Grav Shield with a One Hit kill at 100% hit rate
+#     Aeon Edge. Perfect Melee Weapon. Infinite damage basically
+#     Perfect Psi Amp
+#     Lose Game
+#     Ultimate Air Weapon
+#--Codex Tech Tree --------------------END
+#doggos#
+#  - name: STR_CANID_BITE
+    # cost: 0
+    # points: 0
+    # dependencies:
+    #   - STR_DOGE_RECRUITMENT
+    # listOrder: 17580
+#  - name: STR_CANID_TRACKING
+    # cost: 0
+    # points: 0
+    # dependencies:
+    #   - STR_DOGE_RECRUITMENT
+    # listOrder: 17512
+
+#  - name: STR_CANID_BITE_CYBER
+   # cost: 0
+   # points: 0
+   # dependencies:
+   #   - STR_K9_POWER_ARMOR
+   # listOrder: 17581
+#  - name: STR_CANID_BARK_CYBER
+   # cost: 0
+   # points: 0
+   # dependencies:
+   #   - STR_K9_POWER_ARMOR
+   # listOrder: 17592

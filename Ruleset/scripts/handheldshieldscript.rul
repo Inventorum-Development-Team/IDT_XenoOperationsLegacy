@@ -1,0 +1,54 @@
+items:
+  - type: STR_ME_HUMAN_BASIC_SHIELD # ignoreDuplicate
+    tags:
+      Shield: 1
+  - type: STR_ME_HUMAN_ALLOY_SHIELD # ignoreDuplicate
+    tags:
+      Shield: 1
+  - type: STR_ME_HUMAN_HOLO_SHIELD # ignoreDuplicate
+    tags:
+      Shield: 1
+  - type: STR_AW_HOLO_SHIELD # ignoreDuplicate
+    tags:
+      Shield: 1
+  - type: STR_AW_ADVANCED_HOLO_SHIELD # ignoreDuplicate
+    tags:
+      Shield: 1
+
+
+extended:
+  tags:
+   RuleItem:
+      Shield: int
+
+
+  scripts:
+
+
+     hitUnit:
+         - offset: 6 #Shield Script
+           code: |
+            var ptr BattleItem righthand;
+            var ptr BattleItem lefthand;
+            var int shield;
+            var int random;
+            var int kneeling;
+            unit.getLeftHandWeapon lefthand;
+            unit.getRightHandWeapon righthand;
+            BattleItem.getTag lefthand shield Tag.Shield;
+            if neq shield 1;
+             BattleItem.getTag righthand shield Tag.Shield;
+             end;
+            if and eq side 0 eq shield 1;
+             BattleGame.randomRange battle_game random 0 100;
+             BattleUnit.isKneeled unit kneeling;
+             if lt random 85;
+              set power 0;
+              end;
+             if and lt random 95 eq kneeling 1;
+              set power 0;
+              end;
+            end;
+
+
+            return power part side;

@@ -1,0 +1,616 @@
+# Made by B1ackwolf for XOPS-Legacy
+# Status: DONE
+
+ufos:
+#----- Deletions -----#
+  - delete: STR_SMALL_SCOUT
+#----- Finish deletions -----#
+#----- Survey Skiff -----#
+  - type: STR_SURVEY
+    size: STR_VERY_SMALL
+    modSprite: UFOSURVEY
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 100
+    speedMax:  1455 # Mach 2.2 Supersonic
+    accel: 12
+    power: 0
+    range: 0
+    score: 50
+    reload: 56
+    breakOffTime: 200
+    battlescapeTerrainData:
+      name: XOPSSURVEY
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOSMFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+        - XOPSUFORESEARCH
+      mapBlocks:
+        - name: XOPSSURVEY1
+          width: 10
+          length: 10
+#----- Raider Gunship -----#
+  - type: STR_RAIDER
+    size: STR_VERY_SMALL
+    modSprite: UFORAIDER
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 500
+    speedMax: 2120 # Mach 3.20 Supersonic
+    accel: 7
+    power: 20
+    range: 62
+    score: 120
+    reload: 15
+    breakOffTime: 1000
+    battlescapeTerrainData:
+      name: XOPSRAIDER
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+      mapBlocks:
+        - name: XOPSRAIDER
+          width: 10
+          length: 10
+#----- Scanner Boat -----#
+  - type: STR_SCANNER
+    size: STR_VERY_SMALL
+    modSprite: UFOSCANNER
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 80
+    speedMax: 1790 # Mach 2.70 Supersonic
+    accel: 12
+    power: 0
+    range: 0
+    score: 40
+    reload: 56
+    breakOffTime: 175
+    battlescapeTerrainData:
+      name: XOPSSCANNER
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+      mapBlocks:
+        - name: XOPSSCANNER1
+          width: 10
+          length: 10
+#----- Scout Escort ----#
+  - type: STR_MEDIUM_SCOUT
+    size: STR_SMALL
+    modSprite: UFOSCOUT
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 200
+    speedMax: 1820 # Mach 2.75 Supersonic
+    accel: 9
+    power: 20
+    range: 40
+    score: 75
+    reload: 56
+    breakOffTime: 250
+    battlescapeTerrainData:
+      name: XOPSCOUT
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+      mapBlocks:
+        - name: XOPSSCOUT1
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 8, 0]
+        - name: XOPSSCOUT2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 11, 0]
+        - name: XOPSSCOUT3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 8, 0]
+        - name: XOPSSCOUT4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 6, 0]
+        - name: XOPSSCOUT5
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [8, 8, 0]
+        - name: XOPSSCOUT6
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [6, 7, 0]
+        - name: XOPSSCOUT7
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 8, 0]
+        - name: XOPSSCOUT8
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [11, 6, 0]
+#----- Research Corvette -----#
+  - type: STR_LARGE_SCOUT
+    size: STR_SMALL
+    modSprite: UFORESEARCHSHIP
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 250
+    speedMax: 1990 # Mach 3.0 Supersonic
+    accel: 9
+    power: 20
+    range: 62
+    score: 125
+    reload: 48
+    breakOffTime: 300
+    battlescapeTerrainData:
+      name: XOPSRESEARCHSHIP
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOSMFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+        - XOPSUFORESEARCH
+      mapBlocks:
+        - name: XOPSRESEARCHSHIP1
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 8, 1]
+        - name: XOPSRESEARCHSHIP2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 8, 1]
+        - name: XOPSRESEARCHSHIP3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [14, 9, 1]
+        - name: XOPSRESEARCHSHIP4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 10, 1]
+#----- Cloner Frigate -----#
+  - type: STR_CLONER
+    size: STR_MEDIUM_UC
+    modSprite: UFOCLONER
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 450
+    speedMax: 3010 # Mach 4.55 Supersonic
+    accel: 7
+    power: 35
+    range: 62
+    score: 235
+    reload: 36
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: XOPSCLONER
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOSMFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+        - XOPSUFOCLONES
+      mapBlocks:
+        - name: XOPSCLONER
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 5, 1]
+#----- Harverster Destroyer -----#
+  - type: STR_HARVESTER
+    size: STR_MEDIUM_UC
+    modSprite: UFOHARVESTER
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 500
+    speedMax: 2615 # Mach 3.95 Supersonic
+    accel: 8
+    power: 40
+    range: 62
+    score: 250
+    reload: 48
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: XOPSHARVESTER
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOSMFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2SM
+        - XOPSUFOHARVEST
+      mapBlocks:
+        - name: XOPSHARVESTER1
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 4, 2]
+              - [14, 4, 2]
+        - name: XOPSHARVESTER2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 4, 2]
+              - [5, 14, 2]
+        - name: XOPSHARVESTER3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [9, 4, 2]
+              - [9, 14, 2]
+        - name: XOPSHARVESTER4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [4, 4, 2]
+              - [13, 14, 2]
+#----- Abductor Cruiser -----#
+  - type: STR_ABDUCTOR
+    size: STR_MEDIUM_UC
+    modSprite: UFOABDUCTOR
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 500
+    speedMax: 2815 # Mach 4.25 Supersonic
+    accel: 8
+    power: 40
+    range: 62
+    score: 250
+    reload: 32
+    breakOffTime: 500
+    battlescapeTerrainData:
+      name: XOPSABDUCTOR
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOSMFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+        - XOPSUFOABDUCTION
+      mapBlocks:
+        - name: XOPSABDUCTOR1
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 5, 2]
+              - [13, 5, 2]
+        - name: XOPSABDUCTOR2
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [13, 5, 2]
+              - [13, 14, 2]
+        - name: XOPSABDUCTOR3
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [5, 13, 2]
+              - [13, 5, 2]
+        - name: XOPSABDUCTOR4
+          width: 20
+          length: 20
+          items:
+            STR_ELERIUM_115:
+              - [3, 9, 2]
+              - [5, 9, 2]
+#----- Laboratory Ship -----#
+  - type: STR_LABSHIP
+    size: STR_MEDIUM_UC
+    modSprite: UFOLABSHIP
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 375
+    speedMax: 2050 # Mach 3.10 Supersonic
+    accel: 9
+    power: 30
+    range: 62
+    score: 250
+    reload: 48
+    breakOffTime: 800
+    battlescapeTerrainData:
+      name: XOPSLABSHIP
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOSMFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+        - XOPSUFORESEARCH
+      mapBlocks:
+        - name: XOPSLABSHIP
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [3, 14, 2]
+              - [25, 14, 2]
+#----- Supply Tanker -----#
+  - type: STR_SUPPLY_SHIP
+    size: STR_LARGE
+    modSprite: UFOSUPPLYSHIP
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 2200
+    speedMax: 2650 # Mach 4.0 Supersonic
+    accel: 6
+    power: 60
+    range: 62
+    score: 400
+    reload: 24
+    breakOffTime: 3000
+    battlescapeTerrainData:
+      name: XOPSSUPPLYSHIP
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOFLOORSUPPLY
+        - XOPSUFOWALLSSM
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+        - XOPSUFOSUPPLY
+      mapBlocks:
+        - name: XOPSSUPPLYSHIP1
+          width: 30
+          length: 30
+        - name: XOPSSUPPLYSHIP2
+          width: 30
+          length: 30
+        - name: XOPSSUPPLYSHIP3
+          width: 30
+          length: 30
+#----- Construction Barge -----#
+  - type: STR_CONSTRUCTOR
+    size: STR_LARGE
+    modSprite: UFOCONSTRUCTOR
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 500
+    speedMax: 2480 # Mach 3.75 Supersonic
+    accel: 6
+    power: 20
+    range: 62
+    score: 500
+    reload: 24
+    breakOffTime: 3000
+    battlescapeTerrainData:
+      name: XOPSCONSTRUCTOR
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOFLOORSUPPLY
+        - XOPSUFOWALLSSM
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+        - XOPSUFOSUPPLY
+      mapBlocks:
+        - name: XOPSCONSTRUCTOR1
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [4, 12, 2]
+              - [4, 17, 2]
+              - [25, 12, 2]
+              - [25, 17, 2]
+#----- Battlecruiser -----#
+  - type: STR_DESTROYER
+    size: STR_LARGE
+    modSprite: UFODESTROYER
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 800
+    speedMax: 3410 # Mach 5.15 Hypersonic
+    accel: 3
+    power: 80
+    range: 62
+    score: 375
+    reload: 24
+    breakOffTime: 2000
+    battlescapeTerrainData:
+      name: XOPSDESTROYER
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+      mapBlocks:
+        - name: XOPSDESROYER1
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [19, 9, 1]
+              - [19, 19, 1]
+#----- Terror Battleship -----#
+  - type: STR_TERROR_SHIP
+    size: STR_LARGE
+    modSprite: UFOSTRIKECRUISER
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 1200
+    speedMax: 3375 # Mach 5.10 Hypersonic
+    accel: 6
+    power: 120
+    range: 62
+    score: 500
+    reload: 24
+    breakOffTime: 2000
+    battlescapeTerrainData:
+      name: XOPSSTRIKECRUISER
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+      mapBlocks:
+        - name: XOPSSTRIKECRUISER1
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [9, 18, 1]
+              - [19, 18, 1]
+              - [14, 22, 1]
+        - name: XOPSSTRIKECRUISER2
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [11, 6, 1]
+              - [14, 6, 1]
+              - [17, 6, 1]
+        - name: XOPSSTRIKECRUISER3
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [16, 7, 1]
+              - [16, 21, 1]
+              - [22, 14, 1]
+#----- Dreadnought -----#
+  - type: STR_BATTLESHIP
+    size: STR_VERY_LARGE
+    modSprite: UFOBATTLESHIP
+    splashdownSurvivalChance: 0
+    fakeWaterLandingChance: 0
+    damageMax: 3000
+    speedMax: 3840 # Mach 5.80 Hypersonic
+    accel: 6
+    power: 140
+    range: 65
+    score: 700
+    reload: 24
+    breakOffTime: 4000
+    battlescapeTerrainData:
+      name: XOPSBATTLESHIP
+      mapDataSets:
+        - BLANKS
+        - XOPSUFOEXT
+        - XOPSUFOPHASERS1
+        - XOPSUFOPHASERS2
+        - XOPSUFOPHASERS3
+        - XOPSUFOPHASERS4
+        - XOPSUFOFLOOR
+        - XOPSUFOWALLS
+        - XOPSUFOITEMS1
+        - XOPSUFOITEMS2
+        - XOPSUFOSUPPLY
+      mapBlocks:
+        - name: XOPSBATTLESHIP1
+          width: 30
+          length: 30
+          items:
+            STR_ELERIUM_115:
+              - [10, 4, 1]
+              - [23, 10, 1]
+              - [5, 18, 1]
+              - [22, 18, 1]

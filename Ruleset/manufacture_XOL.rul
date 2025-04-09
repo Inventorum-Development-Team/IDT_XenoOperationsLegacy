@@ -1,0 +1,3303 @@
+# Made by B1ackwolf for XOPS-Legacy
+# Status:Reorder and clean, unify the numbers of all categories to relate better with the load and list orders, improve "#" notations. Add stuff from the To-Do list (improve the granularity by creating different categories)
+
+manufacture:
+  - delete: STR_LASER_PISTOL
+  - delete: STR_LASER_RIFLE
+  - delete: STR_HEAVY_LASER
+  - delete: STR_PLASMA_PISTOL
+  - delete: STR_PLASMA_PISTOL_CLIP
+  - delete: STR_PLASMA_RIFLE
+  - delete: STR_PLASMA_RIFLE_CLIP
+  - delete: STR_HEAVY_PLASMA
+  - delete: STR_HEAVY_PLASMA_CLIP
+  - delete: STR_UFO_NAVIGATION
+  - delete: STR_UFO_POWER_SOURCE
+  - delete: STR_SMALL_LAUNCHER
+  - delete: STR_STUN_BOMB
+  - delete: STR_BLASTER_LAUNCHER
+  - delete: STR_BLASTER_BOMB
+  - delete: STR_ALIEN_GRENADE
+  - delete: STR_TANK_LASER_CANNON
+  - delete: STR_PERSONAL_ARMOR
+  - delete: STR_POWER_SUIT
+  - delete: STR_FLYING_SUIT
+  - delete: STR_FIRESTORM
+  - delete: STR_LIGHTNING
+  - delete: STR_AVENGER
+#--- Goods ----------------------------------
+  - name: STR_GOODS
+    category: STR_SELL_GOODS
+    space: 1
+    time: 40
+    cost: 0
+    points: 10
+    listOrder: 1
+  - name: STR_GOODS_2
+    category: STR_SELL_GOODS
+    requires:
+      - STR_GOODS_2
+    space: 1
+    time: 40
+    cost: 0
+    points: 20
+    listOrder: 2
+  - name: STR_GOODS_3
+    category: STR_SELL_GOODS
+    requires:
+      - STR_GOODS_3
+    space: 1
+    time: 40
+    cost: 0
+    points: 30
+    listOrder: 3
+  - name: STR_GOODS_4
+    category: STR_SELL_GOODS
+    requires:
+      - STR_GOODS_4
+    space: 1
+    time: 40
+    cost: 0
+    points: 40
+    listOrder: 4
+  - name: STR_GOODS_5
+    category: STR_SELL_GOODS
+    requires:
+      - STR_GOODS_5
+    space: 1
+    time: 40
+    cost: 0
+    points: 50
+    listOrder: 5
+  - name: STR_GOODS_6
+    category: STR_SELL_GOODS
+    requires:
+      - STR_GOODS_6
+    space: 1
+    time: 40
+    cost: 0
+    points: 60
+    listOrder: 6
+  - name: STR_GOODS_7
+    category: STR_SELL_GOODS
+    requires:
+      - STR_GOODS_7
+    space: 1
+    time: 40
+    cost: 0
+    points: 70
+    listOrder: 7
+#--- Goods----------------------------------END
+#---Equipment ----------------------------------
+  - name: STR_PROXIMITY_GRENADE
+    category: STR_EQUIPMENT
+    requires:
+      - STR_PROXIMITY_GRENADE
+    space: 1
+    time: 60
+    cost: 2000
+    listOrder: 1489
+  - name: STR_MOTION_SCANNER
+    listOrder: 1490
+  - name: STR_MIND_PROBE
+    category: STR_EQUIPMENT
+    requires:
+      - STR_MIND_PROBE
+    space: 2
+    time: 480
+    cost: 262000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 10
+      STR_ALIEN_ALLOYS: 1
+    listOrder: 1491
+  - name: STR_EX_ELERIUM_LAMP
+    category: STR_EQUIPMENT
+    requires:
+      - STR_EX_ALIEN_ELERIUM_LAMP
+    space: 2
+    time: 40
+    cost: 8000
+    requiredItems:
+      STR_ELERIUM_115: 1
+    listOrder: 1492
+  - name: STR_EX_PSI_AMP_SMALL
+    category: STR_EQUIPMENT
+    requires:
+      - STR_PSIONIC_WARFARE
+    space: 3
+    time: 200
+    cost: 160000
+    requiredItems:
+      STR_ELERIUM_115: 25
+      STR_CODEX_FRAGMENT: 10
+      STR_ALIEN_ALLOYS: 10
+    listOrder: 1493
+  - name: STR_PSI_AMP
+    category: STR_EQUIPMENT
+    requires:
+      - STR_PSI_AMP
+    space: 6
+    time: 400
+    cost: 320000
+    requiredItems:
+      STR_ELERIUM_115: 50
+      STR_CODEX_FRAGMENT: 25
+      STR_ALIEN_ALLOYS: 25
+    listOrder: 1494
+  - name: STR_EX_PSI_AMP_LARGE
+    category: STR_EQUIPMENT
+    requires:
+      - STR_EX_PSI_AMP_LARGE
+    space: 9
+    time: 600
+    cost: 2500000
+    requiredItems:
+      STR_ELERIUM_115: 100
+      STR_CODEX_FRAGMENT: 50
+      STR_ALIEN_ALLOYS: 50
+    listOrder: 1495
+  - name: STR_MEDI_KIT
+    category: STR_EQUIPMENT
+    requires:
+      - STR_MEDI_KIT
+    space: 2
+    time: 168
+    cost: 28000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 10
+      STR_ELERIUM_115: 3
+    listOrder: 1496
+#---Equipment ----------------------------------END
+#--- Crafts ----------------------------------
+  - name: STR_FIREFLY
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_FIREFLY
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+    space: 25
+    time: 3600
+    cost: 350000
+    listOrder: 291
+  - name: STR_SCARAB #OJITO OJITO
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_SCARAB
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+    space: 25
+    time: 3600
+    cost: 350000
+    listOrder: 291
+  - name: STR_HERCULES
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_HERCULES
+    space: 14
+    time: 4900
+    cost: 650000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+      STR_CODEX_FRAGMENT: 15
+    listOrder: 292
+  - name: STR_GOLIATHUS
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_GOLIATHUS
+    space: 18
+    time: 9000
+    cost: 900000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 60
+      STR_ELERIUM_115: 50
+      STR_CODEX_FRAGMENT: 30
+    listOrder: 293
+  - name: STR_OVERLORD
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_OVERLORD
+    space: 20
+    time: 25000
+    cost: 1500000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 200
+      STR_ELERIUM_115: 100
+      STR_CODEX_FRAGMENT: 75
+      STR_CODEX_COMPLETE: 1
+    listOrder: 294
+# Kiros Hit the Jackpot
+  - name: STR_XOPSWASPYJ
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_ALIEN_ALLOYS
+    space: 30
+    time: 4500
+    cost: 500000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 25
+    listOrder: 291
+  - name: STR_XOPSSTINGMOTH
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_FIREFLY
+      - STR_ALIEN_ALLOYS
+      - STR_ALLOY_AERODYNAMICS
+      - STR_CODEX_1
+    space: 40
+    time: 4500
+    cost: 550000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 25
+      STR_CODEX_FRAGMENT: 10
+    listOrder: 291
+#----- Fighter Crafts -----#
+  - name: STR_UPDATED_INTERCEPTOR #ojito modificar precios
+    category: STR_CRAFT
+    requires:
+      - STR_UPDATED_INTERCEPTOR
+    requiredItems:
+      STR_INTERCEPTOR: 1
+      STR_ALIEN_ALLOYS: 10
+    space: 10
+    time: 3600
+    cost: 350000
+    listOrder: 295
+  - name: STR_XCF2 #ojito modificar precios
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_XCF2
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+    space: 10
+    time: 3600
+    cost: 350000
+    listOrder: 295
+  - name: STR_XCF3
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_XCF3
+    space: 12
+    time: 4000
+    cost: 400000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 25
+      STR_ELERIUM_115: 5
+      STR_CODEX_FRAGMENT: 10
+    listOrder: 296
+  - name: STR_XCF4
+    category: STR_CRAFT
+    requiresBaseFunc: [ ADV_WORKS ]
+    requires:
+      - STR_XCF4
+    space: 15
+    time: 4800
+    cost: 750000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 50
+      STR_ELERIUM_115: 25
+      STR_CODEX_FRAGMENT: 20
+    listOrder: 297
+  - name: STR_XCF_FUEL
+    category: STR_UFO_COMPONENT
+    requires:
+      - STR_XCF3 #ojito modificar y crear combustible propio apenas descubra este tipo de aviones y mejorar los valores y el balanceo
+    space: 1
+    time: 10
+    requiredItems:
+      STR_ELERIUM_115: 10
+    producedItems:
+      STR_XCF_FUEL: 30
+    cost: 1000
+    listOrder: 300
+#--- Crafts ----------------------------------
+#---Craft Weapons ----------------------------------
+  - name: STR_CLUSTER_MISSILE_LAUNCHER
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_CLUSTER_MISSILE
+    space: 3
+    time: 120
+    cost: 18000
+    listOrder: 301
+  - name: STR_CLUSTER_MISSILES
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_CLUSTER_MISSILE
+    space: 1
+    time: 10
+    cost: 3000
+    listOrder: 302
+  - name: STR_PILUM_LAUNCHER
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_PILUM_MISSILES
+    space: 3
+    time: 120
+    cost: 25000
+    listOrder: 303
+  - name: STR_PILUM_MISSILES
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_PILUM_MISSILES
+    space: 2
+    time: 40
+    cost: 10000
+    listOrder: 304
+  - name: STR_LASER_CANNON
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_LASER_CANNON
+    space: 6
+    time: 300
+    cost: 182000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 5
+      STR_ALIEN_ALLOYS: 2
+    listOrder: 305
+  - name: STR_PLASMA_BEAM
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_PLASMA_CANNON
+    space: 4
+    time: 200
+    cost: 226000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 25
+      STR_ELERIUM_115: 20
+      STR_ALIEN_ALLOYS: 4
+    listOrder: 306
+  - name: STR_ELERIUM_CELL
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_PLASMA_CANNON
+    space: 1
+    time: 5
+    cost: 200
+    requiredItems:
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_ELERIUM_CELL: 3
+    listOrder: 307
+  - name: STR_FUSION_BALL_LAUNCHER
+    category: STR_CRAFT_WEAPON
+    requires:
+      - STR_FUSION_MISSILE
+    space: 6
+    time: 400
+    cost: 242000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 25
+      STR_CODEX_FRAGMENT: 30
+    listOrder: 308
+  - name: STR_FUSION_BALL
+    category: STR_CRAFT_WEAPON
+    listOrder: 309
+#---Craft Weapons ----------------------------------END
+#---HWP ----------------------------------
+  - name: STR_HOVERTANK_PLASMA
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_HOVER_HWP_PLASMA
+    space: 15
+    time: 480
+    cost: 850000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_CODEX_FRAGMENT: 25
+      STR_ELERIUM_115: 50
+  - name: STR_HOVERTANK_LAUNCHER
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_HOVER_HWP_FUSION
+    space: 15
+    time: 480
+    cost: 900000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_CODEX_FRAGMENT: 35
+      STR_ELERIUM_115: 50
+  - name: STR_HWP_FUSION_BOMB
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_HOVER_HWP_FUSION
+    space: 12
+    time: 160
+    cost: 15000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 40
+      STR_ELERIUM_115: 5
+      STR_CODEX_FRAGMENT: 5
+#drones ojito
+
+  - name: STR_DRONE_QUADCOPTER_CHASSIS
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_DRONE_WARFARE
+    space: 6
+    time: 240
+    cost: 150000
+    listOrder: 490
+  - name: STR_DRONE_UCAV_CHASSIS
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_DRONE_WARFARE
+      - STR_NEW_FIGHTER_PROGRAM
+    space: 6
+    time: 250
+    cost: 300000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+    listOrder: 495
+  - name: STR_UCAV_ROCKETS
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_DRONE_WARFARE
+      - STR_NEW_FIGHTER_PROGRAM
+    space: 1
+    time: 10
+    cost: 2000
+    listOrder: 496
+  - name: STR_DRONE_ROVER_CHASSIS
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_DRONE_WARFARE
+    space: 6
+    time: 250
+    cost: 110000
+    listOrder: 488
+  - name: STR_REPAIR_BASIC_DRONE
+#    category: STR_ARMOR_REPAIR
+    space: 12
+    time: 200
+    cost: 5000
+    requiredItems:
+      STR_BASIC_DRONE_RECOVER: 1
+    producedItems:
+      STR_DRONE_ROVER_CHASSIS: 1
+    listOrder: 2701
+
+####### ojito, en realidad es la manufactura de una armadura de tanques, reordenar y rebalancear numeros
+
+  - name: STR_REPAIR_BASIC_TANK
+#    category: STR_ARMOR_REPAIR
+    space: 12
+    time: 200
+    cost: 5000
+    requiredItems:
+      STR_BASIC_TANK_RECOVER: 1
+    producedItems:
+      STR_TANK_HE_CHASSIS: 1
+    listOrder: 2701
+
+#  - name: STR_REPAIR_BASIC_TANK
+#    category: STR_ARMOR_REPAIR
+#    space: 12
+#    time: 200
+#    cost: 5000
+#    requiredItems:
+#      STR_BASIC_TANK_RECOVER: 1
+#    producedItems:
+#      STR_TANK_AP_CHASSIS: 1
+#    listOrder: 2702
+
+
+
+
+  - name: STR_TANK_AP_CHASSIS
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_TANKS_UNITS
+    space: 25
+    time: 1200
+    cost: 500000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+    listOrder: 498
+  - name: STR_TANK_HE_CHASSIS
+    category: STR_HEAVY_WEAPONS_PLATFORM
+    requires:
+      - STR_TANKS_UNITS
+    space: 25
+    time: 1200
+    cost: 500000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+    listOrder: 499
+#---HWP ----------------------------------END
+#-----Second Tier Ballistic Weapons ----------------------------------
+  - name: STR_XP_SMALL_PISTOL
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 80
+    cost: 5000
+    listOrder: 2201
+  - name: STR_XP_AUTO_PISTOL
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 110
+    cost: 7000
+    listOrder: 2202
+  - name: STR_XP_SMALL_PISTOL_CLIP2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 22
+    cost: 1400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_SMALL_PISTOL_CLIP2: 10
+    listOrder: 2203
+  - name: STR_XP_SMALL_PISTOL_CLIP3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 22
+    cost: 6000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_XP_SMALL_PISTOL_CLIP3: 10
+    listOrder: 2204
+  - name: STR_XP_MAIN_PISTOL
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 100
+    cost: 6500
+    listOrder: 2205
+  - name: STR_XP_MAIN_PISTOL_CLIP2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 20
+    cost: 1350
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_XP_MAIN_PISTOL_CLIP2: 10
+    listOrder: 2206
+  - name: STR_XP_MAIN_PISTOL_CLIP3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 20
+    cost: 5000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_XP_MAIN_PISTOL_CLIP3: 10
+    listOrder: 2207
+  - name: STR_XP_HEAVY_PISTOL
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 140
+    cost: 8000
+    listOrder: 2208
+  - name: STR_XP_HEAVY_PISTOL_CLIP2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 32
+    cost: 2000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_XP_HEAVY_PISTOL_CLIP2: 10
+    listOrder: 2209
+  - name: STR_XP_HEAVY_PISTOL_CLIP3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 32
+    cost: 10000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_XP_HEAVY_PISTOL_CLIP3: 10
+    listOrder: 2210
+  - name: STR_XP_UZI
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 110
+    cost: 7500
+    listOrder: 2211
+  - name: STR_XP_SMG
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 120
+    cost: 8000
+    listOrder: 2212
+  - name: STR_XP_SMG_CLIP2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 20
+    cost: 1400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_SMG_CLIP2: 10
+    listOrder: 2213
+  - name: STR_XP_SMG_CLIP3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 20
+    cost: 7000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_XP_SMG_CLIP3: 10
+    listOrder: 2214
+  - name: STR_XP_SHOTGUN
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 130
+    cost: 12000
+    listOrder: 2215
+  - name: STR_XP_SHOTGUN_SHELLS2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 26
+    cost: 2400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_SHOTGUN_SHELLS2: 10
+    listOrder: 2216
+  - name: STR_XP_SHOTGUN_SHELLS3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 26
+    cost: 14000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_XP_SHOTGUN_SHELLS3: 10
+    listOrder: 2217
+  - name: STR_XP_BULLPUP
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_LIGHT
+    space: 1
+    time: 140
+    cost: 8500
+    listOrder: 2218
+  - name: STR_XP_RIFLE
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 130
+    cost: 12000
+    listOrder: 2219
+  - name: STR_XP_RIFLE_CLIP2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 26
+    cost: 2400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_RIFLE_CLIP2: 10
+    listOrder: 2220
+  - name: STR_XP_RIFLE_CLIP3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 26
+    cost: 14000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_XP_RIFLE_CLIP3: 10
+    listOrder: 2221
+  - name: STR_XP_LMG
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 220
+    cost: 22000
+    listOrder: 2222
+  - name: STR_XP_LMG_BELT2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 30
+    cost: 4400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_LMG_BELT2: 10
+    listOrder: 2223
+  - name: STR_XP_LMG_BELT3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 30
+    cost: 11000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_XP_LMG_BELT3: 10
+    listOrder: 2224
+  - name: STR_XP_ANTI_MATERIEL
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 240
+    cost: 24000
+    listOrder: 2225
+  - name: STR_XP_ANTI_MATERIEL_CLIP2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 32
+    cost: 4800
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_ANTI_MATERIEL_CLIP2: 10
+    listOrder: 2226
+  - name: STR_XP_ANTI_MATERIEL_CLIP3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_MEDIUM
+    space: 1
+    time: 32
+    cost: 12000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_XP_ANTI_MATERIEL_CLIP3: 10
+    listOrder: 2227
+  - name: STR_XP_MINIGUN
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 240
+    cost: 17500
+    listOrder: 2228
+  - name: STR_XP_MINIGUN_BELT2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 30
+    cost: 4600
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_XP_MINIGUN_BELT2: 10
+    listOrder: 2229
+  - name: STR_XP_MINIGUN_BELT3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 30
+    cost: 48000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 4
+    producedItems:
+      STR_XP_MINIGUN_BELT3: 10
+    listOrder: 2230
+  - name: STR_XP_AUTO_CANNON
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 220
+    cost: 14000
+    listOrder: 2231
+  - name: STR_XP_AUTO_CANNON_BELT1 # ojito cambiar esta version de municion por algo mas cool, como incendiary? o directamente eliminar en todas las otras pags
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 28
+    cost: 2000
+    producedItems:
+      STR_XP_AUTO_CANNON_BELT1: 10
+    listOrder: 2232
+  - name: STR_XP_AUTO_CANNON_BELT2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 30
+    cost: 4000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_AUTO_CANNON_BELT2: 10
+    listOrder: 2233
+  - name: STR_XP_AUTO_CANNON_BELT3
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_TECH_ROUNDS
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 30
+    cost: 20000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_XP_AUTO_CANNON_BELT3: 10
+    listOrder: 2234
+  - name: STR_XP_BAZOOKA
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 2
+    time: 320
+    cost: 32000
+    listOrder: 2235
+  - name: STR_XP_ROCKET1
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 40
+    cost: 10000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_ROCKET1: 10
+    listOrder: 2236
+  - name: STR_XP_ROCKET2
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 1
+    time: 60
+    cost: 15000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_XP_ROCKET2: 10
+    listOrder: 2237
+  - name: STR_XP_APROCKET
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_ALLOY_AMMUNITION
+      - STR_NEXT_GEN_BALLISTICS_HEAVY
+    space: 2
+    time: 60
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_XP_APROCKET: 10
+    listOrder: 2238
+#temporal, ojito, separar luego a ordnance tier correctamente
+  - name: STR_BO_STICK_GRENADE
+    category: STR_HIGH_PERFORMANCE_BALLISTICS
+    requires:
+      - STR_BO_STICK_GRENADE
+    space: 1
+    time: 60
+    cost: 4000
+    listOrder: 2239
+#--- Ballistic Weapons ----------------------------------END
+#--- Third Tier Hybrid Weapons ----------------------------------
+  - name: STR_HB_SMALL_PISTOL
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 80
+    cost: 5000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+      STR_CODEX_FRAGMENT: 2
+    listOrder: 2301
+  - name: STR_HB_AUTO_PISTOL
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 110
+    cost: 7000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_CODEX_FRAGMENT: 3
+    listOrder: 2302
+  - name: STR_HB_SMALL_PISTOL_CLIP1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 18
+    cost: 600
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_HB_SMALL_PISTOL_CLIP1: 10
+    listOrder: 2303
+  - name: STR_HB_SMALL_PISTOL_CLIP2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 22
+    cost: 1400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_HB_SMALL_PISTOL_CLIP2: 10
+    listOrder: 2304
+  - name: STR_HB_SMALL_PISTOL_CLIP3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 22
+    cost: 14000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_HB_SMALL_PISTOL_CLIP3: 10
+    listOrder: 2305
+  - name: STR_HB_MAIN_PISTOL
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 100
+    cost: 6500
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_CODEX_FRAGMENT: 3
+    listOrder: 2306
+  - name: STR_HB_MAIN_PISTOL_CLIP1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 16
+    cost: 520
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_HB_MAIN_PISTOL_CLIP1: 10
+    listOrder: 2307
+  - name: STR_HB_MAIN_PISTOL_CLIP2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 20
+    cost: 1300
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_HB_MAIN_PISTOL_CLIP2: 10
+    listOrder: 2308
+  - name: STR_HB_MAIN_PISTOL_CLIP3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 20
+    cost: 13000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_HB_MAIN_PISTOL_CLIP3: 10
+    listOrder: 2309
+  - name: STR_HB_HEAVY_PISTOL
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 140
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+      STR_CODEX_FRAGMENT: 4
+    listOrder: 2310
+  - name: STR_HB_HEAVY_PISTOL_CLIP1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 24
+    cost: 800
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_HB_HEAVY_PISTOL_CLIP1: 10
+    listOrder: 2311
+  - name: STR_HB_HEAVY_PISTOL_CLIP2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 32
+    cost: 2000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 2
+    listOrder: 2312
+  - name: STR_HB_HEAVY_PISTOL_CLIP3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 32
+    cost: 20000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_HB_HEAVY_PISTOL_CLIP3: 10
+    listOrder: 2313
+  - name: STR_HB_UZI
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 110
+    cost: 7500
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+      STR_CODEX_FRAGMENT: 4
+    listOrder: 2314
+  - name: STR_HB_SMG
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 120
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+      STR_CODEX_FRAGMENT: 4
+    listOrder: 2315
+  - name: STR_HB_SMG_CLIP1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 16
+    cost: 600
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_HB_SMG_CLIP1: 10
+    listOrder: 2316
+  - name: STR_HB_SMG_CLIP2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 20
+    cost: 1400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_HB_SMG_CLIP2: 10
+    listOrder: 2317
+  - name: STR_HB_SMG_CLIP3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 20
+    cost: 14000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_HB_SMG_CLIP3: 10
+    listOrder: 2318
+  - name: STR_HB_SHOTGUN
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 130
+    cost: 12000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 5
+    listOrder: 2319
+  - name: STR_HB_SHOTGUN_SHELLS1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 24
+    cost: 960
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_HB_SHOTGUN_SHELLS1: 10
+    listOrder: 2320
+  - name: STR_HB_SHOTGUN_SHELLS2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 26
+    cost: 2400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_HB_SHOTGUN_SHELLS2: 10
+    listOrder: 2321
+  - name: STR_HB_SHOTGUN_SHELLS3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 26
+    cost: 24000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_HB_SHOTGUN_SHELLS3: 10
+    listOrder: 2322
+  - name: STR_HB_BULLPUP
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_LIGHT_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 140
+    cost: 8500
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 5
+    listOrder: 2323
+  - name: STR_HB_RIFLE
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 130
+    cost: 12000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 5
+    listOrder: 2324
+  - name: STR_HB_RIFLE_CLIP1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 24
+    cost: 960
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_HB_RIFLE_CLIP1: 10
+    listOrder: 2325
+  - name: STR_HB_RIFLE_CLIP2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 26
+    cost: 2400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_HB_RIFLE_CLIP2: 10
+    listOrder: 2326
+  - name: STR_HB_RIFLE_CLIP3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 26
+    cost: 24000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_HB_RIFLE_CLIP3: 10
+    listOrder: 2327
+  - name: STR_HB_LMG
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 220
+    cost: 22000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 7
+      STR_CODEX_FRAGMENT: 7
+    listOrder: 2328
+  - name: STR_HB_LMG_BELT1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 28
+    cost: 1760
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+    producedItems:
+      STR_HB_LMG_BELT1: 10
+    listOrder: 2329
+  - name: STR_HB_LMG_BELT2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 30
+    cost: 4400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_HB_LMG_BELT2: 10
+    listOrder: 2330
+  - name: STR_HB_LMG_BELT3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 30
+    cost: 44000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 3
+    producedItems:
+      STR_HB_LMG_BELT3: 10
+    listOrder: 2331
+  - name: STR_HB_SNIPER
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 240
+    cost: 24000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 7
+    listOrder: 2332
+  - name: STR_HB_SNIPER_CLIP1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 30
+    cost: 1920
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+    producedItems:
+      STR_HB_SNIPER_CLIP1: 10
+    listOrder: 2333
+  - name: STR_HB_SNIPER_CLIP2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 32
+    cost: 4800
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_HB_SNIPER_CLIP2: 10
+    listOrder: 2334
+  - name: STR_HB_SNIPER_CLIP3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 32
+    cost: 48000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 3
+    producedItems:
+      STR_HB_SNIPER_CLIP3: 10
+    listOrder: 2335
+  - name: STR_HB_AUTO_CANNON
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 240
+    cost: 24000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 10
+    listOrder: 2336
+  - name: STR_HB_AUTO_CANNON_BELT1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 30
+    cost: 1920
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+    producedItems:
+      STR_HB_AUTO_CANNON_BELT1: 10
+    listOrder: 2337
+  - name: STR_HB_AUTO_CANNON_BELT2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_CHEMICAL_ROUNDS
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 32
+    cost: 4800
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 4
+    producedItems:
+      STR_HB_AUTO_CANNON_BELT2: 10
+    listOrder: 2338
+  - name: STR_HB_AUTO_CANNON_BELT3
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_E115_ROUNDS
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 32
+    cost: 48000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 4
+    producedItems:
+      STR_HB_AUTO_CANNON_BELT3: 10
+    listOrder: 2339
+  - name: STR_HB_BAZOOKA
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 2
+    time: 320
+    cost: 32000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 15
+      STR_CODEX_FRAGMENT: 15
+    listOrder: 2340
+  - name: STR_HB_ROCKET1
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 40
+    cost: 10000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+      STR_ELERIUM_115: 3
+    producedItems:
+      STR_HB_ROCKET1: 10
+    listOrder: 2341
+  - name: STR_HB_ROCKET2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_HEAVY_HYBRID_BALLISTICS_WEAPONS
+      - STR_CHEMICAL_ROUNDS
+    space: 1
+    time: 60
+    cost: 15000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 4
+    producedItems:
+      STR_HB_ROCKET2: 10
+    listOrder: 2342
+#temporal , ojito separar luego a ordnance
+  - name: STR_BO_HYBRID_GRENADE
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+    space: 1
+    time: 60
+    cost: 7500
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_BO_HYBRID_GRENADE: 10
+    listOrder: 2343
+  - name: STR_BO_HYBRID_GRENADE2
+    category: STR_HYBRID_BALLISTICS
+    requires:
+      - STR_MEDIUM_HYBRID_BALLISTICS_WEAPONS
+      - STR_CHEMICAL_ROUNDS
+    space: 1
+    time: 65
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_BO_HYBRID_GRENADE2: 10
+    listOrder: 2344
+#-----Hybrid Weapons ----------------------------------END
+
+#---Fourth Tier Laser Weaponry ----------------------------------
+  - name: STR_LA_MAIN_PISTOL
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_LIGHT_LASER_WEAPONS
+    space: 1
+    time: 120
+    cost: 80000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 1
+    listOrder: 2401
+  - name: STR_LA_SMG
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_LIGHT_LASER_WEAPONS
+    space: 2
+    time: 140
+    cost: 150000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 8
+      STR_CODEX_FRAGMENT: 8
+      STR_ELERIUM_115: 2
+    listOrder: 2402
+  - name: STR_LA_PISTOL_BATTERY1
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_LIGHT_LASER_WEAPONS
+    space: 1
+    time: 20
+    cost: 400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_LA_PISTOL_BATTERY1: 10
+    listOrder: 2403
+  - name: STR_LA_PISTOL_BATTERY2
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_LIGHT_LASER_WEAPONS
+      - STR_CHARGED_CELLS
+    space: 1
+    time: 20
+    cost: 400
+    requiredItems:
+      STR_CODEX_FRAGMENT: 4
+    producedItems:
+      STR_LA_PISTOL_BATTERY2: 10
+    listOrder: 2404
+  - name: STR_LA_PISTOL_BATTERY3
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_LIGHT_LASER_WEAPONS
+      - STR_ELERIUM_LASER_BATTERY
+    space: 1
+    time: 20
+    cost: 4000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 10
+      STR_ELERIUM_115: 10
+    producedItems:
+      STR_LA_PISTOL_BATTERY3: 10
+    listOrder: 2405
+  - name: STR_LA_SHOTGUN
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+    space: 2
+    time: 160
+    cost: 200000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 11
+      STR_CODEX_FRAGMENT: 11
+      STR_ELERIUM_115: 4
+    listOrder: 2406
+  - name: STR_LA_SHOTGUN_BATTERY1
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+    space: 2
+    time: 34
+    cost: 1600
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+    producedItems:
+      STR_LA_SHOTGUN_BATTERY1: 10
+    listOrder: 2407
+  - name: STR_LA_SHOTGUN_BATTERY2
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+      - STR_CHARGED_CELLS
+    space: 2
+    time: 34
+    cost: 1600
+    requiredItems:
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_LA_SHOTGUN_BATTERY2: 10
+    listOrder: 2408
+  - name: STR_LA_SHOTGUN_BATTERY3
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+      - STR_ELERIUM_LASER_BATTERY
+    space: 2
+    time: 34
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 20
+      STR_ELERIUM_115: 20
+    producedItems:
+      STR_LA_SHOTGUN_BATTERY3: 10
+    listOrder: 2409
+  - name: STR_LA_RIFLE
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+    space: 2
+    time: 160
+    cost: 200000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 10
+      STR_ELERIUM_115: 3
+    listOrder: 2410
+  - name: STR_LA_RIFLE_BATTERY1
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+    space: 2
+    time: 32
+    cost: 1600
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+    producedItems:
+      STR_LA_RIFLE_BATTERY1: 10
+    listOrder: 2411
+  - name: STR_LA_RIFLE_BATTERY2
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+      - STR_CHARGED_CELLS
+    space: 2
+    time: 32
+    cost: 1600
+    requiredItems:
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_LA_RIFLE_BATTERY2: 10
+    listOrder: 2412
+  - name: STR_LA_RIFLE_BATTERY3
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+      - STR_ELERIUM_LASER_BATTERY
+    space: 2
+    time: 32
+    cost: 10000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 20
+      STR_ELERIUM_115: 20
+    producedItems:
+      STR_LA_RIFLE_BATTERY3: 10
+    listOrder: 2413
+  - name: STR_LA_LMG
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_HEAVY_LASER_WEAPONS
+    space: 2
+    time: 180
+    cost: 300000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 15
+      STR_CODEX_FRAGMENT: 15
+      STR_ELERIUM_115: 4
+    listOrder: 2414
+  - name: STR_LA_LMG_BATTERY1
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_HEAVY_LASER_WEAPONS
+    space: 2
+    time: 36
+    cost: 2400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+    producedItems:
+      STR_LA_LMG_BATTERY1: 10
+    listOrder: 2415
+  - name: STR_LA_LMG_BATTERY2
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_HEAVY_LASER_WEAPONS
+      - STR_CHARGED_CELLS
+    space: 2
+    time: 36
+    cost: 2400
+    requiredItems:
+      STR_CODEX_FRAGMENT: 4
+    producedItems:
+      STR_LA_LMG_BATTERY2: 10
+    listOrder: 2416
+  - name: STR_LA_LMG_BATTERY3
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_HEAVY_LASER_WEAPONS
+      - STR_ELERIUM_LASER_BATTERY
+    space: 2
+    time: 36
+    cost: 16000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 25
+      STR_ELERIUM_115: 25
+    producedItems:
+      STR_LA_LMG_BATTERY3: 10
+    listOrder: 2417
+  - name: STR_LA_SNIPER
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+    space: 2
+    time: 190
+    cost: 250000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 12
+      STR_CODEX_FRAGMENT: 12
+      STR_ELERIUM_115: 5
+    listOrder: 2418
+  - name: STR_LA_SNIPER_BATTERY1
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+    space: 2
+    time: 34
+    cost: 2000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+    producedItems:
+      STR_LA_SNIPER_BATTERY1: 10
+    listOrder: 2419
+  - name: STR_LA_SNIPER_BATTERY2
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+      - STR_CHARGED_CELLS
+    space: 2
+    time: 34
+    cost: 2000
+    requiredItems:
+      STR_CODEX_FRAGMENT: 4
+    producedItems:
+      STR_LA_SNIPER_BATTERY2: 10
+    listOrder: 2420
+  - name: STR_LA_SNIPER_BATTERY3
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_MEDIUM_LASER_WEAPONS
+      - STR_ELERIUM_LASER_BATTERY
+    space: 2
+    time: 34
+    cost: 16000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 25
+      STR_ELERIUM_115: 25
+    producedItems:
+      STR_LA_SNIPER_BATTERY3: 10
+    listOrder: 2421
+  - name: STR_LA_HEAVY_CANNON
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_HEAVY_LASER_WEAPONS
+    space: 2
+    time: 280
+    cost: 320000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_CODEX_FRAGMENT: 20
+      STR_ELERIUM_115: 5
+    listOrder: 2422
+  - name: STR_LA_HEAVY_CANNON_BATTERY1
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_HEAVY_LASER_WEAPONS
+    space: 2
+    time: 48
+    cost: 2600
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+    producedItems:
+      STR_LA_HEAVY_CANNON_BATTERY1: 10
+    listOrder: 2423
+  - name: STR_LA_HEAVY_CANNON_BATTERY2
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_HEAVY_LASER_WEAPONS
+      - STR_CHARGED_CELLS
+    space: 2
+    time: 48
+    cost: 2600
+    requiredItems:
+      STR_CODEX_FRAGMENT: 5
+    producedItems:
+      STR_LA_HEAVY_CANNON_BATTERY2: 10
+    listOrder: 2424
+  - name: STR_LA_HEAVY_CANNON_BATTERY3
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_HEAVY_LASER_WEAPONS
+      - STR_ELERIUM_LASER_BATTERY
+    space: 2
+    time: 48
+    cost: 100000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_CODEX_FRAGMENT: 40
+      STR_ELERIUM_115: 40
+    producedItems:
+      STR_LA_HEAVY_CANNON_BATTERY3: 10
+    listOrder: 2425
+#### ojito, ordenar luego en caTEGORIA propia de melee
+
+#--- Laser Weapons ----------------------------------
+#--- Fith Tier Hypervelocity Weapons ----------------------------------
+  - name: STR_RL_MAIN_PISTOL
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_LIGHT_HYPERVELOCITY_WEAPONS
+    space: 2
+    time: 280
+    cost: 60000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 8
+      STR_CODEX_FRAGMENT: 8
+    listOrder: 2501
+  - name: STR_RL_SMG
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_LIGHT_HYPERVELOCITY_WEAPONS
+    space: 2
+    time: 300
+    cost: 70000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 10
+    listOrder: 2502
+  - name: STR_RL_MAIN_PISTOL_CLIP1
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_LIGHT_HYPERVELOCITY_WEAPONS
+    space: 2
+    time: 32
+    cost: 4000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+    producedItems:
+      STR_RL_MAIN_PISTOL_CLIP1: 10
+    listOrder: 2503
+  - name: STR_RL_MAIN_PISTOL_CLIP2
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_LIGHT_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_SLUGS
+    space: 2
+    time: 32
+    cost: 4000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_RL_MAIN_PISTOL_CLIP2: 10
+    listOrder: 2504
+  - name: STR_RL_MAIN_PISTOL_CLIP3
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_LIGHT_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_CELLS
+    space: 2
+    time: 32
+    cost: 4000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_RL_MAIN_PISTOL_CLIP3: 10
+    listOrder: 2505
+  - name: STR_RL_SHOTGUN
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+    space: 3
+    time: 380
+    cost: 100000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 16
+      STR_CODEX_FRAGMENT: 14
+    listOrder: 2506
+  - name: STR_RL_SHOTGUN_CLIP1
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_RL_SHOTGUN_CLIP1: 10
+    listOrder: 2507
+  - name: STR_RL_SHOTGUN_CLIP2
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_SLUGS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_RL_SHOTGUN_CLIP2: 10
+    listOrder: 2508
+  - name: STR_RL_SHOTGUN_CLIP3
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_CELLS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_RL_SHOTGUN_CLIP3: 10
+    listOrder: 2509
+  - name: STR_RL_RIFLE
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+    space: 3
+    time: 380
+    cost: 100000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 14
+      STR_CODEX_FRAGMENT: 14
+    listOrder: 2510
+  - name: STR_RL_RIFLE_CLIP1
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    producedItems:
+      STR_RL_RIFLE_CLIP1: 10
+    listOrder: 2511
+  - name: STR_RL_RIFLE_CLIP2
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_SLUGS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_RL_RIFLE_CLIP2: 10
+    listOrder: 2512
+  - name: STR_RL_RIFLE_CLIP3
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_CELLS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_RL_RIFLE_CLIP3: 10
+    listOrder: 2513
+  - name: STR_RL_LMG
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+    space: 3
+    time: 400
+    cost: 150000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_CODEX_FRAGMENT: 20
+    listOrder: 2514
+  - name: STR_RL_LMG_CLIP1
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+    space: 2
+    time: 40
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+    producedItems:
+      STR_RL_LMG_CLIP1: 10
+    listOrder: 2515
+  - name: STR_RL_LMG_CLIP2
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_SLUGS
+    space: 2
+    time: 40
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_RL_LMG_CLIP2: 10
+    listOrder: 2516
+  - name: STR_RL_LMG_CLIP3
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_CELLS
+    space: 2
+    time: 40
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_ELERIUM_115: 3
+    producedItems:
+      STR_RL_LMG_CLIP3: 10
+    listOrder: 2517
+  - name: STR_RL_SNIPER
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+    space: 3
+    time: 390
+    cost: 100000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 14
+      STR_CODEX_FRAGMENT: 20
+    listOrder: 2518
+  - name: STR_RL_SNIPER_CLIP1
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+    producedItems:
+      STR_RL_SNIPER_CLIP1: 10
+    listOrder: 2519
+  - name: STR_RL_SNIPER_CLIP2
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_SLUGS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_RL_SNIPER_CLIP2: 10
+    listOrder: 2520
+  - name: STR_RL_SNIPER_CLIP3
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_MEDIUM_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_CELLS
+    space: 2
+    time: 36
+    cost: 6000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_ELERIUM_115: 3
+    producedItems:
+      STR_RL_SNIPER_CLIP3: 10
+    listOrder: 2521
+  - name: STR_RL_AUTO_CANNON
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+    space: 4
+    time: 480
+    cost: 200000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 25
+      STR_CODEX_FRAGMENT: 25
+    listOrder: 2522
+  - name: STR_RL_AUTO_CANNON_CLIP1
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+    space: 3
+    time: 60
+    cost: 10000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+    producedItems:
+      STR_RL_AUTO_CANNON_CLIP1: 10
+    listOrder: 2523
+  - name: STR_RL_AUTO_CANNON_CLIP2
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_SLUGS
+    space: 3
+    time: 60
+    cost: 10000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_RL_AUTO_CANNON_CLIP2: 10
+    listOrder: 2524
+  - name: STR_RL_AUTO_CANNON_CLIP3
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_CELLS
+    space: 3
+    time: 60
+    cost: 10000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+      STR_ELERIUM_115: 4
+    producedItems:
+      STR_RL_AUTO_CANNON_CLIP3: 10
+    listOrder: 2525
+  - name: STR_RL_BAZOOKA
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+    space: 4
+    time: 500
+    cost: 300000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+      STR_CODEX_FRAGMENT: 30
+    listOrder: 2526
+  - name: STR_RL_BAZOOKA_CLIP1
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+    space: 3
+    time: 65
+    cost: 20000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+    producedItems:
+      STR_RL_BAZOOKA_CLIP1: 10
+    listOrder: 2527
+  - name: STR_RL_BAZOOKA_CLIP2
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_SLUGS
+    space: 3
+    time: 65
+    cost: 20000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_RL_BAZOOKA_CLIP2: 10
+    listOrder: 2528
+  - name: STR_RL_BAZOOKA_CLIP3
+    category: STR_HYPERVELOCITY_WEAPONS
+    requires:
+      - STR_HEAVY_HYPERVELOCITY_WEAPONS
+      - STR_HYPERVELOCITY_CELLS
+    space: 3
+    time: 65
+    cost: 20000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_ELERIUM_115: 5
+    producedItems:
+      STR_RL_BAZOOKA_CLIP3: 10
+    listOrder: 2529
+#--- Hypervelocity Weapons ----------------------------------END
+#--- Sixt TierPlasma Weapons ----------------------------------
+  - name: STR_PM_SMALL_PISTOL
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 240
+    cost: 50000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 8
+      STR_CODEX_FRAGMENT: 8
+      STR_ELERIUM_115: 5
+    listOrder: 2601
+  - name: STR_PM_SMALL_PISTOL_CLIP1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 24
+    cost: 2000
+    requiredItems:
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_PM_SMALL_PISTOL_CLIP1: 10
+    listOrder: 2602
+  - name: STR_PM_SMALL_PISTOL_CLIP2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+      - STR_CHARGED_PLASMA_CELLS
+    space: 2
+    time: 24
+    cost: 2200
+    requiredItems:
+      STR_ELERIUM_115: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_PM_SMALL_PISTOL_CLIP2: 10
+    listOrder: 2603
+  - name: STR_PM_SMALL_PISTOL_CLIP3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+      - STR_ANTIMATTER_CLIP
+    space: 2
+    time: 24
+    cost: 2400
+    requiredItems:
+      STR_ELERIUM_115: 3
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_PM_SMALL_PISTOL_CLIP3: 10
+    listOrder: 2604
+  - name: STR_PM_MAIN_PISTOL
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 240
+    cost: 56000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 10
+      STR_ELERIUM_115: 6
+    listOrder: 2605
+  - name: STR_PM_SMG
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 286
+    cost: 70000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 12
+      STR_CODEX_FRAGMENT: 12
+      STR_ELERIUM_115: 7
+    listOrder: 2606
+  - name: STR_PM_MAIN_PISTOL_CLIP1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 24
+    cost: 2000
+    requiredItems:
+      STR_ELERIUM_115: 1
+    producedItems:
+      STR_PM_MAIN_PISTOL_CLIP1: 10
+    listOrder: 2607
+  - name: STR_PM_MAIN_PISTOL_CLIP2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_CHARGED_PLASMA_CELLS
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 24
+    cost: 2200
+    requiredItems:
+      STR_ELERIUM_115: 1
+      STR_CODEX_FRAGMENT: 1
+    producedItems:
+      STR_PM_MAIN_PISTOL_CLIP2: 10
+    listOrder: 2608
+  - name: STR_PM_MAIN_PISTOL_CLIP3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ANTIMATTER_CLIP
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 24
+    cost: 2400
+    requiredItems:
+      STR_ELERIUM_115: 5
+      STR_CODEX_FRAGMENT: 5
+    producedItems:
+      STR_PM_MAIN_PISTOL_CLIP3: 10
+    listOrder: 2609
+  - name: STR_PM_HEAVY_PISTOL
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 240
+    cost: 56000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 14
+      STR_CODEX_FRAGMENT: 14
+      STR_ELERIUM_115: 7
+    listOrder: 2610
+  - name: STR_PM_BULLPUP
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 286
+    cost: 70000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 14
+      STR_CODEX_FRAGMENT: 14
+      STR_ELERIUM_115: 8
+    listOrder: 2611
+  - name: STR_PM_HEAVY_PISTOL_CLIP1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 24
+    cost: 2000
+    requiredItems:
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_PM_HEAVY_PISTOL_CLIP1: 10
+    listOrder: 2612
+  - name: STR_PM_HEAVY_PISTOL_CLIP2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_CHARGED_PLASMA_CELLS
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 24
+    cost: 2200
+    requiredItems:
+      STR_ELERIUM_115: 2
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_PM_HEAVY_PISTOL_CLIP2: 10
+    listOrder: 2613
+  - name: STR_PM_HEAVY_PISTOL_CLIP3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ANTIMATTER_CLIP
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 2
+    time: 24
+    cost: 2400
+    requiredItems:
+      STR_ELERIUM_115: 6
+      STR_CODEX_FRAGMENT: 6
+    producedItems:
+      STR_PM_HEAVY_PISTOL_CLIP3: 10
+    listOrder: 2614
+  - name: STR_PM_SHOTGUN
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 328
+    cost: 88000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 17
+      STR_CODEX_FRAGMENT: 15
+      STR_ELERIUM_115: 10
+    listOrder: 2615
+  - name: STR_PM_SHOTGUN_CLIP1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 32
+    cost: 3000
+    requiredItems:
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_PM_SHOTGUN_CLIP1: 10
+    listOrder: 2616
+  - name: STR_PM_SHOTGUN_CLIP2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_CHARGED_PLASMA_CELLS
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 33
+    cost: 3300
+    requiredItems:
+      STR_ELERIUM_115: 3
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_PM_SHOTGUN_CLIP2: 10
+    listOrder: 2617
+  - name: STR_PM_SHOTGUN_CLIP3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ANTIMATTER_CLIP
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 34
+    cost: 3600
+    requiredItems:
+      STR_ELERIUM_115: 5
+      STR_CODEX_FRAGMENT: 5
+    producedItems:
+      STR_PM_SHOTGUN_CLIP3: 10
+    listOrder: 2618
+  - name: STR_PM_RIFLE
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 328
+    cost: 88000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 15
+      STR_CODEX_FRAGMENT: 15
+      STR_ELERIUM_115: 10
+    listOrder: 2619
+  - name: STR_PM_RIFLE_CLIP1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 80
+    cost: 32
+    requiredItems:
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_PM_RIFLE_CLIP1: 10
+    listOrder: 2620
+  - name: STR_PM_RIFLE_CLIP2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_CHARGED_PLASMA_CELLS
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 33
+    cost: 3300
+    requiredItems:
+      STR_ELERIUM_115: 3
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_PM_RIFLE_CLIP2: 10
+    listOrder: 2621
+  - name: STR_PM_RIFLE_CLIP3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ANTIMATTER_CLIP
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 34
+    cost: 3600
+    requiredItems:
+      STR_ELERIUM_115: 8
+      STR_CODEX_FRAGMENT: 8
+    producedItems:
+      STR_PM_RIFLE_CLIP3: 10
+    listOrder: 2622
+  - name: STR_PM_LMG
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_HEAVY_PLASMA_WEAPONS
+    space: 2
+    time: 400
+    cost: 122000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+      STR_CODEX_FRAGMENT: 30
+      STR_ELERIUM_115: 15
+    listOrder: 2623
+  - name: STR_PM_LMG_CLIP1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_HEAVY_PLASMA_WEAPONS
+    space: 2
+    time: 35
+    cost: 6000
+    requiredItems:
+      STR_ELERIUM_115: 3
+    producedItems:
+      STR_PM_LMG_CLIP1: 10
+    listOrder: 2624
+  - name: STR_PM_LMG_CLIP2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_CHARGED_PLASMA_CELLS
+      - STR_HEAVY_PLASMA_WEAPONS
+    space: 2
+    time: 36
+    cost: 6600
+    requiredItems:
+      STR_ELERIUM_115: 4
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_PM_LMG_CLIP2: 10
+    listOrder: 2625
+  - name: STR_PM_LMG_CLIP3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ANTIMATTER_CLIP
+      - STR_HEAVY_PLASMA_WEAPONS
+    space: 2
+    time: 37
+    cost: 7200
+    requiredItems:
+      STR_ELERIUM_115: 10
+      STR_CODEX_FRAGMENT: 10
+    producedItems:
+      STR_PM_LMG_CLIP3: 10
+    listOrder: 2626
+  - name: STR_PM_SNIPER
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 350
+    cost: 92000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 15
+      STR_CODEX_FRAGMENT: 20
+      STR_ELERIUM_115: 10
+    listOrder: 2627
+  - name: STR_PM_SNIPER_CLIP1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 32
+    cost: 3500
+    requiredItems:
+      STR_ELERIUM_115: 2
+    producedItems:
+      STR_PM_SNIPER_CLIP1: 10
+    listOrder: 2628
+  - name: STR_PM_SNIPER_CLIP2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_CHARGED_PLASMA_CELLS
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 33
+    cost: 3850
+    requiredItems:
+      STR_ELERIUM_115: 3
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_PM_SNIPER_CLIP2: 10
+    listOrder: 2629
+  - name: STR_PM_SNIPER_CLIP3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ANTIMATTER_CLIP
+      - STR_MEDIUM_PLASMA_WEAPONS
+    space: 2
+    time: 34
+    cost: 4200
+    requiredItems:
+      STR_ELERIUM_115: 10
+      STR_CODEX_FRAGMENT: 10
+    producedItems:
+      STR_PM_SNIPER_CLIP3: 10
+    listOrder: 2630
+  - name: STR_PM_HEAVY_CANNON
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_HEAVY_PLASMA_WEAPONS
+    space: 3
+    time: 560
+    cost: 175000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 35
+      STR_CODEX_FRAGMENT: 35
+      STR_ELERIUM_115: 20
+    listOrder: 2631
+  - name: STR_PM_HEAVY_CANNON_CLIP1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_HEAVY_PLASMA_WEAPONS
+    space: 3
+    time: 36
+    cost: 7000
+    requiredItems:
+      STR_ELERIUM_115: 4
+    producedItems:
+      STR_PM_HEAVY_CANNON_CLIP1: 10
+    listOrder: 2632
+  - name: STR_PM_HEAVY_CANNON_CLIP2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_CHARGED_PLASMA_CELLS
+      - STR_HEAVY_PLASMA_WEAPONS
+    space: 3
+    time: 38
+    cost: 7700
+    requiredItems:
+      STR_ELERIUM_115: 5
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_PM_HEAVY_CANNON_CLIP2: 10
+    listOrder: 2633
+  - name: STR_PM_HEAVY_CANNON_CLIP3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ANTIMATTER_CLIP
+      - STR_HEAVY_PLASMA_WEAPONS
+    space: 3
+    time: 40
+    cost: 8400
+    requiredItems:
+      STR_ELERIUM_115: 12
+      STR_CODEX_FRAGMENT: 12
+    producedItems:
+      STR_PM_HEAVY_CANNON_CLIP3: 10
+    listOrder: 2634
+######Ojito pasar a armas meelee
+  - name: STR_ME_ALLOY_KNIFE
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ME_ALLOY_KNIFE
+    space: 1
+    time: 20
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    listOrder: 1465
+  - name: STR_ME_ALLOY_SWORD
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ME_ALLOY_KNIFE
+    space: 1
+    time: 20
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+    listOrder: 1465
+  - name: STR_ME_LASER_KNIFE
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_LIGHT_LASER_WEAPONS
+    space: 1
+    time: 48
+    cost: 30000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 1
+    listOrder: 2426
+  - name: STR_ME_LASER_SWORD
+    category: STR_LASER_WEAPONS
+    requires:
+      - STR_LIGHT_LASER_WEAPONS
+    space: 1
+    time: 48
+    cost: 30000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 1
+    listOrder: 2427
+  - name: STR_ME_PLASMA_KNIFE
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 1
+    time: 100
+    cost: 25000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 15
+      STR_ELERIUM_115: 5
+    listOrder: 1466
+  - name: STR_ME_PLASMA_SWORD
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_LIGHT_PLASMA_WEAPONS
+    space: 1
+    time: 100
+    cost: 25000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 15
+      STR_ELERIUM_115: 5
+    listOrder: 1466
+#--- Plasma Weapons ----------------------------------END
+#--- Shock Weapons ----------------------------------
+  - name: STR_SH_SMALL_PISTOL
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_XENO_PHYSIOLOGY
+    space: 2
+    time: 150
+    cost: 20000
+    listOrder: 2706
+  - name: STR_SH_SMALL_PISTOL_CLIP1
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_XENO_PHYSIOLOGY
+    space: 1
+    time: 50
+    cost: 1200
+    producedItems:
+      STR_SH_SMALL_PISTOL_CLIP1: 10
+    listOrder: 2707
+  - name: STR_SH_SMALL_PISTOL_CLIP2
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_XENO_PHYSIOLOGY
+    space: 1
+    time: 50
+    cost: 1200
+    producedItems:
+      STR_SH_SMALL_PISTOL_CLIP2: 10
+    listOrder: 2708
+
+  - name: STR_SH_MAIN_PISTOL
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_SH_MAIN_PISTOL
+    space: 1
+    time: 100
+    cost: 12000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 10
+    listOrder: 2706
+  - name: STR_SH_RIFLE
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_SH_RIFLE
+    space: 2
+    time: 150
+    cost: 20000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 20
+      STR_CODEX_FRAGMENT: 20
+    listOrder: 2707
+  - name: STR_SH_MAIN_PISTOL_BATTERY
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_SH_RIFLE
+    space: 1
+    time: 50
+    cost: 1200
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+      STR_CODEX_FRAGMENT: 2
+    producedItems:
+      STR_SH_MAIN_PISTOL_BATTERY: 10
+    listOrder: 2708
+  - name: STR_SH_HEAVY_CANNON
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_SH_HEAVY_CANNON
+    space: 3
+    time: 300
+    cost: 30000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 30
+      STR_CODEX_FRAGMENT: 30
+    listOrder: 2709
+  - name: STR_SH_HEAVY_CANNON_BATTERY
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_SH_HEAVY_CANNON
+    space: 1
+    time: 100
+    cost: 3000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_CODEX_FRAGMENT: 3
+    producedItems:
+      STR_SH_HEAVY_CANNON_BATTERY: 10
+    listOrder: 2710
+#####ojito agregar a ordnance
+  - name: STR_SH_GRENADE
+    category: STR_SHOCK_WEAPONS
+    requires:
+      - STR_SH_GRENADE
+    space: 1
+    time: 60
+    cost: 6000
+    listOrder: 2711
+#--- Shock Weapons ----------------------------------END
+#--- Elerium and Antimatter Explosives ----------------------------------
+  - name: STR_ELERIUM_GRENADE
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_ELERIUM_GRENADE
+    space: 1
+    time: 60
+    cost: 6700
+    requiredItems:
+      STR_ELERIUM_115: 1
+    listOrder: 1473
+  - name: STR_BO_ELERIUM_PROXY_MINE
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_BO_ELERIUM_PROXY_MINE
+    space: 1
+    time: 80
+    cost: 8000
+    requiredItems:
+      STR_ELERIUM_115: 1
+      STR_CODEX_FRAGMENT: 1
+    listOrder: 1474
+  - name: STR_BO_ANTIMATTER_EXPLOSIVE
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_BO_ANTIMATTER_EXPLOSIVE
+    space: 2
+    time: 160
+    cost: 15000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 2
+      STR_CODEX_FRAGMENT: 2
+      STR_ELERIUM_115: 20
+    listOrder: 1475
+#--- Elerium and Antimatter Explosives ----------------------------------END
+#--- Fusion Weapons ----------------------------------
+  - name: STR_PM_ANTIMATTER_LAUNCHER
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_PM_ANTIMATTER_LAUNCHER
+    space: 4
+    time: 560
+    cost: 175000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 50
+      STR_CODEX_FRAGMENT: 50
+    listOrder: 1469
+  - name: STR_PM_ANTIMATTER_LAUNCHER_BOMB1
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_PM_ANTIMATTER_LAUNCHER
+    space: 2
+    time: 40
+    cost: 8400
+    requiredItems:
+      STR_ELERIUM_115: 5
+      STR_CODEX_FRAGMENT: 1
+    listOrder: 1470
+  - name: STR_PM_ANTIMATTER_LAUNCHER_BOMB2
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_PM_ANTIMATTER_LAUNCHER
+    space: 2
+    time: 40
+    cost: 8400
+    requiredItems:
+      STR_ELERIUM_115: 8
+    listOrder: 1471
+  - name: STR_PM_ANTIMATTER_LAUNCHER_BOMB3
+    category: STR_PLASMA_WEAPONS
+    requires:
+      - STR_PM_ANTIMATTER_LAUNCHER
+    space: 2
+    time: 40
+    cost: 8400
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 1
+    listOrder: 1472
+#--- Fusion Weapons ----------------------------------END
+#**********************************************************END WEAPONS
+#--- Xeno Operations Armor ----------------------------------
+  - name: STR_XOPS_ARMOR_TAN
+    category: STR_LIGHT_ARMOR
+    requires:
+      - STR_XOPS_ARMOR_TAN
+    space: 5
+    time: 160
+    cost: 11000
+    listOrder: 2001
+  - name: STR_K9_COMBAT_VEST
+    category: STR_DOGE_EQUIPMENT
+    requires:
+      - STR_XOPS_ARMOR_TAN
+    space: 3
+    time: 100
+    cost: 8000
+    listOrder: 2011
+#--- Xeno Operations Armor ----------------------------------END
+#--- Personal Armor ----------------------------------
+  - name: STR_PERSONAL_ARMOR_TAN
+    category: STR_LIGHT_ARMOR
+    requires:
+      - STR_PERSONAL_ARMOR_TAN #ojito aqui
+    space: 6
+    time: 320
+    cost: 22000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_CODEX_FRAGMENT: 2
+    listOrder: 2002
+  - name: STR_K9_PERSONAL_GEAR
+    category: STR_DOGE_EQUIPMENT
+    requires:
+      - STR_DOGE_RECRUITMENT
+      - STR_PERSONAL_ARMOR_TAN #ojito aqui
+    space: 4
+    time: 350
+    cost: 25000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_CODEX_FRAGMENT: 2
+    listOrder: 2012
+#--- Personal Armor ----------------------------------END
+#--- Alloy Armor ----------------------------------
+  - name: STR_ALLOY_ARMOR_TAN
+    category: STR_MED_ARMOR
+    requires:
+      - STR_ALLOY_ARMOR_TAN
+    space: 6
+    time: 350
+    cost: 30000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 2
+    listOrder: 2003
+  - name: STR_K9_ALLOY_SUIT
+    category: STR_DOGE_EQUIPMENT
+    requires:
+      - STR_ALLOY_ARMOR_TAN
+    space: 6
+    time: 380
+    cost: 35000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 2
+    listOrder: 2013
+#--- Alloy Armor ----------------------------------END
+#--- Sky Strike Armor ----------------------------------
+  - name: STR_SKY_ARMOR_TAN
+    category: STR_MED_ARMOR
+    requires:
+      - STR_SKY_ARMOR_TAN
+    space: 7
+    time: 360
+    cost: 35000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 3
+      STR_ELERIUM_115: 3
+      STR_CODEX_FRAGMENT: 2
+    listOrder: 2004
+#--- Sky Strike Armor ----------------------------------END
+#--- PSI Armor ----------------------------------
+  - name: STR_PSI_ARMOR_TAN
+    category: STR_MED_ARMOR
+    requires:
+      - STR_PSI_ARMOR_TAN
+    space: 7
+    time: 480
+    cost: 55000
+    requiredItems:
+      STR_ELERIUM_115: 20
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 10
+    listOrder: 2005
+#--- PSI Armor ----------------------------------END
+#--- Power Armor ----------------------------------
+  - name: STR_XOPS_POWER_ARMOR_TAN
+    category: STR_HEAVY_ARMOR
+    requires:
+      - STR_XOPS_POWER_ARMOR_TAN
+    space: 10
+    time: 960
+    cost: 120000
+    requiredItems:
+      STR_ELERIUM_115: 10
+      STR_ALIEN_ALLOYS: 25
+      STR_CODEX_FRAGMENT: 20
+    listOrder: 2006
+#
+  - name: STR_K9_POWER_ARMOR #ojito armadura nueva de perrito, este debe ser mejorado
+    category: STR_PERSONAL_ARMOR
+    requires:
+      - STR_XOPS_POWER_ARMOR_TAN
+      - STR_DOGE_UPLIFTING
+    space: 5
+    time: 800
+    cost: 56000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 4
+    requiresBaseFunc: [ ADV_WORKS ]
+    listOrder: 17577
+#--- Power Suit ----------------------------------END
+#--- Alien Component Breakdown ----------------------------------
+#--- UFO Component Breakdown ----------------------------------END
+  - name: STR_UFO_POWER_SOURCE_BREAKDOWN
+    category: STR_UFO_COMPONENT_BREAKDOWN
+    requires:
+      - STR_UFO_POWER_SOURCE
+    space: 5
+    time: 450
+    cost: 15000
+    requiredItems:
+      STR_UFO_POWER_SOURCE: 1
+    producedItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 10
+    listOrder: 1537
+  - name: STR_UFO_NAVIGATION_BREAKDOWN
+    category: STR_UFO_COMPONENT_BREAKDOWN
+    requires:
+      - STR_UFO_NAVIGATION
+    space: 2
+    time: 200
+    cost: 8000
+    requiredItems:
+      STR_UFO_NAVIGATION: 1
+    producedItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 2
+    listOrder: 1536
+  - name: STR_UFO_CONSTRUCTION
+    category: STR_UFO_COMPONENT_BREAKDOWN
+    requires:
+      - STR_UFO_CONSTRUCTION
+    space: 10
+    time: 500
+    cost: 6000
+    requiredItems:
+      STR_UFO_CONSTRUCTION: 1
+    producedItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 2
+    listOrder: 1536
+  - name: STR_ALIEN_FOOD_BREAKDOWN #alien supplies
+    category: STR_UFO_COMPONENT_BREAKDOWN
+    requires:
+      - STR_ALIEN_FOOD
+    space: 2
+    time: 200
+    cost: 8000
+    requiredItems:
+      STR_ALIEN_FOOD: 1
+    producedItems:
+      STR_ALIEN_ALLOYS: 25
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 10
+    listOrder: 1531
+  - name: STR_ALIEN_REPRODUCTION_BREAKDOWN
+    category: STR_UFO_COMPONENT_BREAKDOWN
+    requires:
+      - STR_ALIEN_REPRODUCTION
+    space: 3
+    time: 200
+    cost: 5000
+    requiredItems:
+      STR_ALIEN_REPRODUCTION: 1
+    producedItems:
+      STR_ALIEN_ALLOYS: 5
+      STR_CODEX_FRAGMENT: 2
+      STR_ELERIUM_115: 1
+    listOrder: 1532
+  - name: STR_EXAMINATION_ROOM_BREAKDOWN
+    category: STR_UFO_COMPONENT_BREAKDOWN
+    requires:
+      - STR_EXAMINATION_ROOM
+    space: 3
+    time: 180
+    cost: 5500
+    requiredItems:
+      STR_EXAMINATION_ROOM: 1
+    producedItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 4
+      STR_ELERIUM_115: 2
+    listOrder: 1535
+  - name: STR_ALIEN_HABITAT_BREAKDOWN
+    category: STR_UFO_COMPONENT_BREAKDOWN
+    requires:
+      - STR_ALIEN_HABITAT
+    space: 5
+    time: 200
+    cost: 4000
+    requiredItems:
+      STR_ALIEN_HABITAT: 1
+    producedItems:
+      STR_ALIEN_ALLOYS: 10
+      STR_CODEX_FRAGMENT: 5
+      STR_ELERIUM_115: 1
+    listOrder: 1533
+  - name: STR_ALIEN_ENTERTAINMENT_BREAKDOWN
+    category: STR_UFO_COMPONENT_BREAKDOWN
+    requires:
+      - STR_ALIEN_ENTERTAINMENT
+    space: 2
+    time: 150
+    cost: 5500
+    requiredItems:
+      STR_ALIEN_ENTERTAINMENT: 1
+    producedItems:
+      STR_ALIEN_ALLOYS: 6
+      STR_CODEX_FRAGMENT: 3
+      STR_ELERIUM_115: 2
+    listOrder: 1539
+#--- UFO Component Breakdown ----------------------------------END
+#--- Alien Component Breakdown ----------------------------------END
+#--- Crafting Components ----------------------------------
+  - name: STR_ELERIUM_115
+    category: STR_UFO_COMPONENT
+    requires:
+      - STR_ELERIUM_115_SYNTHESIS
+    space: 1
+    time: 10
+    cost: 3000
+    listOrder: 3286
+  - name: STR_ALIEN_ALLOYS
+    category: STR_UFO_COMPONENT
+    requires:
+      - STR_ALLOY_FORGE
+    space: 5
+    time: 40
+    cost: 2000
+  - name: STR_CODEX_FRAGMENT
+    category: STR_UFO_COMPONENT
+    requires:
+      - STR_FRAGMENT_REPLICATION
+    space: 1
+    time: 10
+    cost: 1000
+    listOrder: 3288
+#--- Craft Components ----------------------------------END
+#--- Codex ----------------------------------
+  - name: STR_CODEX_1
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_FRAGMENT
+    space: 5
+    time: 500
+    cost: 500000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 150
+      STR_CODEX_FRAGMENT: 75
+      STR_ELERIUM_115: 40
+  - name: STR_CODEX_2_UP
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_1
+      - STR_CODEX_KEY
+    space: 1
+    time: 50
+    cost: 0
+    requiredItems:
+      STR_CODEX_KEY: 1
+      STR_CODEX_1: 1
+    producedItems:
+      STR_CODEX_2: 1
+  - name: STR_CODEX_2
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_1
+    space: 8
+    time: 1000
+    cost: 1000000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 200
+      STR_CODEX_FRAGMENT: 100
+      STR_ELERIUM_115: 60
+      STR_CODEX_1: 1
+  - name: STR_CODEX_3_UP
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_2
+      - STR_CODEX_KEY
+    space: 1
+    time: 100
+    cost: 0
+    requiredItems:
+      STR_CODEX_KEY: 1
+      STR_CODEX_2: 1
+    producedItems:
+      STR_CODEX_3: 1
+  - name: STR_CODEX_3
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_2
+    space: 10
+    time: 2500
+    cost: 3500000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 300
+      STR_CODEX_FRAGMENT: 150
+      STR_ELERIUM_115: 80
+      STR_CODEX_2: 1
+  - name: STR_CODEX_4_UP
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_3
+      - STR_CODEX_KEY
+    space: 1
+    time: 100
+    cost: 0
+    requiredItems:
+      STR_CODEX_KEY: 1
+      STR_CODEX_3: 1
+    producedItems:
+      STR_CODEX_4: 1
+  - name: STR_CODEX_4
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_3
+    space: 14
+    time: 5000
+    cost: 5000000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 400
+      STR_CODEX_FRAGMENT: 200
+      STR_ELERIUM_115: 100
+      STR_CODEX_3: 1
+  - name: STR_CODEX_5_UP
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_4
+      - STR_CODEX_KEY
+    space: 1
+    time: 100
+    cost: 0
+    requiredItems:
+      STR_CODEX_KEY: 2
+      STR_CODEX_4: 1
+    producedItems:
+      STR_CODEX_5: 1
+  - name: STR_CODEX_5
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_4
+    space: 16
+    time: 12000
+    cost: 10000000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 500
+      STR_CODEX_FRAGMENT: 250
+      STR_ELERIUM_115: 120
+      STR_CODEX_4: 1
+  - name: STR_CODEX_COMPLETE
+    category: STR_CODEX
+    requires:
+      - STR_CODEX_5
+    space: 20
+    time: 75000
+    cost: 30000000
+    requiredItems:
+      STR_ALIEN_ALLOYS: 600
+      STR_CODEX_FRAGMENT: 300
+      STR_ELERIUM_115: 200
+      STR_CODEX_KEY: 2
+      STR_CODEX_5: 1
+#--- Codex ----------------------------------END

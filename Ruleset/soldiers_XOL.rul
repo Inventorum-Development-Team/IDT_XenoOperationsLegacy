@@ -1,0 +1,824 @@
+# Made by B1ackwolf for XOPS-Legacy
+# Status: Done for the moment. general improvement for stats pending perhaps.
+soldiers:
+#
+  - type: STR_SOLDIER
+    costBuy: 20000
+    costSalary: 4000
+    costSalarySquaddie: 1000
+    costSalarySergeant: 2000
+    costSalaryCaptain: 4000
+    costSalaryColonel: 6000
+    costSalaryCommander: 16000
+    rankStrings:
+    - STR_ARMY_RECRUIT
+    - STR_ARMY_PRIVATE
+    - STR_ARMY_CORPORAL
+    - STR_ARMY_SERGEANT
+    - STR_ARMY_STAFF_SERGEANT
+    - STR_ARMY_FIRST_SERGEANT
+    minStats:
+      tu: 35
+      stamina: 40
+      health: 30
+      bravery: 15
+      reactions: 30
+      firing: 40
+      throwing: 40
+      strength: 25
+      psiStrength: 0
+      psiSkill: 0
+      melee: 30
+    maxStats:
+      tu: 60
+      stamina: 70
+      health: 45
+      bravery: 60
+      reactions: 60
+      firing: 70
+      throwing: 80
+      strength: 45
+      psiStrength: 100
+      psiSkill: 15
+      melee: 70
+    statCaps:
+      tu: 90
+      stamina: 100
+      health: 60
+      bravery: 100
+      reactions: 100
+      firing: 120
+      throwing: 120
+      strength: 90
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_KEVLAR_VEST_ARMOR_TAN_UC
+    armorForAvatar: STR_KEVLAR_VEST_ARMOR_BERET_UC
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 30
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/
+    deathMale: [41, 42, 43]
+    deathFemale: [44, 45, 46]
+    allowPiloting: false
+#
+  - type: STR_ELITE_SOLDIER
+    costBuy: 180000
+    costSalary: 7000
+    costSalarySquaddie: 1000
+    costSalarySergeant: 3000
+    costSalaryCaptain: 5000
+    costSalaryColonel: 8000
+    costSalaryCommander: 13000
+    rankStrings:
+    - STR_ARMY_RECRUIT
+    - STR_ARMY_PRIVATE
+    - STR_ARMY_CORPORAL
+    - STR_ARMY_SERGEANT
+    - STR_ARMY_STAFF_SERGEANT
+    - STR_ARMY_FIRST_SERGEANT
+    minStats:
+      tu: 55
+      stamina: 50
+      health: 35
+      bravery: 30
+      reactions: 50
+      firing: 50
+      throwing: 60
+      strength: 40
+      psiStrength: 20
+      psiSkill: 0
+      melee: 40
+    maxStats:
+      tu: 65
+      stamina: 70
+      health: 45
+      bravery: 70
+      reactions: 70
+      firing: 80
+      throwing: 80
+      strength: 55
+      psiStrength: 100
+      psiSkill: 15
+      melee: 70
+    statCaps:
+      tu: 90
+      stamina: 100
+      health: 60
+      bravery: 100
+      reactions: 100
+      firing: 120
+      throwing: 120
+      strength: 100
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_KEVLAR_VEST_ARMOR_BLACK_UC
+    armorForAvatar: STR_KEVLAR_VEST_ARMOR_BERET_UC
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 10
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/
+    deathMale: [41, 42, 43]
+    deathFemale: [44, 45, 46]
+    allowPiloting: false
+#
+  - type: STR_DRIVER
+    costSalary: 15000
+    costSalarySquaddie: 5000
+    costSalarySergeant: 10000
+    costSalaryCaptain: 15000
+    costSalaryColonel: 20000
+    costSalaryCommander: 35000
+    minStats:
+      tu: 55
+      stamina: 50
+      health: 30
+      bravery: 40
+      reactions: 40
+      firing: 40
+      throwing: 50
+      strength: 20
+      psiStrength: 0
+      psiSkill: 0
+      melee: 20
+    maxStats:
+      tu: 65
+      stamina: 80
+      health: 45
+      bravery: 70
+      reactions: 70
+      firing: 70
+      throwing: 50
+      strength: 35
+      psiStrength: 100
+      psiSkill: 16
+      melee: 25
+    statCaps:
+      tu: 100
+      stamina: 100
+      health: 70
+      bravery: 120
+      reactions: 120
+      firing: 120
+      throwing: 120
+      strength: 60
+      psiStrength: 100
+      psiSkill: 100
+      melee: 40
+    armor: STR_MECH_DRIFTSUIT_UC
+    armorForAvatar: STR_MECH_DRIFTSUIT_UC
+    rankTinySprite: 19      # este se modifica
+    rankSprite: 911         # estos se modifican
+    rankBattleSprite: 911   # estos se modifican
+    standHeight: 22
+    kneelHeight: 14
+#    femaleFrequency: 50
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/
+    deathMale: [41, 42, 43]
+    deathFemale: [44, 45, 46]
+    allowPiloting: false
+    rankStrings:
+    - STR_MECH_SPECIALIST
+    - STR_MECH_TECHNICAL_SERGEANT
+    - STR_MECH_GUNNERY_SERGEANT
+    - STR_MECH_MASTER_GUNNERY_OFFICER
+    - STR_MECH_LIEUTENANT
+    - STR_MECH_RANGER
+#
+  - type: STR_MECHA_DRIVER
+    costSalary: 15000
+    costSalarySquaddie: 5000
+    costSalarySergeant: 10000
+    costSalaryCaptain: 15000
+    costSalaryColonel: 20000
+    costSalaryCommander: 35000
+    minStats:
+      tu: 55
+      stamina: 50
+      health: 30
+      bravery: 40
+      reactions: 40
+      firing: 40
+      throwing: 50
+      strength: 20
+      psiStrength: 0
+      psiSkill: 0
+      melee: 20
+    maxStats:
+      tu: 65
+      stamina: 80
+      health: 45
+      bravery: 70
+      reactions: 70
+      firing: 70
+      throwing: 50
+      strength: 35
+      psiStrength: 100
+      psiSkill: 16
+      melee: 25
+    statCaps:
+      tu: 100
+      stamina: 100
+      health: 70
+      bravery: 120
+      reactions: 120
+      firing: 120
+      throwing: 120
+      strength: 60
+      psiStrength: 100
+      psiSkill: 100
+      melee: 40
+    armor: STR_MECH_DRIFTSUIT_UC
+    armorForAvatar: STR_MECH_DRIFTSUIT_UC
+    rankTinySprite: 19      # este se modifica
+    rankSprite: 911         # estos se modifican
+    rankBattleSprite: 911   # estos se modifican
+    standHeight: 22
+    kneelHeight: 14
+#    femaleFrequency: 50
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/
+    deathMale: [41, 42, 43]
+    deathFemale: [44, 45, 46]
+    allowPiloting: false
+    rankStrings:
+    - STR_MECH_SPECIALIST
+    - STR_MECH_TECHNICAL_SERGEANT
+    - STR_MECH_GUNNERY_SERGEANT
+    - STR_MECH_MASTER_GUNNERY_OFFICER
+    - STR_MECH_LIEUTENANT
+    - STR_MECH_RANGER
+#
+  - type: STR_SOLDIER_OFFICER
+    costSalary: 12000
+    costSalarySquaddie: 3000
+    costSalarySergeant: 8000
+    costSalaryCaptain: 13000
+    costSalaryColonel: 18000
+    costSalaryCommander: 38000
+    minStats:
+      tu: 50
+      stamina: 40
+      health: 25
+      bravery: 10
+      reactions: 30
+      firing: 40
+      throwing: 50
+      strength: 25
+      psiStrength: 50
+      psiSkill: 0
+      melee: 40
+    maxStats:
+      tu: 65
+      stamina: 70
+      health: 45
+      bravery: 70
+      reactions: 70
+      firing: 80
+      throwing: 80
+      strength: 45
+      psiStrength: 100
+      psiSkill: 15
+      melee: 70
+    statCaps:
+      tu: 90
+      stamina: 100
+      health: 60
+      bravery: 100
+      reactions: 100
+      firing: 120
+      throwing: 120
+      strength: 90
+      psiStrength: 100
+      psiSkill: 100
+      melee: 120
+    armor: STR_KEVLAR_VEST_ARMOR_GRAY_UC
+    armorForAvatar: STR_KEVLAR_VEST_ARMOR_BERET_UC
+    standHeight: 22
+    kneelHeight: 14
+    rankTinySprite: 6
+    rankSprite: 800         # default 42 # basebits.pck
+    rankBattleSprite: 800   # default 20 # smoke.pck
+#    femaleFrequency: 25
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/
+    deathMale: [41, 42, 43]
+    deathFemale: [44, 45, 46]
+    allowPiloting: false
+    rankStrings:
+    - STR_ARMY_DEPUTY_OFICER
+    - STR_ARMY_SUB_LIEUTENANT
+    - STR_ARMY_LIEUTENANT
+    - STR_ARMY_CAPTAIN
+    - STR_ARMY_MAJOR
+    - STR_ARMY_LT_COLONEL
+#
+  - type: STR_PILOT
+    costBuy: 50000
+    costSalary: 15000
+    costSalarySquaddie: 5000
+    costSalarySergeant: 10000
+    costSalaryCaptain: 15000
+    costSalaryColonel: 20000
+    costSalaryCommander: 35000
+    minStats:
+      tu: 55
+      stamina: 50
+      health: 30
+      bravery: 40
+      reactions: 40
+      firing: 40
+      throwing: 50
+      strength: 20
+      psiStrength: 0
+      psiSkill: 0
+      melee: 20
+    maxStats:
+      tu: 65
+      stamina: 80
+      health: 45
+      bravery: 70
+      reactions: 70
+      firing: 70
+      throwing: 50
+      strength: 35
+      psiStrength: 100
+      psiSkill: 16
+      melee: 25
+    statCaps:
+      tu: 100
+      stamina: 100
+      health: 70
+      bravery: 120
+      reactions: 120
+      firing: 120
+      throwing: 120
+      strength: 60
+      psiStrength: 100
+      psiSkill: 100
+      melee: 40
+    armor: STR_FLIGHT_JUMPSUIT_UC
+    armorForAvatar: STR_FLIGHT_JUMPSUIT_UC
+    rankTinySprite: 12
+    rankSprite: 900         # default 42 # basebits.pck
+    rankBattleSprite: 900   # default 20 # smoke.pck
+    standHeight: 22
+    kneelHeight: 14
+    femaleFrequency: 40
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/
+    deathMale: [41, 42, 43]
+    deathFemale: [44, 45, 46]
+    allowPiloting: true
+    dogfightExperience:
+      bravery: 50
+      reactions: 75
+      firing: 100
+    rankStrings:
+    - STR_AIR_SUB_LIEUTENANT
+    - STR_AIR_LIEUTENANT
+    - STR_AIR_CAPTAIN
+    - STR_AIR_MAJOR
+    - STR_AIR_COLONEL
+    - STR_AIR_BRIGADIER
+#
+  - type: STR_DRONE_CORE
+    requires:
+      - STR_DRONE_WARFARE
+    costSalary: 10000
+    transferTime: 72
+    minStats: &AIStats
+      tu: 50
+      stamina: 90
+      health: 15
+      bravery: 0
+      reactions: 0
+      firing: 40
+      throwing: 0
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 0
+      mana: 100
+    maxStats: *AIStats
+    statCaps: &AIStatCaps
+      tu: 75
+      stamina: 90
+      health: 15
+      bravery: 0
+      reactions: 50
+      firing: 100
+      throwing: 80
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 80
+      mana: 100
+    trainingStatCaps: &AITrainingStatCaps
+      tu: 0
+      stamina: 0
+      health: 0
+      bravery: 0
+      reactions: 0
+      firing: 0
+      throwing: 0
+      strength: 0
+      psiStrength: 0
+      psiSkill: 0
+      melee: 0
+      mana: 0
+#    dogfightExperience: *AnchorHumanDogfightExperience
+    armor: STR_DRONE_ROVER_CHASSIS_UC
+#    armorForAvatar: carita del dron?
+    avatarOffsetX: 79
+    avatarOffsetY: 62
+    standHeight: 10
+    kneelHeight: 10
+    femaleFrequency: 0
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/SupportNames/Cores.nam
+    rankStrings:
+    - STR_DRONE_CORE
+    deathMale: 23
+    deathFemale: 23
+    allowPiloting: false
+    allowPromotion: false
+    flagOffset: 500
+#
+  - type: STR_DOGE
+    costBuy: 15000
+    costSalary: 3000
+    minStats:
+      tu: 60
+      stamina: 80
+      health: 25
+      bravery: 10
+      reactions: 60
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 70
+      mana: 100
+    maxStats:
+      tu: 70
+      stamina: 90
+      health: 30
+      bravery: 20
+      reactions: 80
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 90
+      mana: 150
+    statCaps:
+      tu: 100
+      stamina: 130
+      health: 50
+      bravery: 40
+      reactions: 110
+      firing: 10
+      throwing: 10
+      strength: 2
+      psiStrength: 40
+      psiSkill: 0
+      melee: 140
+      mana: 220
+    trainingStatCaps:
+      tu: 70
+      stamina: 90
+      health: 30
+      bravery: 20
+      reactions: 60
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 90
+      mana: 0
+    armor: STR_K9_HARNESS_UC
+    armorForAvatar: STR_K9_HARNESS_UC
+    avatarOffsetX: 87
+    avatarOffsetY: 59
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/SupportNames/Doges.nam
+    allowPiloting: false
+    allowPromotion: false
+    flagOffset: 500
+    rankSprite: 910         # default 42 # basebits.pck
+    rankBattleSprite: 910   # default 20 # smoke.pck
+    moraleLossWhenKilled: 33
+    rankTinySprite: 18
+    standHeight: 12
+    kneelHeight: 12
+    requires:
+      - STR_DOGE_RECRUITMENT
+    femaleFrequency: 50
+    deathMale: [994, 680, 681]
+    deathFemale: [994, 680, 681]
+#
+  - type: STR_DOGE_PRESAPIENT
+    costSalary: 3000
+    minStats:
+      tu: 60
+      stamina: 80
+      health: 25
+      bravery: 10
+      reactions: 60
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 70
+      mana: 100
+    maxStats:
+      tu: 70
+      stamina: 90
+      health: 30
+      bravery: 20
+      reactions: 80
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 90
+      mana: 150
+    statCaps:
+      tu: 100
+      stamina: 130
+      health: 50
+      bravery: 40
+      reactions: 110
+      firing: 10
+      throwing: 10
+      strength: 2
+      psiStrength: 40
+      psiSkill: 0
+      melee: 140
+      mana: 220
+    trainingStatCaps:
+      tu: 70
+      stamina: 90
+      health: 30
+      bravery: 20
+      reactions: 60
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 90
+      mana: 0
+    armor: STR_K9_HARNESS_UC
+    armorForAvatar: STR_K9_HARNESS_UC
+    avatarOffsetX: 87
+    avatarOffsetY: 59
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/SupportNames/Doges.nam
+    allowPiloting: false
+    allowPromotion: false
+    flagOffset: 500
+    rankSprite: 910         # default 42 # basebits.pck
+    rankBattleSprite: 910   # default 20 # smoke.pck
+    moraleLossWhenKilled: 33
+    rankTinySprite: 18
+    standHeight: 12
+    kneelHeight: 12
+    requires:
+      - STR_DOGE_RECRUITMENT
+      - STR_DOGE_EPIGENETIC
+    femaleFrequency: 50
+    deathMale: [994, 680, 681]
+    deathFemale: [994, 680, 681]
+#
+  - type: STR_DOGE_SAPIENS_SAPIENS
+    costSalary: 3000
+    minStats:
+      tu: 60
+      stamina: 80
+      health: 25
+      bravery: 10
+      reactions: 60
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 70
+      mana: 100
+    maxStats:
+      tu: 70
+      stamina: 90
+      health: 30
+      bravery: 20
+      reactions: 80
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 90
+      mana: 150
+    statCaps:
+      tu: 100
+      stamina: 130
+      health: 50
+      bravery: 40
+      reactions: 110
+      firing: 10
+      throwing: 10
+      strength: 2
+      psiStrength: 40
+      psiSkill: 0
+      melee: 140
+      mana: 220
+    trainingStatCaps:
+      tu: 70
+      stamina: 90
+      health: 30
+      bravery: 20
+      reactions: 60
+      firing: 0
+      throwing: 0
+      strength: 1
+      psiStrength: 40
+      psiSkill: 0
+      melee: 90
+      mana: 0
+    armor: STR_K9_HARNESS_UC
+    armorForAvatar: STR_K9_HARNESS_UC
+    avatarOffsetX: 87
+    avatarOffsetY: 59
+    soldierNames:
+      - delete
+      - Ruleset/SoldierNames/SupportNames/Doges.nam
+    allowPiloting: false
+    allowPromotion: false
+    flagOffset: 500
+    rankSprite: 910         # default 42 # basebits.pck
+    rankBattleSprite: 910   # default 20 # smoke.pck
+    moraleLossWhenKilled: 33
+    rankTinySprite: 18
+    standHeight: 12
+    kneelHeight: 12
+    requires:
+      - STR_DOGE_RECRUITMENT
+      - STR_DOGE_UPLIFTING
+    femaleFrequency: 50
+    deathMale: [994, 680, 681]
+    deathFemale: [994, 680, 681]
+#----- Soldier Transformation -----#
+soldierTransformation:
+  - name: STR_OFFICER_PROMOTION
+    cost: 20000
+    producedSoldierType: STR_SOLDIER_OFFICER
+    requiresBaseFunc: [ TROOPERS_SCHOOL ]
+    keepSoldierArmor: true
+    minRank: 3
+    transferTime: 168
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    createsClone: false
+    allowedSoldierTypes:
+      - STR_SOLDIER
+      - STR_ELITE_SOLDIER
+      - STR_DRIVER
+    lowerBoundAtMinStats: false
+    upperBoundAtMaxStats: false
+    upperBoundAtStatCaps: true
+    resetRank: true
+    flatOverallStatChange:
+      bravery: 10
+      health: 5
+      strength: 2
+      reactions: 2
+      firing: 4
+      throwing: 2
+      melee: 2
+  - name: STR_TANK_TRAINING_PROGRAM
+    cost: 20000
+    requires: [ STR_TANKS_UNITS ]
+    requiresBaseFunc: [ TROOPERS_SCHOOL ]
+    producedSoldierType: STR_DRIVER
+    keepSoldierArmor: true
+    minRank: 2
+    transferTime: 168
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    createsClone: false
+    allowedSoldierTypes:
+      - STR_SOLDIER
+      - STR_ELITE_SOLDIER
+      - STR_SOLDIER_OFFICER
+    lowerBoundAtMinStats: false
+    upperBoundAtMaxStats: false
+    upperBoundAtStatCaps: true
+    resetRank: true
+    flatOverallStatChange:
+      bravery: 10
+      health: 5
+      strength: 2
+      reactions: 2
+      firing: 4
+      throwing: 2
+      melee: 2
+#
+#  - name: STR_MECHA_TRAINING_PROGRAM
+#    cost: 20000
+#    requires: [ STR_MECHA_UNITS ]
+#    requiresBaseFunc: [ TROOPERS_SCHOOL ]
+#    producedSoldierType: STR_DRIVER
+#    keepSoldierArmor: true
+#    minRank: 2
+#    transferTime: 168
+#    allowsDeadSoldiers: false
+#    allowsLiveSoldiers: true
+#    createsClone: false
+#    allowedSoldierTypes:
+#      - STR_SOLDIER
+#      - STR_ELITE_SOLDIER
+#      - STR_SOLDIER_OFFICER
+#      - STR_DRIVER
+#    lowerBoundAtMinStats: false
+#    upperBoundAtMaxStats: false
+#    upperBoundAtStatCaps: true
+#    resetRank: true
+#    flatOverallStatChange:
+#      bravery: 10
+#      health: 5
+#      strength: 2
+#      reactions: 2
+#      firing: 4
+#      throwing: 2
+#     melee: 2
+#AGREGAR PERRITOS INTELIGENTES Y SAPIENS TAMBIEN
+#
+  - name: STR_DOGE_EPIGENETIC
+    cost: 20000
+    producedSoldierType: STR_DOGE_PRESAPIENT
+    requiresBaseFunc: [ ADV_MEDBAY ]
+    keepSoldierArmor: true
+#    minRank: 3
+    transferTime: 168
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    createsClone: false
+    allowedSoldierTypes:
+      - STR_DOGE
+    lowerBoundAtMinStats: false
+    upperBoundAtMaxStats: false
+    upperBoundAtStatCaps: true
+    resetRank: true
+    flatOverallStatChange:
+      bravery: 10
+      health: 5
+      strength: 2
+      reactions: 2
+      firing: 4
+      throwing: 2
+      melee: 2
+#
+  - name: STR_DOGE_UPLIFTING
+    cost: 20000
+    producedSoldierType: STR_DOGE_SAPIENS_SAPIENS
+    requiresBaseFunc: [ ADV_MEDBAY ]
+    keepSoldierArmor: true
+    minRank: 3
+    transferTime: 168
+    allowsDeadSoldiers: false
+    allowsLiveSoldiers: true
+    createsClone: false
+    allowedSoldierTypes:
+      - STR_DOGE_PRESAPIENT
+    lowerBoundAtMinStats: false
+    upperBoundAtMaxStats: false
+    upperBoundAtStatCaps: true
+    resetRank: true
+    flatOverallStatChange:
+      bravery: 10
+      health: 5
+      strength: 2
+      reactions: 2
+      firing: 4
+      throwing: 2
+      melee: 2

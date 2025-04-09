@@ -1,0 +1,618 @@
+# Made by B1ackwolf for XOPS-Legacy
+# Status: Reorder and clean, improve "#" notations. Add stuff from the To-Do list.
+#Also merged Interfaces.RUL, IA.RUL, hitFX.RUL
+fontName: AmigaFont.dat
+startingTime:
+  second: 0
+  minute: 0
+  hour: 12
+  weekday: 2
+  day: 4
+  month: 1
+  year: 2027
+costEngineer: 180000
+costScientist: 450000
+maxViewDistance: 40
+maxLookVariant: 17
+timePersonnel: 48
+initialFunding: 8000
+alienFuel: [STR_ELERIUM_115, 10]
+turnAIUseGrenade: 3
+turnAIUseBlaster: 4
+soldiersPerSergeant: 5 #prev valor 7
+soldiersPerCaptain: 11 #prev valor 15
+soldiersPerColonel: 19 #prev valor 24
+soldiersPerCommander: 29 #prev valor 39
+crewEmergencyEvacuationSurvivalChance: 65
+pilotsEmergencyEvacuationSurvivalChance: 75
+statisticalBulletConservation: true
+surrenderMode: 2
+chanceToStopRetaliation: 50
+displayCustomCategories: 1
+customTrainingFactor: 30
+buildInfiltrationBaseCloseToTheCountry: true
+lighting:
+  enhanced: 7
+allowCountriesToCancelAlienPact: true
+bughuntMinTurn: 30
+bughuntMaxEnemies: 3
+showDogfightDistanceInKm: true
+pediaReplaceCraftFuelWithRangeType: 2
+enableCloseQuartersCombat: 1
+closeQuartersAccuracyGlobal: 100
+closeQuartersTuCostGlobal: 0
+closeQuartersEnergyCostGlobal: 8
+pilotAccuracyZeroPoint: 40
+pilotBraveryThresholds: [90, 80, 40] #Very bold, Bold, Normal
+ufoBeamWidthParameter: 1000
+hunterKillerFastRetarget: true
+#Options that cant be changed and are paramount for the balance of the mod:
+fixedUserOptions:
+#OXC
+  lazyLoadResources: true
+  storageLimitsEnforced: true
+  canSellLiveAliens: true
+  retainCorpses: true
+  sneakyAI: false
+  battleUFOExtenderAccuracy: true
+  battleExplosionHeight: 3
+  battleInstantGrenade: false
+  weaponSelfDestruction: true
+#BOXCE
+  displayHiddenAlienActivity: 0
+  baseDefenseProbability: true
+  baseDetectionProbability: true
+  battleRealisticAccuracy: true
+  #battleRealisticDisplayRolls: true
+  battleRealisticImprovedSnap: true
+  battleRealisticShotDispersion: 0
+  oxcePediaShowClipSize: true
+#AI
+  brutalAI: true
+  brutalCivilians: true
+  intelligenceMode: 1
+  aggressionMode: 2
+  dogfightAI: true
+  aiTargetMode: 3
+#others
+  alienBleeding: true
+  extendedItemReloadCost: true
+  friendlyCraftEscort: true
+#Options that can be changed but are highly recommended for the balance of the mod:
+recommendedUserOptions:
+#OXCE
+  aggressiveRetaliation: true
+  customInitialBase: false
+  allowBuildingQueue: true
+  craftLaunchAlways: true
+  fieldPromotions: false
+  newSeedOnLoad: true
+  oxceAutomaticPromotions: false
+  oxceManualPromotions: true
+  oxceWoundedDefendBaseIf: 60
+  allowPsionicCapture: true
+  bleedingIndicator: true
+  autoSell: true
+  anytimePsiTraining: true
+  psiStrengthEval: true
+  oxcePlayBriefingMusicDuringEquipment: true
+#####artificial inteligence reemplazado por brutal IA?
+# ai:
+#   extendedFireModeChoice: true #default false
+#   pickUpWeaponsMoreActively: true #default false
+#   pickUpWeaponsMoreActivelyCiv: true #default false
+operationNamesFirst:
+  - Allied
+  - Banished
+  - Black
+  - Bleeding
+  - Blind
+  - Blinding
+  - Bloody
+  - Blue
+  - Broken
+  - Bronze
+  - Brutal
+  - Burning
+  - Cold
+  - Cobalt
+  - Crimson
+  - Cryptic
+  - Crystal
+  - Dark
+  - Defiant
+  - Demon
+  - "Devil's"
+  - Driving
+  - Dying
+  - Empty
+  - Enduring
+  - Fading
+  - Fallen
+  - Final
+  - First
+  - Flying
+  - Forgotten
+  - Frozen
+  - Glass
+  - "God's"
+  - Golden
+  - Gothic
+  - Glorious
+  - Green
+  - Hidden
+  - Hot
+  - Joint
+  - Lazy
+  - Lone
+  - Lost
+  - Morbid
+  - Orange
+  - Patient
+  - Purple
+  - Red
+  - Rainbow
+  - Rotting
+  - Sacred
+  - Scarlet
+  - Secret
+  - Severed
+  - Shattered
+  - Silent
+  - Silver
+  - Soaring
+  - Spectral
+  - Stone
+  - Swift
+  - Twisted
+  - Unceasing
+  - Unholy
+  - Vengeful
+  - Yellow
+operationNamesLast:
+  - Apollo
+  - Assault
+  - Attack
+  - Bell
+  - Blade
+  - Breath
+  - Calm
+  - Crone
+  - Crown
+  - Cyclone
+  - Daze
+  - Dream
+  - Dust
+  - Devil
+  - Doom
+  - Empire
+  - Engine
+  - Fall
+  - Father
+  - Fear
+  - Fog
+  - Future
+  - Grave
+  - God
+  - Hammer
+  - Hawk
+  - Hail
+  - Hailstorm
+  - Hurricane
+  - Hydra
+  - Hymn
+  - Jester
+  - Justice
+  - King
+  - Line
+  - Lightning
+  - Law
+  - Moon
+  - Mother
+  - Mountain
+  - Night
+  - Napalm
+  - Neptune
+  - Palace
+  - Paramour
+  - Pipe
+  - Priest
+  - Prophet
+  - Plan
+  - Pyre
+  - Rain
+  - Raid
+  - Ring
+  - Saber
+  - Savior
+  - Scepter
+  - Serpent
+  - Shield
+  - Shroud
+  - Skull
+  - Smoke
+  - Stallion
+  - Star
+  - Strike
+  - Stroke
+  - Storm
+  - Snow
+  - Summer
+  - Sword
+  - Tears
+  - Thorn
+  - Throne
+  - Tornado
+  - Typhoon
+  - Thunderbolt
+  - Thunder
+  - Tsunami
+  - Vanguard
+  - Vengeance
+  - Whisper
+  - Wrath
+  - Zeus
+### Ojito, move this to another more appropiate rul?
+#####o dejarlo aca pero moverlo a ultimo de todo todo.
+interfaces:
+  - type: inventory
+    elements:
+      - id: textName
+        color: 46
+      - id: textTUs
+        color: 240
+        color2: 48
+      - id: textWeight
+        color: 240
+        color2: 48
+      - id: textFiring
+        color: 240
+        color2: 48
+      - id: textReaction
+        color: 240
+        color2: 48
+      - id: textPsiSkill
+        color: 240
+        color2: 48
+      - id: textPsiStrength
+        color: 240
+        color2: 48
+      - id: textItem
+        color: 48
+      - id: textAmmo
+        color: 144
+        color2: 48
+      - id: textSlots
+        color: 240
+      - id: weight
+        color: 48
+        color2: 32
+      - id: grid
+        color: 248
+########## posible duplicados
+      - id: textName
+        color: 64
+      - id: textTUs
+        color: 64
+        color2: 16
+      - id: textWeight
+        color: 64
+        color2: 16
+      - id: textStatLine1
+        custom: 1
+        color: 64
+        color2: 16
+      - id: textStatLine2
+        custom: 2
+        color: 64
+        color2: 16
+      - id: textStatLine3
+        custom: 3
+        color: 64
+        color2: 16
+      - id: textStatLine4
+        custom: 4
+        color: 64
+        color2: 16
+      - id: textItem
+        color: 48
+        color2: 16
+      - id: textAmmo
+        color: 64
+        color2: 16
+      # required
+      - id: textSlots
+        color: 63
+      - id: weight
+        color: 16     # gold (acceptable)
+        color2: 32    # red (overweight)
+      - id: grid
+        color: 8
+      - id: numStack
+        color: 66
+        color2: 32
+######## mas duplicados
+      - id: textStatLine1
+        custom: 11
+        color: 64
+        color2: 16
+      - id: textStatLine2
+        custom: 12
+        color: 64
+        color2: 16
+      - id: textStatLine3
+        custom: 13
+        color: 64
+        color2: 16
+      - id: textStatLine4
+        custom: 14
+        color: 64
+        color2: 16
+
+############## todo lo siguiente va a ser modificado completamente que son los interfaces?
+
+####################
+invs:
+  - id: STR_GROUND
+    costs:
+      STR_QD_SLOT: 20
+      STR_BACK_PACK: 20
+      STR_BELT: 18
+      STR_LEFT_HAND: 14
+      STR_LEFT_LEG: 16
+      STR_LEFT_SHOULDER: 22
+      STR_RIGHT_HAND: 14
+      STR_RIGHT_LEG: 16
+      STR_RIGHT_SHOULDER: 22
+  - id: STR_RIGHT_HAND
+    costs:
+      STR_QD_SLOT: 5
+      STR_BACK_PACK: 10
+      STR_BELT: 6
+      STR_GROUND: 2
+      STR_LEFT_HAND: 2
+      STR_LEFT_LEG: 10
+      STR_LEFT_SHOULDER: 8
+      STR_RIGHT_LEG: 8
+      STR_RIGHT_SHOULDER: 10
+  - id: STR_LEFT_HAND
+    costs:
+      STR_QD_SLOT: 5
+      STR_BACK_PACK: 10
+      STR_BELT: 6
+      STR_GROUND: 2
+      STR_LEFT_LEG: 8
+      STR_LEFT_SHOULDER: 10
+      STR_RIGHT_HAND: 2
+      STR_RIGHT_LEG: 10
+      STR_RIGHT_SHOULDER: 8
+  - id: STR_BELT
+    x: 200
+    y: 104
+    slots:
+      - [0, 0]
+      - [1, 0]
+      - [2, 0]
+      - [3, 0]
+      - [2, 1]
+      - [3, 1]
+    costs:
+      STR_QD_SLOT: 6
+      STR_BACK_PACK: 14
+      STR_GROUND: 6
+      STR_LEFT_HAND: 4
+      STR_LEFT_LEG: 10
+      STR_LEFT_SHOULDER: 12
+      STR_RIGHT_HAND: 4
+      STR_RIGHT_LEG: 10
+      STR_RIGHT_SHOULDER: 12
+  - id: STR_RIGHT_LEG
+    costs:
+      STR_QD_SLOT: 10
+      STR_BACK_PACK: 16
+      STR_BELT: 10
+      STR_GROUND: 6
+      STR_LEFT_HAND: 8
+      STR_LEFT_LEG: 12
+      STR_LEFT_SHOULDER: 14
+      STR_RIGHT_HAND: 6
+      STR_RIGHT_SHOULDER: 16
+  - id: STR_LEFT_LEG
+    costs:
+      STR_QD_SLOT: 10
+      STR_BACK_PACK: 16
+      STR_BELT: 10
+      STR_GROUND: 6
+      STR_LEFT_HAND: 6
+      STR_LEFT_SHOULDER: 16
+      STR_RIGHT_HAND: 8
+      STR_RIGHT_LEG: 12
+      STR_RIGHT_SHOULDER: 14
+  - id: STR_RIGHT_SHOULDER
+    costs:
+      STR_QD_SLOT: 10
+      STR_BACK_PACK: 14
+      STR_BELT: 10
+      STR_GROUND: 6
+      STR_LEFT_HAND: 4
+      STR_LEFT_LEG: 14
+      STR_LEFT_SHOULDER: 10
+      STR_RIGHT_HAND: 6
+      STR_RIGHT_LEG: 12
+  - id: STR_LEFT_SHOULDER
+    costs:
+      STR_QD_SLOT: 10
+      STR_BACK_PACK: 14
+      STR_BELT: 10
+      STR_GROUND: 6
+      STR_LEFT_HAND: 6
+      STR_LEFT_LEG: 12
+      STR_RIGHT_HAND: 4
+      STR_RIGHT_LEG: 14
+      STR_RIGHT_SHOULDER: 10
+  - id: STR_BACK_PACK
+    costs:
+      STR_QD_SLOT: 26
+      STR_BELT: 26
+      STR_GROUND: 24
+      STR_LEFT_HAND: 22
+      STR_LEFT_LEG: 26
+      STR_LEFT_SHOULDER: 26
+      STR_RIGHT_HAND: 22
+      STR_RIGHT_LEG: 26
+      STR_RIGHT_SHOULDER: 26
+  - id: STR_QD_SLOT
+    x: 176
+    y: 104
+    slots:
+      - [0, 0]
+      - [0, 1]
+    costs:
+      STR_BACK_PACK: 14
+      STR_BELT: 8
+      STR_GROUND: 5
+      STR_LEFT_HAND: 3
+      STR_LEFT_LEG: 10
+      STR_LEFT_SHOULDER: 10
+      STR_RIGHT_HAND: 3
+      STR_RIGHT_LEG: 10
+      STR_RIGHT_SHOULDER: 10
+#### end of moving
+# HitFX Basic Version
+extended:
+  tags:
+    BattleUnit:
+      LAST_HIT_FRAME: int
+      # 1: only armor damaged, 2: hp damaged
+      LAST_HIT_TYPE: int
+      LAST_HIT_POWER: int
+  scripts:
+    # hitUnit required to find side hit
+    # Otherwise we cannot get the armor value delta
+    hitUnit:
+    - offset: 20
+      code: |
+        var int unit_id;
+        unit.getId unit_id;
+        return power part side;
+    damageUnit:
+      - offset: 20
+        code: |
+          var int temp;
+          var int unit_id;
+          var int unit_health;
+          var int unit_armor;
+          var int hits_to_kill;
+
+          battle_game.getAnimFrame temp;
+          unit.getId unit_id;
+          unit.getHealth unit_health;
+          unit.getArmor unit_armor side;
+          set hits_to_kill unit_health;
+
+          unit.setTag Tag.LAST_HIT_POWER 1;
+          # unit.setTag Tag.LAST_HIT_FRAME 0;
+          unit.setTag Tag.LAST_HIT_FRAME temp;
+
+          if eq to_health 0;
+            if gt to_armor 0;
+              unit.setTag Tag.LAST_HIT_TYPE 1;
+            else eq to_armor 0;
+              if gt to_stun 0;
+                unit.setTag Tag.LAST_HIT_TYPE 3;
+              else gt to_morale 0;
+                unit.setTag Tag.LAST_HIT_TYPE 4;
+              else;
+                unit.setTag Tag.LAST_HIT_TYPE 0;
+              end;
+            end;
+          else gt to_health 0;
+            unit.setTag Tag.LAST_HIT_TYPE 2;
+            # hits_to_kill = uni health here
+            div hits_to_kill to_health;
+            # If it takes 3 or more hits_to_kill, use weaker hit effect
+            if ge hits_to_kill 3;
+              unit.setTag Tag.LAST_HIT_POWER 0;
+            end;
+            # Do we have stun damage? Yes
+            if gt to_stun 0;
+              # Will the hit kill the unit? No
+              if gt unit_health to_health;
+                # Are there any wounds? No
+                if eq to_wound 0;
+                  # Is stun bigger than hp damage? Yes
+                  if gt to_stun to_health;
+                    # Then let's use the stun effect instead.
+                    unit.setTag Tag.LAST_HIT_TYPE 3;
+                    # Would it take 6 or less such hits to kill?
+                    # Yes means we need to use a weaker red hit effect
+                    if le hits_to_kill 6;
+                      unit.setTag Tag.LAST_HIT_TYPE 2;
+                      unit.setTag Tag.LAST_HIT_POWER 0;
+                      # Would it take 3 or less such hits to kill?
+                      # Yes means we need to use the stronger red hit effect
+                      if le hits_to_kill 3;
+                        unit.setTag Tag.LAST_HIT_POWER 1;
+                      end;
+                    end;
+                  end;
+                end;
+              end;
+            end;
+          end;
+          return;
+    recolorUnitSprite:
+      - offset: 20
+        code: |
+          var int temp;
+          var int hittype;
+          var int hitpower;
+
+          unit.getTag temp Tag.LAST_HIT_FRAME;
+          unit.getTag hittype Tag.LAST_HIT_TYPE;
+          unit.getTag hitpower Tag.LAST_HIT_POWER;
+
+          if neq temp 0;
+            sub temp anim_frame;
+            if eq hittype 0;
+              if gt temp -3; # number of frames to blink
+                #set_color new_pixel 112;
+                #set_shade new_pixel 0;
+              end;
+          # Hit type 1 = armor only damage
+            else eq hittype 1;
+              if gt temp -3; # number of frames to blink
+                set_color new_pixel 14;
+                set_shade new_pixel 0;
+              end;
+          # Hit type 2 = hitpoint damage
+            else eq hittype 2;
+              if eq hitpower 0;
+                if gt temp -3; # number of frames to blink
+                  set_color new_pixel 2;
+                  #set_shade new_pixel 0;
+                end;
+              else gt hitpower 0;
+                if gt temp -2; # number of frames to blink
+                  set_color new_pixel 2;
+                  set_shade new_pixel 5;
+                end;
+              end;
+            # Hit type 3 = stun damage
+            else eq hittype 3;
+              if gt temp -3; # number of frames to blink
+                set_color new_pixel 175;
+                #set_color new_pixel 0;
+                #set_shade new_pixel 10;
+              end;
+            # Hit type 4 = morale damage
+            else eq hittype 4;
+              if gt temp -10; # number of frames to blink
+                set_color new_pixel 112;
+                #set_shade new_pixel 0;
+              end;
+            end;
+          end;
+
+          return new_pixel;
+########

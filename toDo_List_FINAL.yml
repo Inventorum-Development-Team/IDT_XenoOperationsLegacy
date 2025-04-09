@@ -1,0 +1,865 @@
+#ideas for the mod, in any specific order:
+#checar los ojitos siguientes
+
++ cosas de nombres de especies:
+ - ponerle nombres bonitos a todos los rangos de todas las especies, ojito
+ - confirmar los nombres distintos al "alien armor" para q tengan coherencia, actualmente son un desastre, en especial las versiones nuevos de mutones.
+ - nombres nuevos a considerar para rangos otras especies
+  * psion, archon, elder, apex, hunter, stalker, broodmother, drone(insect)
+  * Brute,Darter,Nightscale, Savant (scientist-ish members of the race?) , Reaver,Burner, Gnawer,Harasser,Scourger,Zealot,Evoker,Priest,Wizard(???),Casters(????),Heretic(individuals fallen in disgrace, warriors without honor with missions like assasination, something normal mutons found pity), Servant, Devourer,Spitter (some of them could work for their reapers, think about them as their warhounds)
+  * revisar nombres de rangos especies y criaturas de gears of war (ejem, scion.)
+ - nombres a considerar para nombres clave de naves , animales mitologicos
+  * scylla, behemoth, etc
+ - Posibles descripciones mutones
+Thrall:  this could be used to denote the non combatant crew, the lower caste/ranks of their hierarchy, the scum members of their race,not worthy enough to win the right to use an armor.
+Grunt:  the more basic member of their army but they make the bulk of their ranks,the meat cannon, strong enough to hold a weapon, but no so intelligent to notice they are expendables.
+Gladiator/Centurion(brute?)**:  the backbone of the Muton invaders, they are the TRUE warrior caste, Mutons who proved to fullfill this role, they are though and good in their work, that being killing or dying for the hierarchy.
+Chieftain: they live, they die and then live again, once gladiator/centurions lived enough to became veterans of a dozen fight, they achieve the honor to become chieftain and lead a warclan of their own
+Warchief:  they are veterans of a hundred battles at least, only few Mutons show enough initiative , cunning skill and sharp intelligence to become warchief, they lead all the clans(and chieftains) to battle. They are in charge or leading the troops and accomplish the objectives of the campaings...they only answer to the warlord.
+Champion:  true veterans, the elite of the elite,they are hundreds years old and have the same amount of battles, they participed in many succesfull campaings, many worlds invaded by the wraps of their actions, they are the personal bodyguards of the Warlord, and are the only one with the honor to have full battle armors, they are immensely though, taller, smarter that the average Muton, the true parangon of a warrior race, beyond any of its quality, they possess the more dangerous of them, a fierce almos fanatic loyalty and devotion to their master, who they guard with extreme zealotry until they last breath.
+Warlord: the only and true leader of the muton-folk ,one only the most though,strogest and intelligent being inside their ranks can achieve this tittle and most important , hold it enough time to get the respect of all the warriors of the chain, once they proved themself with many victories, all the Muton structures get the same goal, achieve the Warlord desires for plunder and conquest.
+
++ TODO LO SIGUIENTE QUEDA PENDIENTE PARA EL SIGUIENTE PARCHE:
+####### Esto para hacer principalmente en la chamba
+#######
+ - sacarles el kraken rotorcannon backpack de 40k rosigma, revisar como funciona
+ - tambien revisar como implementaron el gibs of gory
+ - confirmar como hacen para tener "dinamic hands" q se estiran en base al tamaño del arma
+ - sacar piezas de armaduras der la steellegion
+   * el casco de tanquero y los arneses de cuero
+ - sacar de unexcom
+   * sonidos de las armas
+   * sacar rastros de vapor del plasma y otras armas
+   * implementar sistema de torretas
+      ~ en naves aliens
+      ~ en naves humanas (transportes)
+      ~ en bases enemigas
+      ~ en bases humanas
+ - revisar medallas de unexcom
+
+ - aprovechar el walker de rogozunbenjoyer64
+ - preguntarle a osobist respecto al dron
+ - preguntar en idt acerca de la velocidad de los perritos
+
+
+
+####balanceo?
+
+ - revisar el tema de q ahora las armas tendran el daño modificado en el arma y no en la municion en si (excelente para balancear)
+ - revisar enteramente las armaduras de perritos para balanceo de stats
+ - agregar las anclas de los stats y damage modifiers de todas las armaduras q falta (enfasis en aliens )
+ - revisar los damage modifiers de los Aliens
+   * agregarle resistencias a energia y daño segun el caso (ejemplo sovereigns y antimateria)
+ - balancear todos los damage modifiers de TODAS LAS ARMADURAS
+ - revisar los precios de TODOS LOS ARTICULOS
+
+ ######
+ - armaduras despues de personal_armor , usar ejemplo de warhammer 40k el snipper y vanguard
+ - crear los loadouts iniciales
+   * quizas crear para mid game y para late game?
+
+ - conseguir nuevos pngs de ataques melee
+   * el ataque de chrysalida sera uno de garras verdes (tendra daño chem)
+   * uno donde te inserte huevitos
+ - revisar todas las carpetas en los distintos tiers que tengan tanto en handob, floorob y bigobs
+   * misma cantidad de imagenes
+      ~ en el primer tier faltan imagenes de los cohetes de la bazuka
+      ~ rehacer apariencia de los cohetes de bazuka basico tanto en bigob,floorob y handob
+   * misma nomenclatura de nombres en cuanto a "espacios y underscores _ "
+   * mismo formato de imagen PNG
+   * detalles de colores de los cargadores
+      ~ en armas de segundo nivel confirmar q las armas de correa tengan 3 duplicados, uno laton, uno azulito y uno marroncito
+      ~ en armas de segundo nivel confirmar que handobs tengan los cargadores respectivos
+      ~ confirmar que en las armas hibridas el floorobs sean los correctos (en especial desde desde la lmg)
+   * cambiar todo de png a gif
+      ~ conseguido con las armas, faltarian en el resto de recursos
+
+#posiblemente listo - revisar la velocidad de los UFOS en terminos relativos a mach
+ - blaster bombs y armas laser elite necesitan de sus respectivos sprites, en especial cargadores
+ -  CREAR DAÑO ANTI MATERIA q use el color purpurita como tipo de daño color
+   - desintegrara todo en el area de explosion.
+   - sera carisimo producir explosivos y municion
+   - exotico , los spawn seran casi inmunes
+#####
+ - modificar ligeramente el mapa del security station para q encaje con el octagonal
+ - cambiarle el nombre a las armas de aviones
+   * checar el archivo excel de la pagina para mas info
+   * Plane cannon is now a 30 mm GAU-8/A Avenger.
+     ~ Create an improved version that unlocks after researching xelloys?.
+#esto ya se agrego, falta meterlo en el changelog
+ - reordenar el tema de los tipos de unidades y q los drones funcionen las armaduras correctamente
+     ~ crearles sus respectivos armor previews correctamente
+#revisar chat con efren para la explicacion
+ - consultar respecto a los drons
+     ~ confirm if i can recluse which kind of weapons can this unit pick up (to avoid picking pistols or basic medbags).
+       ° find a way to avoid them reloading their weapons, thus restricting their use to a "single magazine per weapon".
+       ° making it necessary to have a supplementary trooper to pick up the weapon and reloading it for the drone.
+       ° it should also let the drone to equip stuff like advanced med-gel and the movement detector.
+     ~ reduce trowing accuracy to 0 so it cant toss grenades of any kind, yet it should be able to drop or kamikaze itself with explosives.
+   * Additionally, they would have different "armors" differences.
+     ~ A light chassis, many TUs but low resistance.
+     ~ Reinforced, heavier and stronger but with fewer TUs.
+     ~ Versions with xelloys, first basic and then advanced.
+   * These changes would provide much more longevity to the use of drones by XCOM.
+#leer lo de arriba
+#####
+ - agregarle a todas las armas melee el damagealter segun sea el caso correcto
+ - balancear TODOS LOS ITEMS q sean explosivos y/o con rango y concretar el tema de las explosiones que pierdan daño segun el area de impacto
+ - le tengo q agregar a los q son explosivos dedicados un par de cuadros mas pero incrementar el tema de reduccion de daño de modo q quede equiparado al rango actual en base al daño real (y el cuadro adicional tendria solo un poquito de daño extra)
+   * agregar al tema de las descripciones de ufopedia respecto a esto
+     ~ el small rocket tiene menor area de explosion, el misil large el area es mayor y ademas se mantiene el daño en el area a mas tiles, el incendiary tiene el mismo daño en casi todo y es mas amplio
+     ~ el rango del cohete del lanzacohetes hybrido es de los blast radius
+     ~ el rango de los explosivos rieles es un fogonazo rapido, sin tanto daño en el area
+   * revisar luego los randomtype para q tengan tipo 2 o 3 segun sea el caso
+     ~ tambien revisar de balancear luego el tema de los tomorale totiles y demas efectos extras.
+       ° para esto tengo q fijarme en los resistype 10 que son los daño antimateria principalmente
+   * balancear waypoints totales de las armas blaster
+   * meterle al tema del ataque en area acido
+   * modificar el tema del knucles y el damagebonus siendo aplicado
+   * acomodar todos las areas de rangos de todos los explosivos q sean incendiarios y quimicos para intentar hacerle el efecto de rangos
+   * a la granada quimica pintar el humo de verde y usarlo para eso (aprovechar el sprite q ya existe).
+   * confirm which ones can be marked to avoid overkill
+#
+ - balancear breaching charges
+   * darle credits a dbrizo por inspirarme para breaching charge
+   * aprovechar el comando "throwRange" para definir todos los objetos demasiado pesados o delicados para arrojarse
+ - Explore sources for improved versions of map and globe symbols.
+   * Check TFTD+ or Unexcom to understand how the ruleset works for this.
+     ~ must define using globemarkers.
+     ~ Use the "marker" command assigned to each aircraft.
+ - Ensure all grenades have an implemented fuse type.
+   * This would differentiate three types of heavy explosives
+     ~ C4/Semtex as vanilla.
+     ~ A lighter satchel charge without a counting fuse that could be created.
+     ~ A breaching charge. with very small explosive range, intended to pierce UFO hulls.
+ - Completely rebalance plasma weapons, especially weights.
+ - Use the Polish FB MSBS rifle as an eXperimental tier bullpup.
+   * Modify the handobs of the laser knife, plasma knife (both using the xelloy knife as example), alloy sword and plasma sword (using laser sword as an guide).
+     ~ also improve the laser sword handob slighty.
+   * Lore of the progressive knife is cutting at the molecular level through vibrations (Evangelion-like).
+   * Finalize lore for the Xelloy knife and sword, simply sharper, lighter, and never rusts or wears out (alita damascus sword).
+ - Rename XX assault cannon to something 20mm flak.
+ - Rename tank AP cannon to 25 mm Bushmaster.
+#
+ - acomodar los escudos
+   * integrar correctamente en el arbol de tecnologias
+   * Use metalhit.ogg as effect sound
+   * confirmar todos los handobs que esten habilitados correctamente y recolorizar la version holo humana
+   * usar el script de halo del kin-yar gauntlet
+     ~ recordar darle credits a filip-H
+     ~ Scutum/testudo el basico?
+     ~ ASPIS (Hoplite) el mas avanzado q es de alloys (haria juego con spartan armor)
+     ~ no se me ocurre para el escudo plasma
+   * agregar las dos variedades dorada(basico) y rojo de plasma a alos alien deployments
+     ~ sectoides buen candidato para esto
+   * hacerles sus respectivos articulos en la ufopaedia
+#
+#######
+####### Esto solo puedo hacerlo en casa
+#######
+ - confirmar que todos los items nuevos tengan sus respectivas entradas en la ufopaedia
+ - confirmar correctamente sprites nuevos para lideres sectoides con implantes
+ - revisar que el drone advanced funcione correctamente con un cadaver y un recovery especifico (checar el tema drone corpse), ademas de los respectivos articulos de la ufopedia
+ - crear articulos en ufopaedia respecto a los uplifting de perros
+   * revisar video de cypher en matrix explained
+ - sombrear mejor sprites de los perritos
+ - resolver tema de las imagenes de la ufopaedia de los tanques y drones
+#POSIBLEMENTE TERMINADO?
+ - reajustar todo lo relacionado con ingenieros?
+   * triplicar precio de proyectos de generacion de dinero
+   * reducir costo de horas proyectos un 1/3
+   * resultando en numero total de ingenieros, la mitad aproximadamente
+#
+ - balancear TODOS LOS STATS DE LAS ARMADURAS
+ - Remake the FLUFF TEXT for the armors.
+   * Consider renaming tiers.
+   * Rename each armor individually.
+   * preguntar a efren como aprovechar el "uc" para que tengan los nombres unicos en el articulo de la ufopedia, pa q no se repita el nombre en el inventario
+      ~ aprovechar y cambiar el nombre(pattern) a las armaduras
+         ° armadura driftsuit = ????
+         ° armadura basica = Legionnaire / pilot = zero g suit
+         ° armadura xops = praetorian / pilot = equite
+         ° Armadura personal = Ulfsark / pilot= valkyrie
+         ° Armadura alloy = Spartan / pilot=ithacan
+         ° Armadura Voladora = cuāuhpilli / pilot= Quetzalcóatl
+         ° Armadura Power = Myrmidon / pilot=argonaut
+         ° Armadura Psionica = Gorgon / pilot= cyclops
+#
+ - Change all lines of the report sprite in the ufopedia from color 227 to 229 (the brightness is too intense).
+ - terminar de hacer las floorobs y handobs de las armas elites alien
+   * mejorar detalles del color rojo y tambien al cargador
+   * las armas elite seran daño laser porq son reliquias antiguas
+     ~ con esto podria hacerlas mas fuertes que el plasma sin hacerlas redundantes
+ - acomodar colores del bulletsprite q coincidan con el color del arma
+ - verificar si puedo implementar el laser BEAM
+ #
+ - hacer siguiente nivel de armadura de perritos, si puedo, confio en mi.
+ - sacar baseprites para edificios del tftd twots y tftd+
+ - Tanks, UFOs, and Sectopods use pilots.
+   * Training requires overcoming claustrophobia?, thus requiring a minimum bravery.
+     ~ All tanks will be single-seaters, but the pilot cannot exit quickly, so with permanent destruction, the pilot dies.
+     ~ The lore will be that once the tank is assembled, special facilities are needed to remove it and extract the pilot safely.
+     ~ Create a special building to help with vehicle maintenance.
+   * Integrate Sectopods with human pilots; they will be brown like in vanilla for human homogeneity.
+   * When "destroyed," a "ruined chassis that can be repaired" remains.
+
+ - hacer lore explicando el tema de los salarios, q mientras el personal trabaje, no puede gastarlo, asi q aun a pesar de ganar millones, efectivamente hasta q no se gane la guerra no podran disfrutar nada
+###################################################################################################################################
++ CAMBIOS RELATIVOS AL TECH TREE:
+####OJITO AQUI SIGUIENTES
+ - revisar los requisitos necesarios pa fabricar el scarab
+   * el firefly ahora se comprara solamente
+   * tambien crear un articulo para el combustible
+ - balancear requerimientos en materiales de todos los edificios. hacer sprites de armas elites, de cargadores de la minigun .
+ - ahi si puedo proceder a hacer los cambios en el research tree(recordatorio de darle enfasis en los articulos nuevos, como los aviones y las entries q falten) y ademas balancear todo en manufactures haciendo enfasis en los xelloys (usando la lista arriba de referencias a recuperacion), para finalizar ordenando todo en el rul de research, manufactures y ufopaedia (incluyendo los listorders de items.rul como guia y ejemplo).
+ - revisar enteramente arbol de investigaciones dandole enfasis a los siguientes proyectos
+   * STR_CODEX_COMPLETE
+   * STR_DATA_RECOVERY
+   * STR_DATA_FRAGMENT_SORTING
+   * STR_HISTORICAL_ARCHIVES
+   * STR_HISTORICAL_ARCHIVES_ANALYSIS
+   * STR_ANOMALOUS_EQUATION
+   * STR_SOLVE_ANOMALOUS_EQUATION
+ - agregar data corrupta en todos los niveles, hasta el 4 para q siempre haya posibilidad de fallos.
+   * esto funciona aplicandole la propiedad "lookup".
+ - a partir del 4 , se reemplaza con el anomalous equation y data fragments.
+ - Checar que onda que hacer con elerium CELL que es la municion del cañon plasma de aviones
+ - hacer que "STR_XENO_PHYSIOLOGY" requiera distintas especies antes de desbloquearse
+ - Resolve the Suppressed Error for STR_SECTOPOD_ELITE_TERRORIST.
+   * This unit can be recovered (in theory), but there is no corresponding 'liveAlien:' or 'civilianRecoveryType:' to recover.
+ - aprovechar los extras aliens objects para hacer requisitos de tecnologia
+   * ejemplo el communicador y el hypersensory para el Hyper-wave relay
+   * todos los q son cosas de medico para las clinicas
+   * etc
+   * tambien para los manufactures for profit goods
+ - modificar totalmente como funcionan los articulos medicos.
+   * buscar agregarle soniditos a los articulos medicos cuando se usen
+   * nivel 0 la jeringa de adreno y el pouch individual y descartable
+   * nivel 1 el bolsito medico, pensado para unidades especializadas en curar.
+   * nivel 2 el field surgery kit, una version mejorada.
+     ~ tambien requerira un manufacture project
+     ~ requerira la investigacion del life support? (proporcionaria mejoras en el tratamiento de celulas madre blablabla)
+     ~ quizas tambien el de alien physiology
+       ° nota, recordatorio de agregar pistas dentro del research de alien psynionomy de q se necesita el life support para poder tener el alien containtment.
+   * nivel 3 el medi-kit de vainilla q es dispensador de medi-gel, explicaria todo lo avanzado de la medicina, cosas de reparar heridas y tejido casi al instante blablabla
+     ~ requeriria quizas nivel 3 del codex? (2 como minimo)
+     ~ estaria atado a la mejora del edificio de la base de la clinica mejorada.
+###################
++ Cosas pendientes PARA EL SIGUIENTE PARCHE:
+ - De este modo ya queda para el siguiente parche cambiar y modificar todo lo q sean nombres y lores en el EXTRA strings ( finalmente en ese parche seran ordenados el rule extrastrings), luego de ese parche (esperemos el 98.02), ahi si empezare a revisar de vuelta el TODO-list y ver que puedo ir agregando como features nuevos.
+ - siguiente parche tendra el revamp completo de las armaduras al uso correcto de layers, el rework completo de los sprites de los tanques, del combate aereo y el pacing de misiones, ademas de rehacer el globo terraqueo.
+#
++ PRIORITIES FIXES:
+ - ojito revisar el sonido de aggro de los carcharodones
+ - PERRITOS MATAN A CYBERDISC. bug o feature?
+   * de hecho matan a demasiados alienes q no deberian
+   * deberia considerarse si los aliens q atacan tienen o no armadura, a partir de alli haran daño o no
+ - OJO, en los ALIEN DEPLOYMENTS FALTAN LOS CARGADORES OVERCHARGED DEL SNIPER ALIEN OJITO, no estan asignados a ninguna especie
+ - Investigate how to resolve the following error
+   * [ERROR] STR_HANGAR can hold 2 crafts but has 0 craft-slots defined. Will draw all crafts in the center.
+   *[revisar q pasa q los aviones no se ponen cada uno en un hangar,sino q se stackean encima]
+       ~ esto se resolvio con brutal IA, igual seguir investigando para estacionar varios en paralelo
+#
+IMPORTANTE PARA LORE:
+ - recordar el renombrar q las granadas y explosivos hybridas producen explosion termobarica gracias al elerium empobrecido en bajas cantidades como combustible, por eso aun asi son tan ligeros pero tan dañinos
+ - explicar q aunque los drones no son humanos, necesitan de uno para manejarse y espacio en las instalaciones, ya despues aunque sean semi automaticos, igual requieren human input
+     ~ aprovechar texto del edificio radar para completar la explicacion
+ - Changed all drones to a system based on "a CPU platform that can be inserted into different chassis and with different equipment."
+   * The ground drone would be a platform to which the help of a claw can pick up weapons from the ground, tecnically being able to field any weapons used by xcom troops (specially shotguns and rifles, mostly PDW)
+ - el lore de los spawns sera como leliel
+   * internamente son un mar dirac infinito blablabla
+ - describir que la barraca grande tambien proporciona el trooper school y es necesario para poder hacer el upgrade a oficiales y demas
+#
+ - explicar que los aliens no usan FTL, sino mas bien cosas parecidas a un alcubierre drive
+ - el viaje a marte tardaria aproximadamente 10 dias para nosotros?
+   * por cuestiones de desaceleracion, la mitad del viaje se hace de espaldas asi q eso agrega tiempo.
+   * los aliens hacen el viaje a la mitad del tiempo.
+   * con un motor de esas caracteristicas el viaje a alpha centauri (4.5 años luz de distancia) seria aprox unos 10 años
+   * estariamos hablando de unos 18k/s a 20k/s, aproximadamente el 8%~ de la velocidad luz
+ - Correctly place the new lore for Alien Alloy, now called Xenominium, Xenium Alloy short, and Xelloy in slang.
+   * Consists of high-entropy alloys of known and other alien elements.
+   * The real problem is not knowing the elements but the proportion for the correct mix to obtain desired properties.
+ - xelloy esta compuesto de aleaciones complejas de materiales conocidos, aunque algunos tengamos en muy bajas cantidades, tambien tiene elementos mundanos y pequeñas cantidades de elementos aun no conocidos para nosotros.
+ - los ufos no estan enteramente construidos de xelloys, en cambio usan metales comunes como el titanio y el IRIDIO principalmente, y tienen secciones de la super estructura hechas usando xelloy.
+ - el iridio tiene la ventaja sobre el titanio q mantiene su dureza incluso en altas temperaturas
+ - la municion toxica de tier 3 (armas hybridas) es a base de POLONIO
+ - usar municion mas densa de la tier 5 (RIELES) hecha de paladio,titanio, tugsteno
+ - municion de cañon de riel hecho de platino?, la ultra densa y rara hecha a base de osmio
+ - mantener el sufijo "caballero" para las armaduras mechas, y chassis tanques y demas?
+   * usando nombres como "pattern X"
+     ~ squire
+     ~ lancer
+     ~ knight
+     ~ warden
+     ~ paladin
+     ~ sentinel
+   * nombres pósibles de chassis de tanques (espadas de dos manos)
+     ~ claymore
+     ~ zweihander
+ - crear la pagina del firefly donde explique especificamente que el proyecto fue creado entre la cosa de ucrania y rusia, y en cambio la de la nave sea solo descriptiva del avion en si
+ - acomodar sprites de aviones en ufopaedia
+   * rehacerle la imagen al f35 mejorado con el coffin, foto en nuevo angulo
+     ~ tambien al nuevo empress q sera el avion definitivo de XCOM.
+   * revisar las descripciones y q nombres coincidan
+ - Create new lore for the bishop (Interceptor improved xcf1).
+   * in short, its an xelloy plated f35, renamed to xyf-36b
+ - Improve the rider and rook ufopaedia lore.
+#
++ impending changes:
+ - (NUEVO) aprovechar el sistema "spriteFaceColor; *SpriteFaceColorAgent" pa reducir espacio necesario en archivo
+   * esto ya se aplico, pero recordar hacerlo con los tanqueros nuevos, consultar si se puede aplicar a los perros, preguntarle a scorch
+ - agregar efecto purpura psionico pero solo a los ethereals
+ - Later, create some kind of torch/drill/specialized melee weapon to break walls and enter UFOs??.
+   * Give this "terrain damage" sub-property to the plasma sword and knife?
+#
++ FINISH REORGANIZING FOLDERS:
+ - Fix all relative routes inside extrasprites.rul for this.
+   * Be cautious, CHECK and modify the names of ALL sprites in "unitSprites" folders.
+   * Rename all files within ufopaedia folder.
+ - Delete the extras sound folder as I test the new sounds.
+ - Finish the Audio enhancement
+   * Confirmar todas las carpetas quedan correctamente utilizadas
+   * aprovechar carpeta de into the abyss que tiene sonidos buenos, en especial para primeros dos tiers.
+   * aprovechar de CTO los efectos de sonido, en especial los de recarga de armamento
+ - conseguir explosiones diferentes para efectos de granadas
+#
++ sacar de into the abbyss:
+ - cascos para soldados basicos, recordar ponerle quadlentes, aprovechar microfonos y orejeras
+  ~ confirmar si necesitaria modificar sprite battlescape, de todas maneras recordar ponerle el quadlentes que esta en el de CTO
+ - lore de algunas armas
+ - Confirmar que sonidos puedo sacar de aca, sobre todo para segundo y tercer nivel de armas bailisticas
+   * sacar de apoc tambien, sobre todo sonido de swarmids para dron
+#MISC
+ - Create a "Credits" section in the post and the Read me, where i list all the mods already integrated here.
+   * Acknowledge the one who removed the letters from Amiga Kittencon (https://mod.io/g/openxcom/m/amigapsx-font-visual-upgrade-symbols).
+   * Should create a section that says "INTEGRATED MODS" and also add Daedalus FMP HQSounds.
+ - Clearly add the recommendation for the song mod.
+
+###FINAL DE ESTE PARCHE####
+
+###################################################################################################################################
+###################################################################################################################################
+###################################################################################################################################
+###################################################################################################################################
+###################################################################################################################################
++ PETICIONES A OXCE:
+ - Confirm how the fuck do i edit the world .
+ - Inquire about making day and night sprites differentiation for armors sprites
+   * for implementation in the first tier with lenses going up and down.
+ - (NUEVO) acomodar las imagenes basebits.
+   * revisar si puedo hacer q aparezcan las puerticas como en los de las de 4 pedazos.
+ - crear alguna especie de "CURRENT OBJECTIVE"
+
+ - respecto a soldiertransformation para perritos, consultar si se puede aplicar un porcentaje de "fallo"
+ - (NUEVO) Error in the new "inventory" image for enemies.
+   * Firstly, add remaining images of enemy inventory.
+   * Review the size of the "slots" position for 2x2 units.
+ - The ground drone would be a platform to which the help of a claw can pick up weapons from the ground, tecnically being able to field any weapons used by xcom troops (specially shotguns and rifles, mostly PDW)
+   * confirm if i can recluse which kind of weapons can this unit pick up (to avoid picking pistols or basic medbags).
+ - al momento de disparar un arma, el sprite de las armas a dos manos se "alinea" hacia adelante, consultar si existe una manera de q esto se mantenga permanentemente
+   * de ese modo se simularia q el dron esta sosteniendo un arma.
+ - confirmar como editar para q cada escudo reciba menos daño q el anterior?
+#####
++ EFRENESPARTANO HELP IN PLANES CHANGES:
+ - Firefly and other planes
+   * Resolve the issue with the ramp so that it doesn't deviate incorrectly (test by placing 3 tus).
+#####
++ IMPROVEMENTS TO JACKSTRAW2323 MOD RELATIVE TO NEW ETHEREALS:
+ - The cape shouldn't disintegrate but should drop to the floor.
+ - The cape should be the actual corpse.
+ - Ethereal disintegration should create a psionic scream, morale checking, and panicking enemy nearby troops.
+ - Update lore to reflect this; you only recover the cape and dust until you conduct an interrogation, finding a proper specimen to study
+ - change Ethereal scientific name to tetramand?.
+
+#####
+
++ UFOPEDIA CHANGES:
+ - Reorder every Ufopedia and create new sections.
+ - Rewrite all alien races Ufopedia entries.
+ - Provide realistic equivalents for all weapon descriptions.
+   * first tier partially done, the rest is up to go.
+ - Modify Ancient Abomination autopsy picture to be more detailed and bloody.
+#being worked this patch - Consider creating a new interrogation project for advanced races.
+ - Remove articles about alien Elerium magazines from Ufopedia.
+ - Conduct a thorough review and correction of medal articles.
+   * Correct and improve all texts.
+   * Rearrange the position of the medal in the photo for symmetry.
+   * Change commendation color based on the type (e.g., BLACK for posthumous).
+   * Give priority to Erwin's speech (move that to the Cape Hope Battle article).
+     ~ Invent a dossier section and move Erwin's information there.
+ - Give a cooler name to alloy ammunition (due to Xenominium/xelloy change).
+ - Create better lore for tech ammo.
+   * something like "intelligent ammunition with hollow points, using Codex technology, a small onboard computer determines the depth and chooses the best time to detonate, causing shrapnel and severe internal injuries"
+     ~ GYROJET/DUMDUM?
+ - Adjust the position of text in certain reports.
+   * For heavy weapons platforms (lower it a bit for a better view of the drawing and separate paragraphs correctly).
+ - Invent new Elerium lore related to Sovereigns.
+   * Check conversation with EfrenEspartano again; basically, Sovereigns are like sheep to shear Elerium.
+   * Rearrange the project to recreate Elerium, needing a live sovereing specimen in the base.
+
+#####
+
++ ARMOR CHANGES:
+ - Confirm if more insignias can be added to the paperdoll based on the soldier's rank.
+   * confirmed i can, raven found a way, i need to found how to apply considering the colors of my armors.
+   * specialy if i can change them using the same color varying for ranks.
+     ~ something like "for rank 1, change color X, for rank 2  changes color Y instead"
+   * Focus especially to restablish the nomenclatures on the bodies and corpses of png files.
+   * Perhaps increase the Size of frontal pockets to 2x2 squares?.
+   * Rename the "backpack" category to something more generic.
+ - I havent found the way to alter armor order yet, i need to keep investigating about it.
+ - Add bulbs on hands, hips in the battlescape sprites of nerve armors.
+ - Implement a new pocket configuration.
+   * Add a new pocket where only "armor modules" can be placed.
+     ~ Metal protection plates.
+     ~ Communication nodes.
+     ~ For aiming improvement.
+### NUEVO ###
+ - las armaduras deberan tener una capa extra en todas sus versiones
+   * acomodar el uniforme q sea de vuelta una capa unica, de preferencia eliminar todo rastro del chaleco negro en low poly.
+   * arriba de ese una capa extra q sera referente al WEBBBING osea tirantes, chalecos y demas.
+   * asi puedo manipular mejor el tema de tamaños de la ropa y del chaleco encima.
+ - rehacer sistema de layers a algo mas o menos asi
+   * mameluco de colores (simple y sin nada)
+   * chaleco principal donde estaran la mayoria
+   * capas extras de webbing y aparejos, radios, distintas bandoleras, etc
+     ~ de este modo habra variedades de la misma armadura
+ - agregar nuevos sprites a las armaduras
+   * darle prioridar al formato de los chalecos
+     ~ solamente agrandar y achicar segun los talles LA CAPA PRINCIPAL DEL CHALECO
+     ~ las capas q contienen los bolsillos deben quedar igual, de este modo todos los tamaños poseeran los mismos bolsillos, ajustado al tamaño de los soldados
+       ° evitar entrar en la situacion de firaxis 2012 xcom que las mujeres deben tener cartuchos mas chikitos
+   * importante crear talles distintos de los mamelucos
+     ~ recordar recortar y ajustar ligeramente mas al cuerpo el traje basico a la sprite medium
+     ~ luego ir agrandando para los distintos talles
+       ° usar esos tamaños de plantillas para el resto de las versiones de colores
+   * separar mascaras de cascos en versiones oscuras black ops.
+   * raparle pelo a "heads" nuevas para que calse con los cascos
+   * aprovechar el sistema "spriteFaceColor; *SpriteFaceColorAgent" pa reducir espacio necesario en archivo
+     ~ esto ya se aplico, pero recordar hacerlo con los tanqueros nuevos, consultar si se puede aplicar a los perros, preguntarle a scorch
+#
+ - Improve armor sprites.
+   * hacer mas bulkies el battle sprite
+   * poner chalequitos verdes al battle sprite camo
+   * usar los cascos de CTO y girarle los lentes de NV 90° para que queden arriba.
+   * Create new sprites with cool visors for every pilot version.
+   * Create different versions based on soldier sizes.
+   * Ensure advanced versions cover ALL skin (test with a black background as I update).
+   * Use the belly from female personal armor for non-muscular men.
+ - Add raised quad-lenses to tier 1 soldier sprites, then add lower quad-lenses and find out if configuration is possible.
+ - cambiar colores de paperdolls de cascos a rojo tambien para pílotos.
+ - rehacer todas las armaduras de vuelta de tier 1 , rehacer como habia planteado las armaduras femeninas para q los bolsillos sean iguales en tamaño, se cambia solo el coso del chaleco principal. recordatorio, cuando achico armadura femenina se hace al 96% en sprite resize
+   * luego quedaria por hacer las versiones por distintos tamaños para cada genero
+   * confirmar todos los detalles restantes de los battlescape, incluyendo casco y visores.
+   * el xops armor tendra la burbuja del skystrike, agregarselo al battlesprite y eliminarle la recoloracion automatica en base a la piel
+   * el battlestrike tendra un casco distinto hecho a medida mas adelante
+ - hacer q la armadura que sale en el ARMOR for avatar (aprovechar la q se pone en la ufopaedia)
+   * la q se llama "no se que display", aprovecharme del parametro q repite el codigo usando "&" para acortar espacio
+   * sea distinta, no se pueda usar en el inventario
+   * sin el chaleco pesado pero q posea la boina
+   * con boina distinta segun el tipo de soldado q sea
+#####
+
++ Weapons Changes:
+ - Check that by eliminating certain shot types, weapons now have different maximum ranges in some instances.
+   * Consider all balance issues this could create.
+ - Rebalance the minigun to be "lighter" in the weapon itself but heavier overall, requiring a special ammo and battery backpack, which will be upgraded in the Xtier.
+   * Use a belt box of ammo as a fixed backpack for the battery and bullets (Black Ops minigun box sprite in X-Files could be used).
+     ~ [(currently impossible to add "backpack related to weapons")]
+   * Add vapor trails and reduce bullet speed.
+   * Add a delay to "load the gun from the ground to the hands" as it involves "putting on the special backpack."
+ - Perhaps add a cylinder to the plasma handcannon to make it a heavy revolver?.
+ - Integrate functional flamethrowers (taking example from X-Files).
+   * First version with fuel tanks on the back.
+     ~ [(currently impossible to add "backpack related to weapons")]
+   * Second version without a tank.
+   * Third version with gelatinized Elerium.
+     ~ Some tank-like weapon, perhaps a "Kokodrile"?
+ - Use "onehandpenalty" to define holographic swords like those in Mass Effect.
+ - Implement a recoil system.
+   * Each consecutive shot with a weapon in the same turn generates an accuracy debuff.
+     ~ Mitigated by the soldier's accuracy and strength stats.
+   * This additional parameter could help in better balancing weapons (e.g., the PDW having little recoil but longer reload times).
+ - Confirm the issue with the bullet sprite of the pistol taser.
+   * era el tamaño del sprite del hit, acomodar a 320x40?
+   * agregar explosion de la granada de shock
+#
+ - Check all reloading TUs for every weapon.
+   * Modify reload times, balance transfer times of items from one pocket to another.
+   * Make bullpups take longer to reload as a balancing method.
+   * Find out how to modify weapon reload times.
+   * It should be faster to draw your weapon from the holster than to reload the primary.
+     ~ Use the commands tuLoad and tuUnload.
+   * Remember to include this "you need to additionally pay the cost of moving the ammo from its current inventory slot into a hand slot! Consider that when balancing reload costs."
+   * "Take into consideration that, since OXCE v6.2, the OXCE behavior is now turned off by default. It can be enabled using the extendedItemReloadCost setting."
+ - Rebalance the weight of all objects for more intuitive values.
+   * Would a total rebalancing of the soldiers' strength be needed to maintain coherent values?
+#####
+
++ Doggos Changes:
+ - Create more sprites for dog paper dolls.
+   * Introduce more breeds?
+   * Provide a wide variety of fur patterns for different species.
+     ~ At least 20 different sprites for each.
+     ~ Rottweilers and Dobermans could be additional species, considering they don't have much variety in fur patterns.
+ - Create accurate battle sprites (currently beyond my abilities; seek assistance).
+ - Slow down the walking animation speed of dogs to ensure all frames are activated.
+ - Resolve the issue with the zombification of dogs (from xfiles).
+#nuevo
+ - crear medalla para perros
+ - Modify dog armor.
+   * No pockets initially in the harness; perhaps add pockets to advanced versions (only the belt in the vest version?) to serve as mini-inventories.
+   * Restore the strength stat.
+   * Balance the stat with the weight of the armors to prevent exploits like pack mules with way to cumbersome weapons.
+ - Modify dog armor sprites.
+   * Basic ones will be a simple harness.
+   * XOps (tier 2) will be armor similar to Riley Cod (done).
+   * At the 3rd level, it would resemble Astra Militarum Canid Unit.
+   * 4th level exoskeleton similar to Cod Advanced Warfare.
+   * 5th level mechanical exosuit (would it require uplift to use?).
+     ~ Could equip weapons like Zoid ligers, medkits?
+     ~ Turn dogs into better support units.
+     ~ Turn dogs into the equivalent of a "terror unit" for humans.
+#####
+
++ Vehicles Changes:
+#
+ - Change the lore and description of the SR-71 CORMORANT to something cooler.
+   * new ideas for improved planes.
+     ~ Shearwater?
+     ~ Albatross
+     ~ CONDOR? (this should be the longest ranged , prolly a UAV)
+ - Resolve HWP sprite using the Coelacanth spritesheet to have a movable wheel and turret.
+   * se achican imagenes que tengo al 33% y hovers al 32%
+   * aplicar el tanque sobre el Coelacanth y usar la posicion de las orugas anguladas sobre la punta (como los tanques de helldivers 2)
+ - Classic tanks will be armed with
+   * A 25mm AP cannon
+   * A HyperVelocity Ap cannon
+   * A 105mm HE cannon
+   * A Laser cannon
+   * A Plasma Cannon
+ - Use the flying tank sprite from Xenonauts to replace human Cyberdiscs.
+   * They would have MRSLs as a secondary weapon.
+     ~ They would behave with a lobbed effect (using "arcingShot true"), perfect for carpet bombing.
+   * Laser Cannon
+   * Plasma Cannon
+   * HyperVelocity Coilgun
+   * Fusion Launcher
+ - Perhaps add a more sturdier chassis
+ - For basic drones, use the drawing routine sprites of medusas to create an effect of going up and down at least one pixel when idle.
+ - Maintain the blades of the Shuriken, add a portion of central blades to the Longbow.
+   * Completely redesign the Longbow sprite.
+   ### ojito esto ya esta haciendose
+ - Use Xenonauts' drones and large drones as upgrades and improvements to classic drones.
+   * uses three designs, small, medium and large drones
+   * Require research on the anti-gravity core, equivalent to Skystrike armors in terms of research.
+     ~ temptative names will be the chu-ko-nu, ARBALEST and ballista.
+   * Create alien drone equivalents of drones using XFILES ROBOSPHERE
+ - (NUEVO) encontrar una manera de que se ilumine la torreta al momento de disparar los tanques?
+
+#####
+
++ Aliens Changes:
+ - Start implementing all the changes to the lore and motivations from the alien empire, including the rebranding of their faction.
+   * Still on discussion but for now the term "The Accord" its the one who gained more traction, specially considering the new lore.
+     ~ Perhaps add a new angle of the alien faction formed by Pro-Aliens Humans? on the same edge of EXALT/cult of sirius?
+       ° If this is applied, perhaps call the organization "The Pact", following the same function MIB has in classic fiction.
+ - Solve all missing and improve inventory aliens sprites significantly.
+ - Change Carcharodons sprites to gray.
+   * Perhaps Only leaders should be gray, or a darker shade of gray?
+ - Improve Commander Sectoid sprites.
+   * Add spikes like Aquatoids.
+   * Make their heads shine?
+   * Reconfirm with EfrenEspartano the color of their gray Skyranger in the sprite for the entire race.
+ - Implement new lore for Sectopods.
+   * Similar to Robocop/Dreadnoughts of Warhammer for COMMANDO Mutons.
+     ~ Perpetuate them to an eternity of service and suffering.
+ - Improve the drawing routine of the Spawn.
+ - Check the functionality of the xfiles spitter regarding hiding, to completely replace the silacoid.
+ - Resolve the situation with Silicoids.
+   * Create a new companion for Formics to replace Silicoids.
+   * Remove Silicoids as companions for Mutons.
+   * Leave Silicoids for Mutons and pass Celatids/Spitters to Formics.
+   * Mutons only with Berserkers and Formics with Spitters, completely eliminate Silicoids until a decent replacement is found.
+ - Add the new corpses of Celatids/Spitters to their correct updated versions.
+# NUEVO
+ - Review the changes made to alien species and reclassify their STR_ reference names accurately.
+   * Perhaps create an extra investigation that provides reports on the weaknesses of aliens.
+     ~ Should be a new project that need an X ammount of bodies for testing and exploring any weaknesses.
+   * Every race should consist of these projects
+     ~ A live study discussing the behavior and characteristics of the species.
+     ~ An autopsy establishing generalities and the functioning of the species.
+     ~ A combat analysis showing weaknesses and exploiting qualities, giving a damage bonus. (Check Xenonauts 1 posters entries for inspiration to the artwork).
+ - modificar unidades alienigenas para darles una dificultad mas estable
+   * eliminar q ganen stats segun el nivel de dificultad, por lo tanto ahora regularizar mejor los stats a un promedio
+   * la dificultad se modificaran las cantidades totales de aliens
+   * quizas modificar los parametros de BRUTAL IA en base al nivel (siempre sin hacer trampa)
+     ~ usar correctamente el tema de los perfiles, ejemplo rusher, sniper, spotter, etc.
+     ~ aprovechar este tema y verificar si se pueden agregar enemigos medicos (q curen a sus unidades enemigas).
+#####
+
++ Sprites Changes:
+ - Improve the sprites of the Mindprobe (a sphere with notches, like the map in planet of the Treasure or the Eden's apple from Assasins creed).
+ - Review tier by tier.
+   * Identify missing handobs, floorobs, and bigobs, of both weapons and ammunition (priority for the first two).
+ - Add underwear and/or T-shirts to sprites like the new ones in the US Army (keep it SFW).
+ - Sectopod aliens are xelloy blue; in contrast, human sectopods will be brown. Confirm this.
+   * Blue color has already been changed; only need to create the human sectopods.
+   * or use alternative sprites from mech as jagers and such
+# nuevo
+ - actualizar el interfaces y modificar los colres de los elementos de la ufopaedia
+     ~ consegui el archivo, es el interfaces, es muchisimos articulos, pero empezar poco a poco editandolos.
+ - all this is done with the interface.rul
+ - Change background sprites for some screens on the base.
+   * Background02 (soldier tab)/ Something more fitting and militarish, perhaps some soldiers formed saluting?
+     ~ for the memorial add some kind of memorial wall, like in Firaxis or Mass Effect.
+   * Background03 (terror tab)/ Create something more fitting, perhaps a city burning?
+     ~ Differentiate different missions with different tabs (so all different terror types, either liners, islands, small towns, etc., have a different background).
+   * Background04 (base defense)/ Something showing either soldiers fighting in a hallway (like Xenonauts vs. Androns), or some kind of missile batteries shooting at an incoming UFO.
+     ~ the same file applies to base equiptment preview, some kind of armory view
+   * Background13 (selling screen)/ I always liked the TFTD version of this a lot more (try to add the money suitcase too?).
+   * Background14 (plane equipment)/ Im okay with the current version, might only retouch the silhouette to not be so dark, so all the changes made to plane basebits shadows stand out more.
+   * Background16 (UFO related mission start)/ Some kind of POV over the shoulder inside the cockpit of our plane, flying over a crashed UFO.
+     ~ Learn if there is a way to add a custom-made version for the Cydonian assault.
+   * Cambiar la imagen de fondo del graph de ser el soldado disparando a algo mas....fittin?, algo como stonks?
+#####
+
++ Minor Changes:
+ - (NUEVO) directamente revisar todos los "ojitos"
+ - (NUEVO) Clean up and correct all newlines (and double newlines).
+   * Indent (-) only at the beginning of the text, not at the beginning of a new paragraph.
+ - Clean every .rul file from unused lines, reorder and correct all annotations.
+   * "#----- topic -----#" should be the correct format.
+   * Eliminate all that have an excess of dashes.
+   * Check all the "ojito" notifications.
+ - Add filters and categories to manufacturers to make it more granular.
+ - Add filters and categories to items so it can be searched more granular.
+ - Does the Alien Disassemble from alien entertainment give a Mind Probe?
+   * If so, significantly reduce the price of the probe.
+   * Increase the necessary hours.
+
+#####
+
++ Major Changes:
+#nuevo queda pendiente
+ - balance the following stuff
+   * units stats
+     ~ improve the differences between units and mostly the bonus stats regarding promotions
+   * armor stats
+     ~ emphasis in tanks and new damage (antimatter)
+   * prices of items
+   * manufacture
+   * researches
+
+#
+ - agregate a roman numeral to every codex related technology to signify their current tier level ( I, II, III, IV, V, VI )
+ - make base facilities needs ammunition to fire defenses and stuff
+   * search "ammoneeded"
+ - include xcom npcs in base defenses
+   * scientist and perhaps engineers?
+   * having them killed cause losing them on the geoscape
+ - Implement daytime and nighttime camouflage stat to armors and enemies.
+   * Balance total vision and ranges.
+ - Add inventory sprites for civilians and a variety of civilians as well (possibly from XFILES).
+ - Implement a possible Armor chipping and degradation system.
+#####
+
++ Long Term Changes:
+ - improve ALL THE FloorObs and HandObs of ALL tiers.
+   * specially in terms of clips and magazines.
+ - (NEW) Review the file Scang.DAT and check which maps should get their MCD file modified to improve the mapview.
+   * Priority in cruiser and cargo ship missions.
+ - Add new types of missions similar to EU2012.
+   * Landed UFO (already implemented).
+   * Crashed UFO (already implemented).
+   * Abductions (perhaps low-scale "terror missions" with a small number of civilians, around 5, maybe?).
+   * Ships attacks (counting as abductions?, small crews of sailors, less than a dozen).
+   * Bomb disposal (should be the early "terror missions," maybe one per two months, to spice mission variety).
+   * Asset recovery (WIP).
+   * Extraction/escort (if it's possible to code a VIP mission, this should be once/twice per month?).
+   * Key recovery mission twice or thrice per year MAX (already implemented).
+   * Terror sites (BIG CHUNGUS ATTACKS) on council funding members, should be giant maps, a big number of civilians (20 perhaps?) and military presence (partially implemented, should be moved at least until April or May as a sign of conflict escalation).
+   * Ship line cruisers (same as above, maybe two dozen passengers?).
+ - Improve the pacing of missions escalation entirely.
+   * Delay terror in major cities by a couple of months.
+   * Definitely correct the spawning in cruise ship and boat missions (these might be the first terrors, then remote places like bases/facilities, then major cities).
+   * Avoid ancient key missions appearing in nonsensical locations (Europe, for example).
+ - Find out how to make dynamic global reports.
+ - Add lore to the previous world, North Korea nuked (paint it red?), Cape of Good Hope nuked (also red?), Haiti, and the Netherlands?, Israel?
+ - Completely improve the air game, interception, patrols, etc.
+ - Organize and overhaul alien deployments.
+ - Adjust the position of the Russian peninsula above the Kuril Islands, finalize changes to the world map.
+ - Each council country must have at least 4 cities on the map.
+ - Later add ambient music to different maps.
+ - Completely improve the sound database.
+   * To all weapons, different effects, explosions, etc.
+ - Completely improve explosion sprites (check XFILES and other mods).
+   * Eliminate the cheesy effect of a skull as an explosion.
+   * Create explosions of different colors according to the effect or damage caused.
+   * Find out how to create an "implosion" effect that grows, then collapses and immediately expands again.
+ - Implement elite alien weapons.
+   * Confirm functionality of sprites.
+   * Add a "whistling" sound bulletsound to scare tactics.
+     ~ Check conversation with EfrenEspartano.
+ - Improve the entire ufopedia implementing this line of code of "removedBy" (https://openxcom.org/forum/index.php/topic,7639.msg0.html#new)
+
+#####
+
++ Possible Unattainable Changes:
+ - Create videos like in the PS1 assets.
+ - Rearrange mission lists to something more coherent.
+ - Add a "voices" system with dialogues for responses and more (not so sure about this, tho).
+ - Check how the callsings of Vigilo Confido work (ask EfrenEspartano).
+ - check verticalLevels para agregarle terreno adicional a las bases de xcom
+#####
+
++ This should be the new ListOrder of the item/weapon:
+ - This is roughly the new listorder in equip weapon window and ufopaedia.
+   * Basic weaponry.
+   * Xperimental weaponry.
+   * Hybrid weaponry.
+   * Laser weaponry.
+   * Human Plasma Weaponry.
+   * Stun weaponry.
+   * Human ordnance.
+   * Melee weaponry.
+   * Alien weaponry.
+   * Alien ordnance.
+   * Misc items (medicals, psi warfare, lamps).
+   * Alien Misc items.
+
++ This should be the new order in the ufopaedia:
+ - This is the listorder of categories.
+   * 000= turorials(???)
+   * 100= dossiers and background info (move xcom personnel here?)
+   * 200= alien research
+   * 300= alien artifacts
+   * 400= ufo components
+   * 500= ufos
+   * 600= alien life forms
+   * 700= codex specific and related info, reports and levels
+   * 800= human tech (should recieve a roman number to determine tier in case of being codex related ie "(IV)")
+   * 900= xcom personnel
+   * 1000= xcom vehicles (crafts and tanks)
+   * 1100= xcom equiptment (armors and weapons)
+   * (????)= the rest
+   * 1500= Faciities
+   * last one=> commendations
+
+#####
+
++ IMPORTANTE PARA LORE: ###Done Translate
+ - aprovechar para el lore, "el tema de los codex son fragmentos de una inteligencia primigenia, obtuvieron la ascencion y pasaron sus mentes a un mundo digital, cada nucleo de un codex es originalmente un individuo, cuya unica meta es reformarse a si mismo, parasitando formas de vida inteligentes para que hagan el trabajo por ellos."
+   * en un principio, esta especie era dominante, en la categoria 4 de la escala de kardashov, increible avanzados.
+   * al llegar a una cuspide dedicaron el resto de sus existencias a la autocomplacencia, alcanzaron una etapa superior a la post escasez, por lo tanto todas sus necesidades estaban cubierta. esto les hizo caer en un stagnation que duro eones.
+   * algun suceso no especificado disturbed su hegemonia. el mismo hecho de su avanzado estado tecnologico los hizo "smug" y desinterezados, se sobreconfiaron en su propia supremacia en q esto les protegeria de cualquier problema.
+   * desde hacia milenios ya existia una tendencia de descargar sus mentes en copias digitales, a modo de mantener su personalidad y de ese modo extender artificialmente su existencia.
+   * un evento subito al q se refieren como "the blackout" hizo q el 99.99% de la especie desapareciera repentinamente. unicamente estas mentes que habian sido descargadas temporalmente "sobrevivieron" a este primer "rapture".
+     ~ importante aclarar y hacer enfasis en que fue subito el suceso y que fue por mero azar y casualidad que se preservaron sus mentes.
+     ~ esto no fue ningun acto heroico o sacrificio noble, simplemente los q ese dia recordaron hacer backup en la nube se salvaron.
+     ~ esto abre la posibilidad a una gran variedad de "personalidades" respaldadas, no todos eran mentes cientificas queriendo preservar su legado al futuro, tambien estaban magnates desinteresados, estaban lideres crueles, psicopatas, egolatras narcisistas, estaban mocosos ingenuos q simplmente se subscribieron a un free trail period en el gmail espacial y justo por eso se respaldaron.
+       °esto abre la posibilidad a que cada mente pueda poseer agendas propias acordes a su usuario original, no todos eran filantropos pero tampoco todos eran villanos.
+  * el 0.01% q si sobrevivio a esta primera pase estuvieron presentes en algo llamado "la noche eterna", estos que si evadieron el cataclismo pasaron el resto de su existencia intentando preservar estas mentes digitales.
+    ~ importante hacer enfasis en la ambiguedad tanto de las causas y la amenaza, la crisis, el apagon, etc. para mantener la atmosfera de terror cosmico de "QUE PORONGAS FUE CAPAZ DE EXTERMINAR UNA CIVILIZACION NIVEL 4" ademas de sobre todo el enigma de "SERA QUE LO Q SEA Q FUESE ESO....SIGUE AHI AFUERA?, ESPERANDO?"
+  * para preservar tanto a los individuos y sobre todo su civilizacion, iniciaron una caceria de estos "respaldos", cabe aclarar q cada servidor contenia una informacion casi infinita.
+  * cada "mente" fue entonces inyectada con una copia de la base de datos tecnologica de su civilizacion, esto abulto el ya de por si grotesco cantidad de informacion.
+  * para poder hacerlo mas manejable, toda estos "datos" fueron comprimidos en archivos rars llamado CODEX.
+    ~ el problema es q la compresion termino afectado algunas mentes, en algunos casos la degrado, en otras cambio totalmente la personalidad
+    ~ de por si la especie era indiferente a lo q consideraban especies inferiores, pero esto solo agravo el problema.
+    ~ muchas lineas de codigo relacionado al usuario original fueron reemplazados por informacion tecnologica.
+  * igualmente los codex seguian siendo demasiado grandes por los que necesitaron ser doblados en computadoras cuanticas, este nivel de compresion degenero aun mas la "personalidad" de estos.
+  * debido al apagon la tecnologia necesaria para hacer estas sublimaciones (proceso de creacion del backup mental) era imposible de realizar nuevamente. los supervivientes se encontraban en la desesperante situacion de tener la informacion necesaria para evitar la catastrofe pero sin los medios ni mecanismos para salvaguardarlos de manera segura.
+  * algunos intentaron meter pistas y opiniones propias dentro de los codex, esto incremento aun mas la degeneracion de las mentes ya q algunos podian consistir incluso en amalgaciones de disntitas entidades. no hay q aclarar la volatibilidad que esto representa.
+  * como a los sobrevivientes se les agotaba el tiempo util, esto los empujo a tomar medidas cada vez mas desesperadas.
+  * algunos se resignaron a la idea de q iba a ser imposible para ellos restaurar su civilizacion y tomaron medidas extras.
+     ~ 1) hacer q cada pieda de informacion del codex sea autoreplicable.
+     ~ 2) comprimir aun mas el codex hasta el punto de dejarlo hyper requete comprimido.
+     ~ 3) inventar las "keys", estas llaves cumplian una triple funcion.
+       ° a) funcionar como "seeders", llenos de material genetico y arcas, eran arrojados en distintas direcciones intentando aterrizar planetas con condiciones optimas que les permitiera desarrollar vida (seeded life theory) y q esta alcanzara un umbral tecnologico suficientemente alto para retomar la labor de reformar los codex.
+         ++ esto mantiene la tematica del juego original q somos creaciones de los aliens invasores, en este caso somos bioproductos de los codices
+         ++ quizas el meteorito q mato a los dinosaurios tenia un key incrustado en la piedra??? haciendo q la tierra sea uno de los casos raros donde no somos el producto de uno sino de dos KEYS, ya q cada key es unica respecto a la informacion q posee, asi q segun la key q caia en la tierra, produciria resultados y permutaciones distintas.
+       ° b) contener instrucciones de como funcionan los codex de modo q si una civilizacion alcanza el nivel necesario podria utilizarlo.
+       ° c) tener algoritmos especiales que al ser insertados dentro de un codex en construccion, ayudara a desdoblar/descomprimir la informacion mas rapido o eficientemente (Cada vez q un codex es "upgraded" es justamente eso, esta siendo descomprimido intentando alcanzar su tamaño original)
+  * en el presente cada contendiente en la guerra posee su propio codex, los humanos tienen uno al q le pueden aplicar dos llaves (Explicando asi como alcanzamos tan rapido a los aliens), los aliens solo tienen una sola llave, pero quieren usar los disponibles aqui para poder expandir el suyo.
+  * cada codex es unico con una agenda propia por lo que no necesaria mente son buenos ni malos, somos meramente herramientas en sus ambiciones por reformarse, cada "entidad" tiene la insaciable necesidad de reformarse a si misma como meta principal y esta voracidad es la que la lleva a producir las invasiones y utilizar a especies "menores" para su conveniencia.
+  * aun es un enigma cual es el objetivo final de nuestro codex, para que quiere reformarse? esta corrupto y solo tiene una voracidad consumista? desea elevar a una especia menor en una relacion simbiotica y asi luchar contra lo que fuese que los afecto originalmente y evitar otro cataclismo? de ser asi, estaria justificado hacer lo q se tenga q hacer para este fin?
+  * aunque al final se termine en un "hanz are we the baddies??" en el momento en q cuando ganemos nuestro codex nos apunte a otra civilizacion en desarrollo con llaves disponibles para hacer q el nuestro crezca y terminemos siendo la especie avanzada q invade a una mas pequeña. pero esto sea por un bien mayor?
+   * "si miras al abismo, este te devuelve la mirada" "aquellos q usen los artefactos del diablo, deben estar preparados para blandir su espada (osea del diablo)"
+ - ESTA SERIA LA IDEA GENERAL DEL LORE PRINCIPAL.
+
+
+###########
++ datos importantes para considerar cuando balancee ciertos gastos :
+#estos son notaciones para tener en cuenta respecto a la eliminacion de ceros dentro del juego
+ - presupuesto anual gringo total aprox 841.000.000.000, igual a 70.083.333.333 mensual
+ - presupuesto anual otan total aprox 380.000.000.000,   igual a 31.666.666.666 mensual
+ - para q ajuste precios, tendrian q ser entre mil?
+#Dropeo de materiales
+ - survey skiff = 6x / 10e
+ - raider gunship = 10x / 10e
+ - scanner boat = 10x / 10e
+ - scout escort = 23x / 10e
+ - research corvette = 42x / 10e
+ - cloner frigate = 40x / 10e
+ - harvester destroyer = 60x / 20e
+ - abductor cruiser = 52x / 20e
+ - laboratory ship = 75x / 20e
+ - supply tanker = 110x / 30e + 28 supplies
+ - constructor barge = 135x / 40e + 70 supplies
+ - battlecruiser = 105x / 20e
+ - terror battleship = 133x / 30e
+ - dreagnought = 203x / 40e + 15 supplies
+ - Base defense = 75X / 20e + 180 supplies
+
+
+
+ ############## Kiro Translate the language
+ - take advantage of the lore, "the theme of the codexes are fragments of a primordial intelligence, they obtained ascension and passed their minds to a digital world, each core of a codex is originally an individual, whose only goal is to reform itself, parasitizing intelligent life forms to do the work for them."
+  * At first, this species was dominant, in category 4 of the Kardashov scale, incredibly advanced.
+  * Some unspecified event disturbed their hegemony. The very fact of their technological advancement made them smug and disinterested, and they became overconfident in their own supremacy, believing this would protect them from any trouble.
+  * For millennia there has been a tendency to download their minds into digital copies, in order to maintain their personality and thus artificially extend their existence.
+  * A sudden event referred to as "The Blackout" caused 99.99% of the species to suddenly disappear. Only those minds that had been temporarily downloaded "survived" this first "rapture."
+  ~ It is important to clarify and emphasize that the event happened suddenly and that it was by mere chance and coincidence that their minds were preserved.
+  ~ This wasn't a heroic act or a noble sacrifice, it was just those who remembered to back up their data to the cloud that day who were saved.
+  ~ This opens the possibility to a wide variety of backed "personalities," not all of whom were scientific minds wanting to preserve their legacy for the future; there were also selfless magnates, cruel leaders, psychopaths, narcissistic egomaniacs, and naive brats who simply subscribed to a free trail period on space Gmail, and that's precisely why they were backed.
+  This opens the possibility that each mind could possess its own agendas, aligned with its original user. Not all were philanthropists, but not all were villains either.
+  * The 0.01% who survived this first pass were present during something called "the eternal night." Those who evaded the cataclysm spent the rest of their existence trying to preserve these digital minds.
+  ~ It's important to emphasize the ambiguity of both the causes and the threat, the crisis, the blackout, etc., to maintain the atmosphere of cosmic terror of "WHAT THE HELL WAS CAPABLE OF EXTERMINATING A LEVEL 4 CIVILIZATION?" In addition to the enigma of "WILL WHATEVER THAT WAS...IS STILL OUT THERE?, WAITING?"
+  * To preserve both the individuals and, above all, their civilization, they began a hunt for these "backups." It's worth noting that each server contained almost infinite information. * Each "mind" was then injected with a copy of its civilization's technological database, bloating the already grotesque amount of information.
+  * To make it more manageable, all this "data" was compressed into RAR files called CODEX.
+  ~ The problem is that the compression ended up affecting some minds, in some cases degrading them, in others completely changing their personality.
+  ~ The species was already indifferent to what they considered inferior species, but this only aggravated the problem.
+  ~ Many lines of code related to the original user were replaced with technological information.
+  * Likewise, the codexes were still too large and needed to be folded into quantum computers. This level of compression further degenerated their "personality."
+  * Due to the blackout, the technology necessary to perform these sublimations (the process of creating the mental backup) was impossible to perform again. The survivors found themselves in the desperate situation of having the information necessary to avoid the catastrophe but without the means or mechanisms to safely safeguard it. * Some attempted to insert clues and their own opinions into the codexes, further increasing the degeneration of the minds, as some could even consist of amalgamations of different entities. The volatility this represents is not necessarily explained.
+  * As the survivors ran out of useful time, this pushed them to take increasingly desperate measures.
+  Some resigned themselves to the idea that it would be impossible for them to restore their civilization and took extra measures.
+  1) Make every piece of information in the codex self-replicating.
+  2) Compress the codex even further, to the point of leaving it hyper-compressed.
+  3) Invent the "keys." These keys served a triple function.
+  a) Functioning as "seeders," filled with genetic material and arks, they were thrown in different directions, trying to land on planets with optimal conditions that would allow them to develop life (seeded life theory) and reach a technological threshold high enough to resume the task of reforming the codexes.
+  ++ This maintains the theme of the original game that we are creations of the invading aliens; in this case, we are byproducts of the codices.
+  ++ Perhaps the meteorite that killed the dinosaurs had a key embedded in the stone? Making the Earth one of the rare cases where we are not the product of one but two keys, since each key is unique with respect to the information it holds, so depending on which key landed on the Earth, it would produce different results and permutations.
+  ° b) Contain instructions on how the codexes work so that if a civilization reaches the necessary level, they can use it.
+  ° c) Have special algorithms that, when inserted into a codex under construction, will help unfold/decompress the information more quickly or efficiently. (Every time a codex is "upgraded," it is exactly that; it is being decompressed in an attempt to return to its original size.)
+  * Currently, each contender in the war has their own codex. Humans have one to which they can apply two keys (thus explaining how we caught up with the aliens so quickly). The aliens only have one key, but they want to use the ones available here to expand theirs.
+  * Each codex is unique with its own agenda, so they aren't necessarily good or bad; we are merely tools in their ambitions to reform. Each "entity" has the insatiable need to reform itself as its main goal, and this voracity is what leads it to produce invasions and use "lesser" species for its convenience.
+  * The ultimate goal of our codex remains an enigma. Why does it want to reform itself? Is it corrupt and only has a consumerist voracity? Does it wish to elevate a lesser species in a symbiotic relationship and thus fight against whatever originally affected them and avoid another cataclysm? If so, would it be justified to do what needs to be done to achieve this goal?
+  * Even if it ultimately ends in a "Hanz, are we the baddies?" moment when we win our codex, it points us to another developing civilization with keys available to make ours grow, and we end up being the advanced species that invades a smaller one. But is this for the greater good?
+  * "If you gaze into the abyss, it gazes back at you." "Those who wield the devil's artifacts must be prepared to wield their (i.e., the devil's) sword."
+  - THIS WOULD BE THE GENERAL IDEA OF THE MAIN LORE.
+
+
+- Remember to rename hybrid grenades and explosives that produce thermobaric explosions thanks to the use of depleted elerium in small quantities as fuel, which is why they are still so light but so damaging.
+- Explain that although drones are not human, they require human intervention and space in the facility. Even if they are semi-automatic, they still require human input.
+~ Use the text from the radar building to complete the explanation.
+- Changed all drones to a system based on "a CPU platform that can be inserted into different chassis and with different equipment."
+* The ground drone would be a platform to which the help of a claw can pick up weapons from the ground, technically being able to field any weapons used by XCOM troops (especially shotguns and rifles, mostly PDW).
+- The spawn lore will be like Leliel.
+* Internally, they are an infinite Dirac sea, blah blah blah.
+- Describe that the large barracks also provide the trooper school and are necessary to upgrade to officers and others.
+
+
+
+
+

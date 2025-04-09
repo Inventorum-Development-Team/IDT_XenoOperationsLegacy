@@ -1,0 +1,739 @@
+# Made by B1ackwolf for XOPS-Legacy
+# Status: #OJITO ajustar todos los fuelmax
+# notes about soldiers facing
+#
+# 6  7  0  #    W  NW  N
+# 5     1  #   SW      NE
+# 4  3  2  #    S  SW  E
+#
+crafts:
+#----- Deletions -----#
+  - delete: STR_SKYRANGER
+  - delete: STR_LIGHTNING
+  - delete: STR_FIRESTORM
+  - delete: STR_AVENGER
+#----- End Deletions -----#
+#----- Transport Crafts -----#
+  - type: STR_DRAGONFLY
+    sprite: 1000
+    maxSkinIndex: 2            # default 0
+    skinSprites: [1001,1002] # default empty, contains all sprites except for the first (index zero)
+    fuelMax: 1500
+    damageMax: 100
+    speedMax: 300 # Mach 0.45 Subsonic // 556kmh
+    accel: 2
+    avoidBonus: 15
+    soldiers: 12
+    vehicles: 8
+    maxSmallUnits: 12
+    maxLargeUnits: 0
+    pilots: 1
+    maxItems: 350
+    costBuy: 600000
+    costSell: 250000
+    costRent: 60000
+    refuelRate: 20
+    radarRange: 350
+    radarChance: 100
+    transferTime: 72
+    score: 400
+    keepCraftAfterFailedMission: false
+    battlescapeTerrainData:
+      name: DRAGONFLY
+      mapDataSets:
+        - BLANKS
+        - BD_PLANE
+        - BD_OSPREY_ROTOR
+      mapBlocks:
+        - name: DRAGONFLY
+          width: 20
+          length: 20
+    craftInventoryTile: [10, 10, 0] #X, Y, Level
+    deployment:
+      - [9, 11, 0, 6]  #First Left Door     # W
+      - [9, 10, 0, 6]  #Second Left Door    # W
+      - [11, 11, 0, 2] #First Right Door    # E
+      - [11, 10, 0, 2] #Second Right Door   # E
+      - [10, 11, 0, 4] #First Middle        # S
+      - [10, 10, 0, 4] #Second Middle       # S
+      - [9, 12, 0, 0]  #left of pilot       # N
+      - [11, 12, 0, 0] #right of pilot      # N
+      - [9, 9, 0, 4]   #back left           # S
+      - [10, 9, 0, 4]  #back middle         # S
+      - [11, 9, 0, 4]  #back Right          # S
+      - [10, 12, 0, 0] #pilot               # N
+#
+  - type: STR_FIREFLY
+    sprite: 150
+    fuelMax: 1900
+    damageMax: 200
+    speedMax: 530 # Mach 0.80 Transonic // 989 kmh
+    accel: 2
+    weapons: 1
+    soldiers: 14
+    vehicles: 10
+    maxSmallUnits: 14
+    maxLargeUnits: 1
+    pilots: 1
+    maxItems: 450
+    costSell: 450000
+    costRent: 130000
+    refuelRate: 50
+    radarRange: 700
+    radarChance: 100
+    transferTime: 72
+    score: 200
+    battlescapeTerrainData:
+      name: FIREFLY
+      mapDataSets:
+        - BLANKS
+        - FIREFLY
+        - BD_PLANE_2
+        - PELICAN_CARGO_BAY_1
+        - ELEVATOR_TILES
+      mapBlocks:
+        - name: FIREFLY
+          width: 10
+          length: 20
+    craftInventoryTile: [4, 9, 1]
+    deployment:
+      - [3, 6, 1, 0]  #First in front of ramp   # N
+      - [5, 7, 1, 0]  #Second facing back ramp  # N
+      - [3, 8, 1, 0]  #Second row back ramp     # N
+      - [5, 8, 1, 0]  #Second row back ramp     # N
+      - [3, 9, 1, 0]  #third row back ramps     # N
+      - [5, 9, 1, 0]  #third back ramp          # N
+      - [3, 10, 1, 0] #fourth row back ramp     # N
+      - [5, 10, 1, 0] #fourth row back ramp     # N
+      - [3, 11, 1, 0] #fith row back ramp       # N
+      - [5, 11, 1, 0] #fith row back ramp       # N
+      - [3, 12, 1, 0] #sixth row back ramp      # N
+      - [5, 12, 1, 0] #Sixt row back Door       # N
+      - [5, 13, 1, 0] #Last row right door      # N
+      - [4, 13, 1, 0] #pilot                    # N
+#
+  - type: STR_SCARAB
+    sprite: 200
+    fuelMax: 2400
+    damageMax: 250
+    speedMax: 430 # Mach 0.65 subsonic // 803 kmh
+    accel: 2
+    weapons: 2
+    soldiers: 25
+    vehicles: 16
+    maxSmallUnits: 25
+    maxLargeUnits: 0
+    pilots: 2
+    maxItems: 650
+    costSell: 450000
+    costRent: 130000
+    refuelRate: 50
+    radarRange: 700
+    radarChance: 100
+    transferTime: 72
+    score: 200
+    battlescapeTerrainData:
+      name: SCARAB
+      mapDataSets:
+        - BLANKS
+        - FIREFLY
+        - BD_PLANE_2
+        - PELICAN_CARGO_BAY_1
+        - PELICAN_COCKPIT_1
+        - ELEVATOR_TILES
+      mapBlocks:
+        - name: SCARAB
+          width: 10
+          length: 20
+    craftInventoryTile: [4, 8, 0]
+    deployment:
+      - [3, 12, 0, 4] #Front door left
+      - [4, 12, 0, 4] #Front door center
+      - [5, 12, 0, 4] #Front door right
+#
+      - [4, 11, 0, 4] #Second row of door center
+      - [5, 11, 0, 4] #Second row of door right
+#
+      - [2, 10, 0, 2] #First row in floor left
+      - [3, 10, 0, 4] #First row in floor middle
+      - [4, 10, 0, 4] #First row in floor center
+      - [5, 10, 0, 4] #First row in floor middle
+      - [6, 10, 0, 6] #First row in floor right
+#
+      - [2, 9, 0, 2]  #Second row in floor left
+      - [6, 9, 0, 6]  #Second row in floor right
+      - [2, 8, 0, 2]  #Third row in floor left
+      - [6, 8, 0, 6]  #Third row in floor left
+#
+      - [2, 7, 0, 4]  #Last row in floor left
+      - [3, 7, 0, 4]  #Last row in floor middle
+      - [4, 7, 0, 4]  #Last row in floor center
+      - [5, 7, 0, 4]  #Last row in floor middle
+      - [6, 7, 0, 4]  #Last row in floor right
+#
+      - [3, 7, 1, 4]  #Last row top level middle
+      - [4, 7, 1, 4]  #Last row top level center
+      - [5, 7, 1, 4]  #Last row top level middle
+#
+      - [4, 9, 0, 4] #Officer Seat in floor
+      - [5, 12, 1, 2] #First Pilot top level
+      - [6, 12, 1, 7] #Second Pilot top level
+#
+  - type: STR_GOLIATHUS
+    sprite: 250
+    fuelMax: 30 #2500
+    refuelItem: STR_XCF_FUEL
+    damageMax: 400
+    speedMax: 1455 # Mach 2,2 Supersonic // 2716 kmh
+    accel: 6
+    weapons: 1
+    soldiers: 22
+    vehicles: 14
+    maxSmallUnits: 22
+    maxLargeUnits: 2
+    pilots: 2
+    maxItems: 700
+    allowLanding: true
+    costBuy: 0
+    costSell: 562500
+    costRent: 230000
+    refuelRate: 60
+    transferTime: 72
+    score: 250
+    battlescapeTerrainData:
+      name: XOPSHURRICANE
+      mapDataSets:
+        - BLANKS
+        - XOPSTRANSPORT2
+        - XOPSTRANSPORT3
+        - PELICAN_CARGO_BAY_1
+        - PELICAN_COCKPIT_1
+      mapBlocks:
+        - name: XOPSHURRICANE
+          width: 20
+          length: 10
+    craftInventoryTile: [6, 4, 1] #X, Y, Level
+    deployment:
+      - [7, 5, 1, 4]  #Ramp scout left
+      - [12, 5, 1, 4] #Ramp scout right
+#
+      - [5, 4, 1, 2]  #Left wing row back
+      - [5, 5, 1, 2]  #Left wing row middle
+      - [5, 6, 1, 2]  #Left wing row closer
+#
+      - [15, 4, 1, 6] #Right wing row back
+      - [15, 5, 1, 6] #Right wing row middle
+      - [15, 6, 1, 6] #Right wing row closer
+#
+      - [6, 3, 1, 4]  #Back row left
+      - [7, 3, 1, 4]  #Back row far middle
+      - [8, 3, 1, 4]  #Back row far center
+      - [12, 3, 1, 4] #Back row center
+      - [13, 3, 1, 4] #Back row middle
+      - [14, 3, 1, 4] #Back row right
+#
+      - [9, 6, 1, 0]  #Between ramps left
+      - [10, 6, 1, 0] #Between ramps center
+      - [11, 6, 1, 0] #Between ramps right
+#
+      - [9, 4, 1, 6]  #Main pillar seat left
+      - [11, 4, 1, 2] #Main pillar seat right
+      - [10, 5, 1, 4] #Officer Seat in center
+#
+      - [9, 2, 1, 0]  #Pilot left seat
+      - [11, 2, 1, 0] #Pilot right seat
+#
+  - type: STR_HERCULES
+    sprite: 300
+    fuelMax: 40
+    refuelItem: STR_XCF_FUEL
+    damageMax: 475
+    speedMax: 2315 # Mach 3.5 Supersonic // 4322 kmh
+    accel: 5
+    weapons: 1
+    soldiers: 18
+    vehicles: 12
+    maxSmallUnits: 18
+    maxLargeUnits: 1
+    pilots: 1
+    maxItems: 500
+    allowLanding: true
+    costBuy: 0
+    costSell: 562500
+    costRent: 200000
+    refuelRate: 50
+    transferTime: 72
+    score: 200
+    battlescapeTerrainData:
+      name: SKYWARDEN
+      mapDataSets:
+        - BLANKS
+        - XOPSTRANSPORT2
+        - XOPSTRANSPORT3
+        - PELICAN_CARGO_BAY_1
+        - PELICAN_COCKPIT_1
+      mapBlocks:
+        - name: XOPSNEWSKYWARDEN
+          width: 10
+          length: 20
+    craftInventoryTile: [5, 6, 1] #X, Y, Level
+    deployment:
+      - [4, 15, 1, 4] #Ramp row first left
+      #- [5, 15, 1, 4] #Ramp row first right
+      #- [4, 14, 1, 4] #Ramp row Second left
+      #- [5, 14, 1, 4] #Ramp row Second right
+#
+      #- [4, 13, 1, 4] #Cargo bay first row left
+      - [5, 13, 1, 4] #Cargo bay first row right
+      - [4, 12, 1, 4] #Cargo bay second row left
+      - [5, 12, 1, 4] #Cargo bay second row right
+      - [4, 11, 1, 4] #Cargo bay third row left
+      - [5, 11, 1, 4] #Cargo bay third row right
+      - [4, 10, 1, 4] #Cargo bay fourth row left
+      - [5, 10, 1, 4] #Cargo bay fourth row right
+      - [4, 9, 1, 4]  #Cargo bay Last row right
+      - [5, 9, 1, 4]  #Cargo bay Last row left
+#
+      - [3, 8, 1, 2]  #Mid section seat near left
+      - [6, 8, 1, 6]  #Mid section seat near right
+      - [3, 7, 1, 2]  #Mid section seat far left
+      - [6, 7, 1, 6]  #Mid section seat far right
+#
+      - [4, 5, 1, 2]  #Back seats in cabin near
+      - [4, 4, 1, 2]  #Back seats in cabin far
+      - [4, 6, 1, 4]  #Officer back seat
+#
+      - [5, 3, 1, 0] # Pilot seat in front
+#
+  - type: STR_OVERLORD
+    requires:
+      - STR_OVERLORD
+    sprite: 350
+    fuelMax: 2500 #625000 (in order to reach mars)
+    refuelItem: STR_XCF_FUEL
+    damageMax: 1400
+    speedMax: 6620 # Mach 10 High-hypersonic // 12349 kmh
+    accel: 20
+    weapons: 4
+    soldiers: 30
+    vehicles: 20
+    maxSmallUnits: 30
+    maxLargeUnits: 3
+    pilots: 4
+    maxItems: 800
+    allowLanding: true
+    costRent: 430000
+    refuelRate: 50
+    score: 10000
+    spacecraft: true
+    battlescapeTerrainData:
+      name: OVERLORD
+      mapDataSets:
+        - BLANKS
+        - XOPSTRANSPORT3
+        - XOPSTRANSPORT2
+        - PELICAN_CARGO_BAY_1
+        - PELICAN_COCKPIT_1
+      mapBlocks:
+        - name: XOPSOVERLORD
+          width: 10
+          length: 20
+    craftInventoryTile: [4, 11, 1] #X, Y, Level
+    deployment:
+      - [4, 3, 1, 0] #Ramp row first left
+      - [5, 3, 1, 0] #Ramp row first right
+      - [4, 4, 1, 0] #Ramp row first left
+      - [5, 4, 1, 0] #Ramp row first right
+#
+      - [4, 7, 1, 0] #Cargo bay mag far floor left
+      - [5, 7, 1, 0] #Cargo bay mag far floor right
+      - [4, 8, 1, 0] #Cargo bay mag far floor left
+      - [5, 8, 1, 0] #Cargo bay mag far floor right
+#
+      - [4, 9, 1, 0] #Cargo bay mag floor left
+      - [5, 9, 1, 0] #Cargo bay mag floor right
+      - [4, 10, 1, 0] #Cargo bay mag floor left
+      - [5, 10, 1, 0] #Cargo bay mag floor right
+#
+      - [3, 5, 1, 2] #Cargo bay seats first row left
+      - [6, 5, 1, 6] #Cargo bay seats first row right
+      - [3, 6, 1, 2] #Cargo bay seats second row left
+      - [6, 6, 1, 6] #Cargo bay seats second row right
+      - [3, 7, 1, 2] #Cargo bay seats third row left
+      - [6, 7, 1, 6] #Cargo bay seats third row right
+      - [3, 8, 1, 2] #Cargo bay seats fourth row left
+      - [6, 8, 1, 6] #Cargo bay seats fourth row right
+      - [3, 9, 1, 2] #Cargo bay seats fifth row left
+      - [6, 9, 1, 6] #Cargo bay seats fifth row right
+      - [3, 10, 1, 2] #Cargo bay seats last row left
+      - [6, 10, 1, 6] #Cargo bay seats last row right
+#
+      - [4, 12, 1, 2] #Officer seat left
+      - [5, 12, 1, 6] #Officer seat right
+#
+      - [3, 15, 1, 4] #Pilot Seat back row left
+      - [6, 15, 1, 4] #Pilot Seat back row right
+      - [3, 17, 1, 4] #Pilot Seat bottom row left
+      - [6, 17, 1, 4] #Pilot Seat bottom row right
+# Kiros Expanding this spot!
+  - type: STR_XOPSWASPYJ
+    requires:
+      - STR_ALIEN_ALLOYS
+    sprite: 1101
+    fuelMax: 1750
+    damageMax: 200
+    speedMax: 250
+    accel: 2
+    weapons: 3
+    soldiers: 30
+    vehicles: 20
+    maxSmallUnits: 20
+    maxLargeUnits: 5
+    pilots: 2
+    maxItems: 550
+    allowLanding: true
+    costRent: 60000
+    refuelRate: 50
+    score: 400
+    battlescapeTerrainData:
+      name: XOPSWASPYJ
+      mapDataSets:
+        - BLANKS
+        - BD_PLANE
+        - BD_OSPREY_ROTOR
+      mapBlocks:
+        - name: XOPSWASPYJ
+          width: 20
+          length: 20
+    craftInventoryTile: [9, 13, 1] #X, Y, Level
+    deployment:
+      - [9, 5, 1, 0]
+      - [9, 6, 1, 0]
+      - [9, 7, 1, 0]
+      - [9, 8, 1, 0]
+      - [9, 9, 1, 0]
+      - [9, 10, 1, 6]
+      - [9, 11, 1, 0]
+      - [9, 12, 1, 0]
+      - [9, 13, 1, 0]
+      - [9, 14, 1, 0]
+      - [10, 5, 1, 0]
+      - [10, 6, 1, 0]
+      - [10, 7, 1, 0]
+      - [10, 8, 1, 0]
+      - [10, 9, 1, 0]
+      - [10, 10, 1, 0]
+      - [10, 11, 1, 0]
+      - [10, 12, 1, 0]
+      - [10, 13, 1, 0]
+      - [10, 14, 1, 0]
+      - [11, 5, 1, 0]
+      - [11, 6, 1, 0]
+      - [11, 7, 1, 0]
+      - [11, 8, 1, 0]
+      - [11, 9, 1, 0]
+      - [11, 10, 1, 2]
+      - [11, 11, 1, 0]
+      - [11, 12, 1, 0]
+      - [11, 13, 1, 0]
+      - [11, 14, 1, 0]
+  - type: STR_XOPSSTINGMOTH
+    requires:
+      - STR_FIREFLY
+      - STR_ALIEN_ALLOYS
+      - STR_ALLOY_AERODYNAMICS
+      - STR_CODEX_1
+    sprite: 1102
+    fuelMax: 1750
+    damageMax: 400
+    speedMax: 350
+    accel: 2
+    weapons: 2
+    soldiers: 38
+    vehicles: 20
+    maxSmallUnits: 20
+    maxLargeUnits: 8
+    pilots: 2
+    maxItems: 600
+    allowLanding: true
+    costRent: 75000
+    refuelRate: 50
+    score: 400
+    battlescapeTerrainData:
+      name: XOPSSTINGMOTH
+      mapDataSets:
+        - BLANKS
+        - FIREFLY
+        - BD_PLANE_2
+        - PELICAN_CARGO_BAY
+        - ELEVATOR_TILES
+      mapBlocks:
+        - name: XOPSSTINGMOTH
+          width: 20
+          length: 20
+    craftInventoryTile: [8, 12, 1] #X, Y, Level
+    deployment:
+      - [8, 5, 1, 0]
+      - [8, 6, 1, 0]
+      - [8, 7, 1, 0]
+      - [8, 8, 1, 0]
+      - [8, 9, 1, 0]
+      - [8, 10, 1, 6]
+      - [8, 11, 1, 0]
+      - [8, 12, 1, 0]
+      - [9, 5, 1, 0]
+      - [9, 6, 1, 0]
+      - [9, 7, 1, 0]
+      - [9, 8, 1, 0]
+      - [9, 9, 1, 0]
+      - [9, 10, 1, 6]
+      - [9, 11, 1, 0]
+      - [9, 12, 1, 0]
+      - [10, 5, 1, 0]
+      - [10, 6, 1, 0]
+      - [10, 7, 1, 0]
+      - [10, 8, 1, 0]
+      - [10, 9, 1, 0]
+      - [10, 10, 1, 6]
+      - [10, 11, 1, 0]
+      - [10, 12, 1, 0]
+      - [11, 5, 1, 0]
+      - [11, 6, 1, 0]
+      - [11, 7, 1, 0]
+      - [11, 8, 1, 0]
+      - [11, 9, 1, 0]
+      - [11, 10, 1, 6]
+      - [11, 11, 1, 0]
+      - [11, 12, 1, 0]
+      #### Extra Crew
+      - [8, 13, 1, 0]
+      - [9, 13, 1, 0]
+      - [9, 14, 1, 0]
+      - [10, 13, 1, 0]
+      - [10, 14, 1, 0]
+      - [11, 13, 1, 0]
+#----- End Transport Crafts -----#
+#----- Combat Crafts -----#
+  - type: STR_INTERCEPTOR
+    sprite: 500
+    fuelMax: 1000
+    damageMax: 180
+    speedMax: 1325 # Mach 2.0 Supersonic // 2470 kmh
+    accel: 3
+    weapons: 2
+    soldiers: 1
+    pilots: 1
+    allowLanding: false
+    costBuy: 600000
+    costRent: 90000
+    refuelRate: 50
+    transferTime: 96
+    score: 100
+#
+  - type: STR_UPDATED_INTERCEPTOR #ojito acomodar stats
+    sprite: 550
+    fuelMax: 1250
+    damageMax: 250
+    speedMax: 1855 # Mach 2.8 Supersonic // 3458 kmh
+    accel: 5
+    weapons: 2
+    soldiers: 1
+    pilots: 1
+    allowLanding: false
+    costBuy: 0
+    costSell: 375000
+    costRent: 170000
+    refuelRate: 50
+    transferTime: 96
+    score: 150
+#
+  - type: STR_XCF2
+    sprite: 600
+    fuelMax: 2000
+    damageMax: 310
+    speedMax: 2050 # Mach 3.10 Supersonic // 3828 kmh
+    accel: 5
+    weapons: 2
+    soldiers: 1
+    pilots: 1
+    allowLanding: false
+    costBuy: 0
+    costSell: 375000
+    costRent: 170000
+    refuelRate: 50
+    transferTime: 96
+    score: 150
+#
+  - type: STR_XCF3
+    sprite: 650
+    fuelMax: 15 #3750
+    refuelItem: STR_XCF_FUEL
+    damageMax: 430
+    speedMax: 2650 # Mach 4 Supersonic 4940 kmh
+    costSell: 475000
+    costRent: 265000
+    accel: 6
+    weapons: 2
+    soldiers: 1
+    pilots: 1
+    allowLanding: false
+    refuelRate: 5
+    transferTime: 96
+    score: 200
+#
+  - type: STR_XCF4
+    sprite: 700
+    fuelMax: 30
+    refuelItem: STR_XCF_FUEL
+    damageMax: 600
+    speedMax: 3310 # Mach 5 Hypersonic // 6174 kmh
+    costSell: 437500
+    costRent: 300000
+    accel: 7
+    weapons: 2
+    soldiers: 2
+    pilots: 2
+    allowLanding: false
+    refuelRate: 10
+    transferTime: 96
+    score: 250
+#----- Patrolling Crafts -----#
+  - type: STR_SR71
+    sprite: 900
+    fuelMax: 5000
+    damageMax: 130
+    speedMax: 2250 # Mach 3.4 Supersonic // 4198 kmh
+    accel: 5
+    weapons: 0
+    soldiers: 1
+    pilots: 1
+    autoPatrol: true
+    allowLanding: false
+    costBuy: 800000
+    costRent: 100000
+    radarRange: 1500
+    refuelRate: 100
+    transferTime: 120
+    score: 150
+#----- End Combat and Patrolling Crafts -----#
+#----- All Craft Weaponry -----#
+craftWeapons:
+  - type: STR_CANNON_UC
+    sprite: 11
+    sound: 4
+    damage: 10
+    range: 10
+    accuracy: 25
+    reloadCautious: 4
+    reloadStandard: 4
+    reloadAggressive: 4
+    ammoMax: 200
+    rearmRate: 100
+    launcher: STR_CANNON
+    clip: STR_CANNON_ROUNDS_X50
+    projectileType: 2
+    projectileSpeed: 8
+#
+  - type: STR_LASER_CANNON_UC
+    sprite: 14
+    sound: 8
+    damage: 70
+    range: 21
+    accuracy: 35
+    reloadCautious: 24
+    reloadStandard: 24
+    reloadAggressive: 24
+    ammoMax: 100
+    rearmRate: 50
+    launcher: STR_LASER_CANNON
+    projectileType: 4
+#
+  - type: STR_PLASMA_BEAM_UC
+    sprite: 15
+    sound: 9
+    damage: 140
+    range: 34
+    accuracy: 50
+    reloadCautious: 24
+    reloadStandard: 24
+    reloadAggressive: 24
+    ammoMax: 50
+    rearmRate: 50
+    launcher: STR_PLASMA_BEAM
+    clip: STR_ELERIUM_CELL
+    projectileType: 5
+#
+  - type: STR_FUSION_BALL_UC
+    sprite: 35
+    sound: 7
+    damage: 230
+    range: 66
+    accuracy: 100
+    reloadCautious: 64
+    reloadStandard: 48
+    reloadAggressive: 32
+    ammoMax: 5
+    launcher: STR_FUSION_BALL_LAUNCHER
+    clip: STR_FUSION_BALL
+    projectileType: 3
+    projectileSpeed: 8
+#
+  - type: STR_STINGRAY
+    sprite: 12
+    sound: 15
+    damage: 70
+    range: 30
+    accuracy: 70
+    reloadCautious: 64
+    reloadStandard: 48
+    reloadAggressive: 32
+    ammoMax: 6
+    launcher: STR_STINGRAY_LAUNCHER
+    clip: STR_STINGRAY_MISSILES
+    projectileType: 0
+    projectileSpeed: 8
+#
+  - type: STR_AVALANCHE
+    sprite: 13
+    sound: 5
+    damage: 100
+    range: 60
+    accuracy: 80
+    reloadCautious: 96
+    reloadStandard: 72
+    reloadAggressive: 48
+    ammoMax: 3
+    launcher: STR_AVALANCHE_LAUNCHER
+    clip: STR_AVALANCHE_MISSILES
+    projectileType: 1
+    projectileSpeed: 8
+#
+  - type: STR_CLUSTER_MISSILE_UC
+    sprite: 35
+    sound: 22
+    damage: 45
+    range: 12
+    accuracy: 45
+    reloadCautious: 8
+    reloadStandard: 6
+    reloadAggressive: 4
+    ammoMax: 15
+    launcher: STR_CLUSTER_MISSILE_LAUNCHER
+    clip: STR_CLUSTER_MISSILES
+    projectileType: 1
+    projectileSpeed: 8
+#
+  - type: STR_PILUM_UC
+    sprite: 36
+    sound: 5
+    damage: 135
+    range: 62
+    accuracy: 80
+    reloadCautious: 96
+    reloadStandard: 72
+    reloadAggressive: 48
+    ammoMax: 3
+    launcher: STR_PILUM_LAUNCHER
+    clip: STR_PILUM_MISSILES
+    projectileType: 1
+    projectileSpeed: 8
