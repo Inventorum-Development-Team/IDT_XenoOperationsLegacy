@@ -473,6 +473,7 @@ research:
     needItem: true
     unlocks:
       - STR_PLASMA_CANNON
+      - STR_UFO_CONSTRUCTION
   - name: STR_HEAVY_PLASMA_WEAPONS
     cost: 180
     points: 10
@@ -2551,6 +2552,7 @@ research:
       - STR_GOODS_5
       - STR_DIMENSIONAL_FATIGUE
       - STR_SPECIAL_ALIEN_WEAPONS
+      - STR_UFO_CONSTRUCTION
 #Another possible resource to build
   - name: STR_CODEX_5
     cost: 1350 #antes 5000
