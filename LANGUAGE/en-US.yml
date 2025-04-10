@@ -1093,6 +1093,8 @@ en-US:
       STR_LASER_CANNON_UC: BALLISTA Laser Cannon
       STR_PLASMA_BEAM: Onager Plasma Beam
       STR_PLASMA_BEAM_UC: ONAGER Plasma Beam
+      STR_CATAPULT_GUASS: Catapult Gauss Cannon #Mass Driver, Rail Gauss weapon for Hypervelocity research.
+      STR_CATAPULT_GUASS_UC: CATAPULT Gauss Cannon #Mass Driver, Rail Gauss weapon for Hypervelocity research.
       STR_FUSION_BALL_LAUNCHER: Trebuchet Fusion Launcher
       STR_FUSION_BALL: Trebuchet Ball
       STR_FUSION_BALL_UC: TREBUCHET Fusion Pod
